@@ -21,11 +21,15 @@
   }
 }
 
+
 button.darklight {
   display: none;
   background: transparent;
+  
+  /* trick to force color to pre-colored emoji */
   color: transparent;
   text-shadow: 0 0 0 var(--fg-color2);
+  
   position: absolute;
   bottom: 0;
   left: 0;
@@ -42,7 +46,8 @@ button.darklight {
   button.darklight {
     left: auto;
     right: 0;
-    bottom: -2.5rem;
+    top: 0;
+    bottom: auto;
   }
 }
 
