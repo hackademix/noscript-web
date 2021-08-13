@@ -1,0 +1,11 @@
+---
+permalink: theme.css
+layout: 
+---
+{% set css %}
+  {% include "reset.css" %}
+  {% include "fonts.css" %}
+  {% include "main.css" %} 
+  {% include "nav.css" %} 
+{% endset %}
+{{ css | cssmin | safe }}

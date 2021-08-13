@@ -1,0 +1,262 @@
+:root {
+  --content-width: 1000px;
+  font-family: "Linik Sans", sans-serif;
+  font-size: 16px;
+}
+:root, :root[data-theme="dark"] {
+  --fg-color1: #d00a25;
+  --fg-color2: #fff;
+  --text-color: #ddd;
+  --bg-color1: #222;
+  --bg-color2: #000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fg-color1: #d00a25;
+    --fg-color2: #000;
+    --text-color: #424242;
+    --bg-color1: #ddd;
+    --bg-color2: #fff;
+  }
+}
+
+button.darklight {
+  display: none;
+  background: transparent;
+  color: transparent;
+  text-shadow: 0 0 0 var(--fg-color2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  font-size: 1.5rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  button.darklight {
+    left: auto;
+    right: 0;
+    bottom: -2.5rem;
+  }
+}
+
+:root[data-theme="dark"] button.darklight:after {
+  content: "🔆";
+}
+
+button.darklight:after {
+  content: "🔅";
+} 
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color1);
+  background: linear-gradient(to bottom, var(--bg-color1) 0%, var(--bg-color2) 50%, var(--bg-color1) 100%); 
+}
+
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+p {
+  padding: .5em 1em;
+  margin: .5em;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+pre {
+  padding: .8em 1em;
+  margin: .5em 1.5em;
+  font-family: 'Hack', 'Lucida Console', 'Courier New', Courier, monospace;
+  font-size: .9em;
+  background: var(--bg-color1)
+}
+
+
+main ul {
+  padding: 1em 1em 1em 4em;
+  list-style: none;
+}
+
+main ul li::before {
+  content: "➤"; 
+  color: var(--fg-color2);
+  display: inline-block; 
+  width: 1.5em;
+  margin-left: -1.5em
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "OpenDyslexic", sans-serif;
+  font-weight: bold;
+  color: var(--fg-color2);
+  padding: .1em 1em .3em 1em;
+}
+
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2.5em;
+}
+h4 {
+  font-size: 2em;
+}
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.2em;
+}
+
+a, a:visited {
+  color: var(--fg-color1);
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid;
+}
+
+header, main, footer, nav {
+  max-width: var(--content-width);
+  margin: auto;
+}
+
+header {
+  background: url("img/NoScript.svg") no-repeat center left;
+  position: relative;
+  height: 240px;
+}
+
+header > h1 {
+  font-size: 150px;
+  padding: 0;
+  margin: 0 0 0 220px;
+  color: var(--fg-color2);
+  text-shadow:
+    1px 1px 0 var(--fg-color1),
+    2px 2px 0 var(--fg-color1),
+    3px 3px 0 var(--fg-color1),
+    -1px -1px 0 var(--fg-color1),
+    1px -1px var(--fg-color1),
+    1px 1px var(--fg-color1);
+}
+
+header > h2 {
+  font-size: 70px;
+  padding: .1rem;
+  margin: 2rem 0 0 11rem;
+  background-color: var(--fg-color1);
+  color: var(--bg-color2);
+  transform-origin: 0;
+  transform: rotate(-3deg);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+@media (max-width: 1000px) {
+  header {
+    height: 24vw;
+    background-position-x: 2rem;
+  }
+  header > h1 {
+    font-size: 15vw;
+    margin-left: 24vw;
+    padding-left: 1rem;
+    text-shadow:
+      0.1vw 0.1vw 0 var(--fg-color1),
+      0.2vw 0.2vw 0 var(--fg-color1),
+      0.3vw 0.3vw 0 var(--fg-color1),
+      -0.1vw -0.1vw 0 var(--fg-color1),
+      0.1vw -0.1vw var(--fg-color1),
+      0.1vw 0.1vw var(--fg-color1);
+  }
+  header > h2 {
+    font-size: 7vw;
+    margin-left: 12vw;
+  }
+}
+
+
+
+main {
+  border: solid var(--bg-color1);
+  border-width: 1px 0 1px 0;
+  background-color: var(--bg-color2);
+  font-size: 1rem;
+}
+
+footer {
+  clear: both;
+}
+
+.copyright {
+  text-align: center;
+  font-size: .8rem;
+}
+
+a.screenshot > img {
+  width: 50%;
+  min-width: 384px;
+  float: right;
+  margin: .5em;
+}
+
+.left {
+  float:  left;
+}
+
+.getfor {
+  display: flex;
+  padding: 0;
+  margin: 1rem;
+}
+
+.getfor li {
+  list-style: none;
+  text-align: center;
+  padding: .5em;
+  margin: .5em;
+  background: var(--bg-color1);
+  width: 50%;
+}
+.getfor li::before {
+  display: none;
+}
+
+.getfor a {
+  white-space: nowrap;
+}
+.getfor a[class] {
+  display: block;
+  background: no-repeat center;
+  background-size:contain;
+
+  height: 128px;
+  border: none;
+  text-indent: -5000px;
+  margin-top: .5rem;
+}
+
+.getfor a.firefox {
+  background-image: url("../img/getforfirefox.png");
+}
+.getfor a.chromium {
+  background-image: url("../img/getforchromium.png");
+}

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('fonts/OpenDyslexic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('fonts/OpenDyslexic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('fonts/OpenDyslexic-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('fonts/OpenDyslexic-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Linik Sans';
+    src: url('fonts/LinikSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linik Sans';
+  src: url('fonts/LinikSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Linik Sans';
+  src: url('fonts/LinikSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linik Sans';
+  src: url('fonts/LinikSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+

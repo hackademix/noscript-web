@@ -1,0 +1,71 @@
+---
+sitever: 1
+---
+<!doctype html>
+<html lang="{{ l10n.current }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="Firefox; Chrome; Brave; Tor; security; XSS; Clickjacking; Script blocking; disable JavaScript; content blocking; safety; safe browsing; exploit; ransomware; attack; vulnerability; addon; add-on; extension; plugin;" />
+<meta name="description" content="NoScript for Firefox, Chrome and other browsers pre-emptively blocks malicious scripts and allows JavaScript and other potentially dangerous content only from sites you trust. Download it now for free! {{ title }}" />
+<meta name="category" content="software,internet,development,downloads" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<script src="{{ '/js/darklight.js' | url }}"></script>
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>NoScript - block scripts and own your browser! - {{ title }}</title>
+<link rel="stylesheet" href="{{ '/theme.css' | url }}?v={{ sitever }}" type="text/css" />
+</head>
+<body>
+<header>
+<h1>NoScript</h1>
+<h2>own YOUR browser!</h2>
+<a href="#main-menu"
+  id="main-menu-toggle"
+  class="menu-toggle"
+  aria-label="Open main menu">
+  <span class="sr-only">Open main menu</span>
+  <span class="btn-menu" aria-hidden="true">☰</span>
+</a>
+<button class="darklight" title="Toggle dark/light theme" aria-label="Toggle dark/light theme" aria-hidden="true"></button>
+</header>
+<nav id="main-menu" class="main-menu" aria-label="Main menu">
+ <a href="#main-menu-toggle"
+       id="main-menu-close"
+       class="menu-close"
+       aria-label="Close main menu">
+      <span class="sr-only">Close main menu</span>
+      <span class="btn-close" aria-hidden="true">✖</span>
+    </a>
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+    activeListItemClass: "active", 
+    activeKey: eleventyNavigation.key
+}) | safe }}
+</nav>
+<a href="#main-menu-toggle"
+     class="backdrop"
+     tabindex="-1"
+     aria-hidden="true" hidden></a>
+<main>
+<h3 id="title">{{ title }} </h3>
+{{ content | safe }}
+</main>
+<footer>
+<div class="copyright">
+<p>© 2021 Giorgio Maone.</p>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br />
+This work is licensed under a 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+</footer>
+</body>
+</html>
