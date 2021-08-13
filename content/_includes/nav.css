@@ -216,8 +216,10 @@
   
   .main-menu ul > li.active > a {
     transform: scale(1.2);
-    text-shadow: 2px 2px var(--fg-color2);
-    /*box-shadow: 1px 0 var(--fg-color2), -1px 0 var(--fg-color2), 0 -1px var(--fg-color2), 0 0, 0 1px var(--fg-color1);*/
+    text-shadow: 
+      .05em .05em .2em var(--fg-color2),
+      -.05em -.05em .2em var(--fg-color2)
+      ;
   }
   
   #title {
