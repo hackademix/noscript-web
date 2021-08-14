@@ -9,11 +9,11 @@ nav: 2
   NoScript for __Chrome__ and other __Chromium__-based browsers (eg. __Edge__, __Brave__, __Vivaldi__...) from [Chrome's web store][chromelink]
 {class="getfor"}
 
-[mozlink]:https://addons.mozilla.org/en-US/firefox/addon/noscript/ "Get NoScript for Firefox"
+[mozlink]: {{ links.moz }} "Get NoScript for Firefox"
 
-[chromelink]:https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm/ "Get NoScript for Chromium"
+[chromelink]: {{ links.chrome }}} "Get NoScript for Chromium"
 
-* [Source code](https://github.com/hackademix/noscript/)
+* [Source code]({{ links.source }})
 * [Full changelog]({{ "/changelog" | url }})
 
 ##### Direct download (Firefox desktop only)
