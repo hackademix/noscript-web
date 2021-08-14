@@ -21,15 +21,53 @@
   }
 }
 
+.donate {
+  background-color: var(--fg-color2);
+  color: var(--fg-color1);
+  font-size: 6vw;
+  padding: .25em .5em;
+  /*border-radius: .5em */;
+  border: none;
+  font-weight: bold;
+  font-family: "OpenDyslexic", "sans-serif";
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  display: block;
+  box-shadow:
+    inset .05em .05em .1em .05em var(--fg-color1),
+    inset -.05em -.05em .1em .05em var(--fg-color1);
+  transform: none;
+  transition: .5s;
+}
+
+.donate:hover {
+  border: none;
+  box-shadow: none;
+  transform: scale(1.2);
+  transition: .5s;
+}
+
+.donate:before {
+  content: "♥";
+  padding-right: .5em;
+}
+
+@media (min-width: 768px) {
+  .donate {
+    font-size: 2rem;
+  }
+}
+
 
 button.darklight {
   display: none;
   background: transparent;
-  
+
   /* trick to force color to pre-colored emoji */
   color: transparent;
   text-shadow: 0 0 0 var(--fg-color2);
-  
+
   position: absolute;
   bottom: 0;
   left: 0;
@@ -57,12 +95,12 @@ button.darklight {
 
 button.darklight:after {
   content: "🔅";
-} 
+}
 
 body {
   color: var(--text-color);
   background-color: var(--bg-color1);
-  background: linear-gradient(to bottom, var(--bg-color1) 0%, var(--bg-color2) 50%, var(--bg-color1) 100%); 
+  background: linear-gradient(to bottom, var(--bg-color1) 0, var(--bg-color2) 100vh, var(--bg-color1) 100%);
 }
 
 strong {
@@ -94,9 +132,9 @@ main ul {
 }
 
 main ul li::before {
-  content: "➤"; 
+  content: "➤";
   color: var(--fg-color2);
-  display: inline-block; 
+  display: inline-block;
   width: 1.5em;
   margin-left: -1.5em
 }
@@ -105,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "OpenDyslexic", sans-serif;
   font-weight: bold;
   color: var(--fg-color2);
-  padding: .1em 1em .3em 1em;
+  padding: .1em 0 .3em 0;
 }
 
 h1 {
@@ -145,6 +183,7 @@ header {
   background: url("img/NoScript.svg") no-repeat center left;
   position: relative;
   height: 240px;
+  transition: .2s;
 }
 
 header > h1 {
@@ -159,6 +198,7 @@ header > h1 {
     -1px -1px 0 var(--fg-color1),
     1px -1px var(--fg-color1),
     1px 1px var(--fg-color1);
+  transition: .5s;
 }
 
 header > h2 {
@@ -172,6 +212,7 @@ header > h2 {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  transition: .5s;
 }
 
 
@@ -211,6 +252,11 @@ footer {
   clear: both;
 }
 
+#title {
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
 .copyright {
   text-align: center;
   font-size: .8rem;
@@ -218,7 +264,7 @@ footer {
 
 a.screenshot > img {
   width: 50%;
-  min-width: 384px;
+  min-width: 360px;
   float: right;
   margin: .5em;
 }
@@ -245,9 +291,6 @@ a.screenshot > img {
   display: none;
 }
 
-.getfor a {
-  white-space: nowrap;
-}
 .getfor a[class] {
   display: block;
   background: no-repeat center;
