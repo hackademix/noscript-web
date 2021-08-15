@@ -3,11 +3,15 @@ title: Get it!
 nav: 2
 ---
 
-* [Get NoScript for Firefox][mozlink]{class="firefox"}
-  NoScript for __Firefox__ (desktop and __mobile__!), __Tor Browser__ and other __Mozilla__-based browsers from [Mozilla's add-ons portal][mozlink]
-* [Get NoScript for Chromium][chromelink]{class="chromium"} 
-  NoScript for __Chrome__ and other __Chromium__-based browsers (eg. __Edge__, __Brave__, __Vivaldi__...) from [Chrome's web store][chromelink]
-{class="getfor"}
+[[toc]]
+
+### Latest stable
+
+* [Get NoScript for Firefox][mozlink]{.firefox}
+  NoScript for __Firefox__ (desktop and __mobile__!), __Tor Browser__ and other __Mozilla__-based browsers from [Mozilla Add-ons][mozlink]
+* [Get NoScript for Chromium][chromelink]{.chromium}
+  NoScript for __Chrome__ and other __Chromium__-based browsers (eg. __Edge__, __Brave__, __Vivaldi__...) from the [Chrome Web Store][chromelink]
+{.getfor}
 
 [mozlink]: {{ links.moz }} "Get NoScript for Firefox"
 
@@ -16,11 +20,11 @@ nav: 2
 * [Source code]({{ links.source }})
 * [Full changelog]({{ "/changelog" | url }})
 
-##### Direct download (Firefox desktop only)
+### __Direct download__{#direct} for Firefox
 
-You can get the latest stable version for Firefox also using this [**direct download link for NoScript {{ ver.stable }}**](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi)  
+You can get the latest stable version __for Firefox desktop obly__ also using this [__direct NoScript {{ ver.stable }} download link__](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
-````{class="changelog"}
+````{.changelog}
 v 11.2.11
 ============================================================
 x [nscl] Fixed JavaScript access to CSS rules broken on
@@ -45,12 +49,12 @@ Users of Firefox 58 and below are urged to upgrade their very unsafe browser. Fo
 *   [latest NoScript version compatible with Gecko 1.9 - Gecko 12 is 2.9.0.1rc1](https://secure.informaction.com/download/betas/noscript-2.9.0.1rc1.xpi) ([SHA256](betas/noscript-2.9.0.1rc1.xpi.sha256));
 *   [latest NoScript version compatible with Gecko < 1.9 is 1.10](https://secure.informaction.com/download/releases/noscript-1.10.xpi) ([SHA256](releases/noscript-1.10.xpi.sha256)).
 
-#### Development version
+### __Development build__{#dev}
 
-If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want try this ["Quantum" NoScript {{ ver.dev }} development build](https://secure.informaction.com/download/betas/noscript-{{ ver.dev }}.xpi)
+If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want try this [NoScript {{ ver.dev }} development build](https://secure.informaction.com/download/betas/noscript-{{ ver.dev }}.xpi)
 
-Recent development history:  
-````{class="changelog"}
+Recent development history:
+````{.changelog}
 v 11.2.12rc1
 ============================================================
 x [nscl] Reduce the risk to interfere with scripts messing
@@ -89,11 +93,3 @@ x Handle exception when accessing navigator.serviceWorker on
   sandboxed frames
 x MS Edge support
 ````
-
-#### Feedback
-
-If you find something wrong about NoScript, read the [FAQ page](/faq) and/or [let me know](http://maone.net): I'll try to fix it as soon as I can.
-
-You can also discuss about NoScript on this **[Forum](/forum)**.
-
-Have your safest browsing experience!

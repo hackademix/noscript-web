@@ -2,7 +2,7 @@
 title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
-```{class="changelog"}
+```{.changelog}
 v 11.2.11
 ============================================================
 x [nscl] Fixed JavaScript access to CSS rules broken on
