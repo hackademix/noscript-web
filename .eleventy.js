@@ -8,11 +8,15 @@ module.exports = eleventyConfig => {
     const md = require('markdown-it')();
     eleventyConfig.setLibrary('md', md);
 
-    // Allow {class="something"} (mainly for style customization)
-    md.use(require('markdown-it-attrs'), {
-      allowedAttributes: ["class"]
-    })
-
+    {
+      let slugify = x => String(x).trim().replace(/[^\w\s]/g, "").replace(/\s+/g, '-').toLowerCase();
+      // Allow CSS styling through id/class and heading-based TOCs
+      md.use(require('markdown-it-attrs'), {
+        allowedAttributes: ["id", "class"]
+      })
+        .use(require("markdown-it-anchor"), { slugify, permalink: true, permalinkBefore: true, permalinkSymbol: '§' })
+        .use(require("markdown-it-toc-done-right"), { slugify });
+    }
    // Remember old renderer, if overridden, or proxy to default renderer
     let defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
       return self.renderToken(tokens, idx, options);
