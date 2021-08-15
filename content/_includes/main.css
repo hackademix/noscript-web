@@ -26,7 +26,6 @@
   color: var(--fg-color1);
   font-size: 6vw;
   padding: .25em .5em;
-  /*border-radius: .5em */;
   border: none;
   font-weight: bold;
   font-family: "OpenDyslexic", "sans-serif";
@@ -38,14 +37,12 @@
     inset .05em .05em .1em .05em var(--fg-color1),
     inset -.05em -.05em .1em .05em var(--fg-color1);
   transform: none;
-  transition: .5s;
+  transition: transform .5s ease-in-out;
 }
 
 .donate:hover {
   border: none;
-  box-shadow: none;
   transform: scale(1.2);
-  transition: .5s;
 }
 
 .donate:before {
@@ -183,7 +180,7 @@ header {
   background: url("img/NoScript.svg") no-repeat center left;
   position: relative;
   height: 240px;
-  transition: .2s;
+  transition:  background-position-x .5s;
 }
 
 header > h1 {
@@ -198,7 +195,6 @@ header > h1 {
     -1px -1px 0 var(--fg-color1),
     1px -1px var(--fg-color1),
     1px 1px var(--fg-color1);
-  transition: .5s;
 }
 
 header > h2 {
@@ -212,7 +208,7 @@ header > h2 {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  transition: .5s;
+  white-space: nowrap;
 }
 
 
