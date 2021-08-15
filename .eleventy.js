@@ -41,6 +41,13 @@ module.exports = eleventyConfig => {
     };
   }
 
+  eleventyConfig.addShortcode("screenshot",
+    (screenshot, alt, title = alt) => {
+      let url = `/img/screenshots/${screenshot}.jpg`; // TODO: apply the url filter
+      return `[![${alt}](${url})](${url} "${title}"){.screenshot}`;
+    }
+  );
+
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
