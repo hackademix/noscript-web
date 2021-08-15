@@ -98,6 +98,9 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color1);
   background: linear-gradient(to bottom, var(--bg-color1) 0, var(--bg-color2) 100vh, var(--bg-color1) 100%);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 strong {
@@ -124,13 +127,17 @@ pre {
 
 
 main ul {
-  padding: 1em 1em 1em 4em;
-  list-style: "➤ ";
+  padding: 1em 1em 1em 2.5em;
+  list-style: "➤";
 }
 
 main ol {
-  padding: 1em 1em 1em 4em;
+  padding: 1em 1em 1em 2.5em;
   list-style: decimal;
+}
+
+main li {
+  padding: .25em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -141,19 +148,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4em;
-}
-h2 {
   font-size: 3em;
 }
-h3 {
-  font-size: 2.5em;
-}
-h4 {
+h2 {
   font-size: 2em;
 }
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.6em;
+}
 h5 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 h6 {
@@ -250,16 +257,56 @@ footer {
   padding-bottom: 0;
 }
 
+.table-of-contents {
+  font-family: "OpenDyslexic", "sans-serif";
+  font-size: 1.2em;
+}
+
+.table-of-contents ol {
+  list-style-type: '§';
+}
+
+li li {
+  font-size: .95em;
+}
+
 .copyright {
   text-align: center;
   font-size: .8rem;
 }
 
 a.screenshot > img {
-  width: 50%;
-  min-width: 360px;
+  max-width: 50%;
+  min-width: 320px;
   float: right;
-  margin: .5em;
+  margin: .25em;
+}
+
+img.uibtn {
+  width: 1em;
+  height: 1em;
+}
+
+@media (max-width: 640px) {
+  a.screenshot {
+    display: block;
+    text-align: center;
+  }
+  a.screenshot img {
+    clear: both;
+    float: none;
+  }
+}
+
+a.screenshot:hover {
+  border: none;
+}
+
+img.nscl-logo {
+  width: 25%;
+  max-width: 128px;
+  float: left;
+  margin-right: .5em;
 }
 
 .left {

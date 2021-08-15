@@ -31,7 +31,7 @@
   opacity: .7;
   */
   border: none;
-}  
+}
 
 /*
  Default styles + Mobile first
@@ -119,7 +119,7 @@
 .main-menu:target + .backdrop,
 .main-menu[aria-expanded="true"] + .backdrop{
   position: absolute;
-  display: block;  
+  display: block;
   left: 0;
   top: 0;
   width: 100%;
@@ -150,7 +150,7 @@
   {
     display: none;
   }
-  
+
   /* Undo positioning of off-canvas menu */
   .main-menu {
     position: initial;
@@ -159,10 +159,10 @@
 		height: auto;
     display: block;
   }
-  
+
   .main-menu ul {
     display: flex;
-    
+
     /* Undo off-canvas styling */
     padding: 0;
     -webkit-box-shadow: none;
@@ -173,11 +173,11 @@
 
     background-color: var(--bg-color2);
   }
-  
+
   .main-menu a {
     border: 0 !important; /* Remove borders from off-canvas styling */
   }
-  
+
   .main-menu a:hover,
   .main-menu a:focus {
     background: none; /* Remove background from off-canvas styling */
@@ -189,17 +189,17 @@
     margin: auto;
     font-family: "OpenDyslexic", sans-serif;
     font-weight: bold;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
   }
-  
+
   .main-menu ul {
     display: flex;
   }
-  
+
   .main-menu ul > li {
     padding: 0;
   }
-  
+
   .main-menu ul > li > a {
     display: block;
     color: var(--fg-color1);
@@ -213,15 +213,15 @@
   .main-menu ul > li:hover, .main-menu ul > li.active {
     background: var(--fg-color1);
   }
-  
+
   .main-menu ul > li.active > a {
     transform: scale(1.2);
-    text-shadow: 
+    text-shadow:
       .05em .05em .2em var(--fg-color2),
       -.05em -.05em .2em var(--fg-color2)
       ;
   }
-  
+
   #title {
     display: none;
   }
