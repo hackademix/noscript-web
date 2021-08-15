@@ -125,15 +125,12 @@ pre {
 
 main ul {
   padding: 1em 1em 1em 4em;
-  list-style: none;
+  list-style: "➤ ";
 }
 
-main ul li::before {
-  content: "➤";
-  color: var(--fg-color2);
-  display: inline-block;
-  width: 1.5em;
-  margin-left: -1.5em
+main ol {
+  padding: 1em 1em 1em 4em;
+  list-style: decimal;
 }
 
 h1, h2, h3, h4, h5, h6 {
