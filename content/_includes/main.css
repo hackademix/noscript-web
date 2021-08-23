@@ -269,11 +269,12 @@ footer {
 }
 
 .table-of-contents ol {
-  list-style-type: '§';
+  list-style-type: none;
 }
 
-li li {
-  font-size: .95em;
+.table-of-contents li ol {
+  font-size: 90%;
+  padding: 0 0 0 1em;
 }
 
 .copyright {

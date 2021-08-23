@@ -14,7 +14,7 @@ module.exports = eleventyConfig => {
       md.use(require('markdown-it-attrs'), {
         allowedAttributes: ["id", "class"]
       })
-        .use(require("markdown-it-anchor"), { slugify, permalink: true, permalinkBefore: true, permalinkSymbol: '§' })
+        .use(require("markdown-it-anchor"), { slugify })
         .use(require("markdown-it-toc-done-right"), { slugify });
     }
    // Remember old renderer, if overridden, or proxy to default renderer
