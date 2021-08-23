@@ -1,7 +1,8 @@
 :root {
   --content-width: 1000px;
-  font-family: "Linik Sans", sans-serif;
+  font-family: "Linik Sans", "sans-serif";
   font-size: 16px;
+  --logo-font: "Jellee";
 }
 :root, :root[data-theme="dark"] {
   --fg-color1: #d00a25;
@@ -28,9 +29,9 @@
   padding: .25em .5em;
   border: none;
   font-weight: bold;
-  font-family: "OpenDyslexic", "sans-serif";
+  font-family: var(--logo-font), "sans-serif";
   position: absolute;
-  bottom: -2rem;
+  bottom: .5rem;
   right: 0;
   display: block;
   box-shadow:
@@ -141,7 +142,7 @@ main li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "OpenDyslexic", sans-serif;
+  font-family: var(--logo-font), sans-serif;
   font-weight: bold;
   color: var(--fg-color2);
   padding: .1em 0 .3em 0;
@@ -181,13 +182,15 @@ header, main, footer, nav {
 }
 
 header {
-  background: url("img/NoScript.svg") no-repeat center left;
+  background: url("img/noscript-logo-full.svg") no-repeat center left;
+  background-size: contain;
   position: relative;
   height: 240px;
   transition:  background-position-x .5s;
 }
 
 header > h1 {
+  display: none;
   font-size: 150px;
   padding: 0;
   margin: 0 0 0 220px;
@@ -202,16 +205,18 @@ header > h1 {
 }
 
 header > h2 {
-  font-size: 70px;
+  font-size: 60px;
   padding: .1rem;
   margin: 2rem 0 0 11rem;
   background-color: var(--fg-color1);
   color: var(--bg-color2);
-  transform-origin: 0;
-  transform: rotate(-3deg);
+  border: .1em solid var(--bg-color2);
+  padding: .1em;
+  transform-origin: center;
+  transform: rotate(-10deg);
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 1.5em;
+  right: 1.5em;
   white-space: nowrap;
 }
 
@@ -234,8 +239,9 @@ header > h2 {
       0.1vw 0.1vw var(--fg-color1);
   }
   header > h2 {
-    font-size: 7vw;
-    margin-left: 12vw;
+    font-size: 6vw;
+    bottom: 1.8em;
+    right: 1em;
   }
 }
 
@@ -253,12 +259,12 @@ footer {
 }
 
 #title {
-  padding-top: 2rem;
+  padding: .5rem;
   padding-bottom: 0;
 }
 
 .table-of-contents {
-  font-family: "OpenDyslexic", "sans-serif";
+  font-family: var(--logo-font), "sans-serif";
   font-size: 1.2em;
 }
 

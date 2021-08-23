@@ -80,3 +80,9 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Jellee';
+  src: url('fonts/Jellee-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
