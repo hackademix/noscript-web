@@ -22,7 +22,7 @@ nav: 2
 
 ### __Direct download__{#direct} for Firefox
 
-You can get the latest stable version __for Firefox desktop obly__ also using this [__direct NoScript {{ ver.stable }} download link__](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi).
+You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
 ````{.changelog}
 v 11.2.11
