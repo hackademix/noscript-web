@@ -330,26 +330,24 @@ img.nscl-logo {
 .getfor {
   display: flex;
   padding: 0;
-  margin: 0;
+  margin: 0 -.5em;
 }
 
 .getfor li {
   list-style: none;
   text-align: center;
   padding: .5em;
-  margin: .5em;
+  margin: .5em .25em;
   background: var(--bg-color1);
   width: 50%;
 }
-.getfor li::before {
-  display: none;
-}
 
-.getfor a[class] {
+.getfor a {
   display: block;
+}
+.getfor a[class] {
   background: no-repeat center;
   background-size:contain;
-
   height: 128px;
   border: none;
   text-indent: -5000px;
