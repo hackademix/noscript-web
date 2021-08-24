@@ -28,11 +28,12 @@
   font-size: 6vw;
   padding: .25em .5em;
   border: none;
+  border-radius: .5em;
   font-weight: bold;
   font-family: var(--logo-font), "sans-serif";
   position: absolute;
-  bottom: .5rem;
-  right: 0;
+  bottom: .25em;
+  right: .25em;
   display: block;
   box-shadow:
     inset .05em .05em .1em .05em var(--fg-color1),
@@ -112,29 +113,28 @@ em {
 }
 
 p {
-  padding: .5em 1em;
-  margin: .5em;
   font-size: 1em;
   line-height: 1.2em;
+  margin: 1em 0;
   text-align: justify;
 }
 
 pre {
-  padding: .8em 1em;
-  margin: .5em 1.5em;
+  margin: 1em .5em;
+  padding: .5em;
   font-family: 'Hack', 'Lucida Console', 'Courier New', Courier, monospace;
   font-size: .9em;
-  background: var(--bg-color1)
+  background: var(--bg-color1);
 }
 
 
 main ul {
-  padding: 1em 1em 1em 2.5em;
+  padding-left: 1.5em;
   list-style: "➤";
 }
 
 main ol {
-  padding: 1em 1em 1em 2.5em;
+  padding-left: 1.5em;
   list-style: decimal;
 }
 
@@ -146,7 +146,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--logo-font), sans-serif;
   font-weight: bold;
   color: var(--fg-color2);
-  padding: .1rem 0 .5rem 0;
+  padding: .2em 0;
+  margin: .8em 0 0 0;
 }
 
 h1 {
@@ -179,6 +180,7 @@ a:hover {
 
 header, main, footer, nav {
   max-width: var(--content-width);
+  box-sizing: border-box;
   margin: auto;
 }
 
@@ -217,7 +219,7 @@ header > h2 {
   transform: rotate(-10deg);
   position: absolute;
   bottom: 1.5em;
-  right: 1.5em;
+  right: 2em;
   white-space: nowrap;
 }
 
@@ -242,17 +244,16 @@ header > h2 {
   header > h2 {
     font-size: 6vw;
     bottom: 1.8em;
-    right: 1em;
+    right: .8em;
   }
 }
-
-
 
 main {
   border: solid var(--bg-color1);
   border-width: 1px 0 1px 0;
   background-color: var(--bg-color2);
   font-size: 1rem;
+  padding: 1em;
 }
 
 footer {
@@ -260,9 +261,8 @@ footer {
 }
 
 #title {
-  padding: .5rem;
-  padding-bottom: 0;
-  font-size: 2.5rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .table-of-contents {
@@ -272,6 +272,8 @@ footer {
 
 .table-of-contents ol {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .table-of-contents li ol {
@@ -328,7 +330,7 @@ img.nscl-logo {
 .getfor {
   display: flex;
   padding: 0;
-  margin: 1rem;
+  margin: 0;
 }
 
 .getfor li {

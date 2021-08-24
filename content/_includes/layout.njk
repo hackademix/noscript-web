@@ -44,7 +44,7 @@ sitever: 1
       <span class="btn-close" aria-hidden="true">✖</span>
     </a>
 {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
-    activeListItemClass: "active", 
+    activeListItemClass: "active",
     activeKey: eleventyNavigation.key
 }) | safe }}
 </nav>
@@ -53,7 +53,7 @@ sitever: 1
      tabindex="-1"
      aria-hidden="true" hidden></a>
 <main>
-<h3 id="title">{{ title }} </h3>
+<h2 id="title">{{ title }} </h2>
 {{ content | safe }}
 </main>
 <footer>
@@ -63,7 +63,7 @@ sitever: 1
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 <br />
-This work is licensed under a 
+This work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 </p>
 </div>
