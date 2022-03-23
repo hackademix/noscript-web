@@ -4,8 +4,29 @@ const CleanCSS = require("clean-css");
 module.exports = eleventyConfig => {
 
   {
+
+    eleventyConfig.addShortcode("screenshot",
+      (screenshot, alt, title = alt) => {
+        let id =`screen-${screenshot}`
+        let url = `/img/screenshots/${screenshot}`; // TODO: apply the url filter
+        // return `[![${alt}](${url}.jpg)](${url}.png "${title}"){.screenshot}`;
+        return "\n" + `
+        <figure class="screenshot">
+            <a id="${id}" href="#${id}">
+            <img src="${url}.png" alt="${alt}"/>
+            </a>
+            <figcaption>${title}</figcaption>
+            <a class="ss-closer" href="#${id}-closed"></a>
+        </figure>
+        `.replace(/\s+/g, ' ') + "\n";
+      }
+    );
+
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    eleventyConfig.addShortcode("ts", () => `${Date.now()}`);
+
     // Markdown renderer customization
-    const md = require('markdown-it')();
+    const md = require('markdown-it')({html: true});
     eleventyConfig.setLibrary('md', md);
 
     {
@@ -15,14 +36,15 @@ module.exports = eleventyConfig => {
         allowedAttributes: ["id", "class"]
       })
         .use(require("markdown-it-anchor"), { slugify })
-        .use(require("markdown-it-toc-done-right"), { slugify });
+        .use(require("markdown-it-toc-done-right"), { slugify })
+        .use(require('markdown-it-container'), 'box');
     }
    // Remember old renderer, if overridden, or proxy to default renderer
     let defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
       return self.renderToken(tokens, idx, options);
     };
 
-     const isExternalURL = url => /https?:\/\/(?!noscript\.net(?:\/|$))/.test(url);
+    const isExternalURL = url => /https?:\/\/(?!noscript\.net(?:\/|$))/.test(url);
 
     md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
       let token = tokens[idx];
@@ -41,20 +63,14 @@ module.exports = eleventyConfig => {
     };
   }
 
-  eleventyConfig.addShortcode("screenshot",
-    (screenshot, alt, title = alt) => {
-      let url = `/img/screenshots/${screenshot}.jpg`; // TODO: apply the url filter
-      return `[![${alt}](${url})](${url} "${title}"){.screenshot}`;
-    }
-  );
-
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
   // configure passthrugh copy directories
   ["img", "css", "fonts", "js",
-    {"favicon": "/"},
+    {"srv": "/" }, // server side script
+    {"favicon": "/"}, // top-level icons and logo
   ].forEach(dir => eleventyConfig.addPassthroughCopy(dir));
 
   // take all the sources from the content directory

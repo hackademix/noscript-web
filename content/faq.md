@@ -26,4 +26,4 @@ This should happen only if you're browsing in a Private/Incognito window (or you
 
 #### Is there any way to __donate__{ #faq-donate } different than Paypal?
 
-Yes. If you prefer not to [donate via Paypal](https://noscript.net/donate), you can [send bitcoins](bitcoin:1Kupnx5isBdAJ5ki2BEVF6sBuYmkYigWPU) or [write the author](https://maone.net) to arrange for a wire transfer.
+Yes, definitely. If you prefer not to [donate via Paypal](https://noscript.net/donate) ([USD]({{links.donate}}?c=USD) / [EUR]({{links.donate}}?c=EUR)), you can __send Bitcoins__ ([{{links.donateBTC}}]({{links.donateBTC}})) or [write the author](https://maone.net) to arrange for a wire transfer.

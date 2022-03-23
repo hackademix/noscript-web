@@ -3,27 +3,27 @@
     let rules = s.cssRules;
     for (let j = 0, len = rules.length; j < len; j++) {
       let rule = rules[j];
+      if (rule.styleSheet && patchSheet(rule.styleSheet)) {
+        return true;
+      }
       if (rule.conditionText !== "(prefers-color-scheme: light)") continue;
       for (let r of rule.cssRules) {
-        if (r.selectorText === ":root") {
-          s.insertRule(`:root[data-theme="light"] {${r.style.cssText}}`, j);
-          return true;
-        }
+        s.insertRule(`${r.selectorText}[data-theme="light"] {${r.style.cssText}}`, j);
       }
-      break;
+      return true;
     }
     return false;
   }
 
-  let patched = false;
   let patchAll = () => {
     for (let s of document.styleSheets) {
-      if (patched = patchSheet(s)) break;
+      if (patchSheet(s)) return true;
     }
+    return false;
   }
 
-  patchAll();
-  if (!patched) {
+  if (!patchAll()) {
+    console.error("Couldn't patch sheets while loading, deferring to onload");
     let onload = e => {
       if (patchAll()) {
         removeEventListener(e.type, onload, true);
@@ -31,13 +31,14 @@
     }
     addEventListener("load", onload, true);
   }
-
+}
+// TODO: split me
+{
   let prefers = theme => matchMedia(`(prefers-color-scheme: ${theme})`).matches;
   const THEME_KEY = "darklight.theme";
   const root = document.documentElement;
   root.dataset.theme = localStorage.getItem(THEME_KEY) || (prefers("light") ? "light" : "dark");
   document.addEventListener("DOMContentLoaded", () => {
-    if (!patched) patchAll();
     let toggle = document.querySelector(".darklight");
     toggle.style.display = "block";
     toggle.removeAttribute("aria-hidden");

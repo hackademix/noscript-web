@@ -171,8 +171,6 @@
             box-shadow: none;
     height: auto;
     width: auto;
-
-    background-color: var(--bg-color2);
   }
 
   .main-menu a {
@@ -185,8 +183,7 @@
   }
 
   .main-menu {
-    border-bottom: 1px solid var(--fg-color1);
-    background-color: var(--bg-color2);
+    background: linear-gradient(var(--bg-color2), var(--bg-color1), var(--bg-color2));
     margin: auto;
     font-weight: bold;
     font-size: 1.2rem;
@@ -194,6 +191,7 @@
 
   .main-menu ul {
     display: flex;
+    background: transparent;
   }
 
   .main-menu ul > li {
@@ -202,16 +200,16 @@
 
   .main-menu ul > li > a {
     display: block;
-    color: var(--fg-color1);
+    color: var(--accent-color);
     padding: 1rem;
   }
   .main-menu ul > li > a:hover, .main-menu ul > li.active a {
     color: var(--bg-color2);
-    border: 0;
   }
 
   .main-menu ul > li:hover, .main-menu ul > li.active {
-    background: var(--fg-color1);
+    background-color: var(--accent-color);
+    background: linear-gradient(transparent, var(--accent-color), transparent);
   }
 
   .main-menu ul > li.active > a {

@@ -3,6 +3,526 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.1
+============================================================
+x Support for reverting to the "Vintage Blue" style
+  (NoScript Options/Appearance)
+x Various tweaks to the "Moder Red" dark and light themes
+
+v 11.4.1rc5
+============================================================
+x Higher fidelity "Vintage Blue" theme
+x Removed missing stylesheet reference
+x More resilient CSS patching
+x Further tone down vintage icon brightness in dark mode
+x [L10n] Updated ru
+
+v 11.4.1rc4
+============================================================
+x Open the appearance page for users to configure their
+  preferred visual theme on upgrade from 11.4.1rc3 and below
+x Support for focusing and/or highlighting elements when
+  opening the options page
+x Fixed confusing theme application until a choice is made
+x Dynamic size adjustments on theme changes
+x Focus indicator for on/off switches
+x Icon sizes adjustments (thanks barbaz)
+x Fixed UI in private windows always inheriting the fallback
+  browser color scheme until explicitly set (thanks
+  @mumboking for report)
+x More explanatory text for the Modern Red / Vintage Blue
+  switch
+
+v 11.4.1rc3
+============================================================
+x Cross-theme visual tweaks
+x More robust fallback for private windows (thanks
+  @mumboking for reporting)
+
+v 11.4.1rc2
+============================================================
+x Fix status icon not always synchronized with
+  vintage/modern setting
+
+v 11.4.1rc1
+============================================================
+x Support for reverting to the "Vintage Blue" style
+  (NoScript Options/Appearance)
+
+v 11.4
+============================================================
+x Visual refresh based on Simply Secure concept artwork
+x Full Dark/Light color schemes support
+x [l10n] Many languages updates
+x Include ServiceWorker-initiated fetch requests in UI
+  reporting (thanks 0_o for report)
+x Remove redundant style patching
+x Prompts can be closed by keyboard: Enter emulates the
+  default button click, Escape the cancel action
+x Ensure better visibility for in-popup message box
+x Sticky toolbar and scrollable fixed-height content in
+  browserAction popups
+x [XSS] Automatically reload page when clearing XSS choice
+  from popup
+x [XSS] Enable "Clear XSS Choices" button only if some item
+  is selected
+x Remember last active tab when opening the option window
+x Avoid useless reload if no actual change has happened in
+  enforcement status
+x Fix for regression: request and execution attempts not
+  being reported anymore in the UI if restrictions are
+  disabled (thanks Stefan Mey for report)
+x Dark mode support
+x Improved high contrast layout
+x Fixed automatic reload not always triggered for CUSTOM
+  tweakings
+x More consistent cross-browser widgets
+x Partial status indicator on the left of the icon, to
+  accommodate Chromium's badge position
+x Make focus hint less elusive for needed capability widgets
+x More accurate blocking stats
+
+v 11.4rc5
+============================================================
+x Fix breakage when dom.storage.enabled is set to false
+  (thanks DJ-Leith for report)
+x [l10n] Many languages updates
+
+v 11.4rc3
+============================================================
+x Include ServiceWorker-initiated fetch requests in UI
+  reporting (thanks 0_o for report)
+x Remove redundant style patching
+
+v 11.4rc2
+============================================================
+x Prompts can be closed by keyboard: Enter emulates the
+  default button click, Escape the cancel action
+x Improved light/dark schemes support
+
+v 11.4rc1
+============================================================
+x Dark/Light/Auto theme switcher in Appearance options panel
+x Ensure better visibility for in-popup message box
+
+v 11.3.8rc6
+============================================================
+x Sticky toolbar and scrollable fixed-height content in
+  browserAction popups
+x Remove debug statements
+x Use currentWindow instead of lastFocusedWindow to
+  initialize browserAction and its surrogate windows
+x [XSS] Automatically reload page when clearing XSS choice
+  from popup
+x [XSS] Enable "Clear XSS Choices" button only if some item
+  is selected
+x More visual tweaks
+
+v 11.3.8rc5
+============================================================
+x Remember last active tab when opening the option window
+x More visual/theming tweaks
+x Avoid useless reload if no actual change has happened in
+  enforcement status
+
+v 11.3.8rc4
+============================================================
+x Apply preferred theme to media placeholders
+x Fix for regression: request and execution attempts not
+  being reported anymore in the UI if restrictions are
+  disabled (thanks Stefan Mey for report)
+x Dark and light themes refinements
+
+v 11.3.8rc3
+============================================================
+x Dark mode support
+x Improved high contrast layout
+x Fixed undefined lastInput on tab key
+x Fixed automatic reload not always triggered for CUSTOM
+  tweakings
+
+v 11.3.8rc2
+============================================================
+x [L10n] Updated zh_TW
+x More consistent cross-browser widgets
+x Fix placeholder close button shadow
+x Fix blurry icons on Chromium
+x Partial status indicator on the left of the icon, to
+  accommodate Chromium's badge position
+
+v 11.3.8rc1
+============================================================
+x Make focus hint less elusive for needed capability widgets
+x Align capabilities on the vertical center
+x Improve buttons and tabs appearance
+x Visual refresh based on Simply Secure concept artwork
+x More accurate blocking stats
+
+v 11.3.7
+============================================================
+x Always avoid DNS resolution when a HTTP(S) proxy is used
+  (thanks nojake for reporting)
+
+v 11.3.6
+============================================================
+x Make high contrast and draggable toolbar items mutually
+  exclusive
+x [Chromium] Fix high contrast option not working
+x Avoid flashing empty graveyard on popup opening
+x More deterministic DnD placeholder creation
+x [L10n] Updated fr, es, nl, zh_CN
+x Make disabled buttons draggable and hidden enabled buttons
+  interactive when the "graveyard" is open
+x Close UI and reload immediately when enabling global/tab
+  restrictions or disabling them for the tab only
+
+v 11.3.6rc5
+============================================================
+x Make high contrast and draggable toolbar items mutually
+  exclusive
+x [Chromium] Fix high contrast option not working
+
+v 11.3.6rc4
+============================================================
+x Avoid flashing empty graveyard on popup opening
+
+v 11.3.6rc3
+============================================================
+x More deterministic DnD placeholder creation
+x [L10n] Updated fr
+
+v 11.3.6rc2
+============================================================
+x [L10n] Updated es
+x Make disabled buttons draggable and hidden enabled buttons
+  interactive when the "graveyard" is open
+
+v 11.3.6rc1
+============================================================
+x Close UI and reload immediately when enabling global/tab
+  restrictions or disabling them for the tab only
+x [L10n] Updated nl, zh_CN
+
+v 11.3.5
+============================================================
+x [L10n] Updated de, mk, ru, sq, tr
+x Fix regressions in draggable toolbar buttons
+x [Android] Better styling for icon buttons in message box
+
+v 11.3.5rc2
+============================================================
+x [L10n] Updated de, mk, ru, sq, tr
+
+v 11.3.5rc1
+============================================================
+x Fix regressions in draggable toolbar buttons
+x [Android] Better styling for icon buttons in message box
+
+v 11.3.4
+============================================================
+x Avoid closing the customizer on arrow up key context
+  selection change (thanks barbaz for reporting)
+x Prominently warn user whenever restrictions are disabled
+x Better accessibility and styling for popup global buttons
+x [L10n] Updated de
+x Fix for contextual permissions display inconsistencies in
+  options panel (thanks barbaz for reporting)
+
+v 11.3.4rc2
+============================================================
+x Avoid closing the customizer on arrow up key context
+  selection change (thanks barbaz for reporting)
+x Prominently warn user whenever restrictions are disabled
+x Support icon buttons elsewhere in the UI (e.g. in the
+  messagebox)
+x Support for selectively hiding messages
+x Support for extra UI in the popup's message box
+x Prevent popup closure and automatic reload when
+  restrictions are disabled for the tab or globally
+x Use a 5 seconds timeout to remotely fetch HTML events
+  source
+x Better accessibility and styling for popup global buttons
+
+v 11.3.4rc1
+============================================================
+x [L10n] Updated de
+x Fix for contextual permissions display inconsistencies in
+  options panel (thanks barbaz for reporting)
+
+v 11.3.3
+============================================================
+x [Android] Improved CUSTOM panel portrait layout
+x Play nice with  the Viewhance extension
+x Avoid synchronous fetching for remote embedding documents
+x Fixed typo in UI context dropdown initial selection
+x Fixed wrong label for http: sites in contextual policy UI
+  (thanks barbaz for reporting)
+x Fix for first party context policy ignored on first load
+  in new tabs (thanks ayi for reporting)
+x Consolidate best effort policy fetching
+x Use correct context for all subresources checks (thanks
+  user72 for reporting)
+  queries on Firefox (thanks vexity for reporting)
+x [L10n] Updated de, es, he
+
+v 11.3.3rc6
+============================================================
+x [Android] Improved CUSTOM panel portrait layout
+x [L10n] Updated de, he
+
+v 11.3.3rc5
+============================================================
+x Play nice with  the Viewhance extension
+x Avoid synchronous fetching for remote embedding documents
+x Fixed typo in UI context dropdown initial selection
+
+v 11.3.3rc4
+============================================================
+x Fixed wrong label for http: sites in contextual policy UI
+  (thanks barbaz for reporting)
+x Fix for first party context policy ignored on first load
+  in new tabs (thanks ayi for reporting)
+
+v 11.3.3rc3
+============================================================
+x Consolidate best effort policy fetching
+
+v 11.3.3rc2
+============================================================
+x Use correct context for all subresources checks (thanks
+  user72 for reporting)
+
+v 11.3.3rc1
+============================================================
+x Prevent LAN protection from performing unnecessary DNS
+  queries on Firefox (thanks vexity for reporting)
+x [L10n] Updated de, es
+
+v 11.3.2
+============================================================
+x Prevent LAN protection from breaking webRequest blocking
+  on the Tor Browser (thanks TorBrowserUser for reporting)
+
+v 11.3.1
+============================================================
+x Ensure onBeforeRequest is always synchronous on Chromium
+x Remove dns permission for Chromium, since the asynchronous
+  API is useless in synchronous webRequest
+x Fix regression: CUSTOM UI broken on Gecko 77 and below
+x Localized reset button
+x [nscl] Fix for null origin URL objects breaking Sites
+  parser (thanks kinet1k for reporting)
+x [L10n] Updated translations
+
+v 11.3.1rc3
+============================================================
+x Ensure onBeforeRequest is always synchronous on Chromium
+x Remove dns permission for Chromium, since the asynchronous
+  API is useless in synchronous webRequest
+
+v 11.3.1rc2
+============================================================
+x Fix regression: CUSTOM UI broken on Gecko 77 and below
+
+v 11.3.1rc1
+============================================================
+x Localized reset button
+x [nscl] Fix for null origin URL objects breaking Sites
+  parser (thanks kinet1k for reporting)
+x [L10n] Updated bn, br, ca, da, de, el, es, fr, he, is, it,
+  ja, lt, mk, ms, nb, nl, pl, pt_BR, ru, sq, sv_SE, tr,
+  zh_CN, zh_TW
+
+v 11.3
+============================================================
++ LAN capability to check for cross-zone WAN to LAN requests
+  (thanks barbaz for ABE webext contributions)
++ Contextual policies (different capabilities for the same
+  origin, depending on the top-level domain) configurable in
+  the CUSTOM panel (thanks NLnet for financial support)
+
+v 11.3rc4
+============================================================
+x Automatically persist contextual policy on creation and
+  use animation to convey it being a new instance
+x [L10n] Updated de, fr, it, nb_NO, nl, ru, sq, tr, zh_CN
+
+v 11.3rc3
+============================================================
+x [LAN] check origin for all the DNS records to be local in
+  order to mitigate DNS rebinding attacks
+x [nscl] SyncMessage, fix for about:blank being reported as
+  the tab URL sometimes on Chromium
+
+v 11.3rc2
+============================================================
+x LAN capability to check for cross-zone WAN to LAN requests
+  (thanks barbaz for ABE webext contributions)
+x Support contextual policies in permission updates
+
+v 11.3rc1
+============================================================
++ Contextual policies (different capabilities for the same
+  origin, depending on the top-level domain) configurable in
+  the CUSTOM panel (thanks NLnet for financial support)
+
+v 11.2.25
+============================================================
+x More robust policy fetching
+x [Firefox] Fix regression causing file:// policy not to be
+  correctly enforced sometimes
+
+v 11.2.25rc2
+============================================================
+x More robust policy fetching
+
+v 11.2.25rc1
+============================================================
+x [Firefox] Fix regression causing file:// policy not to be
+  correctly enforced sometimes
+
+v 11.2.24
+============================================================
+x [nscl] Avoid unnecessary window patching
+
+v 11.2.23
+============================================================
+x [nscl] Fix rare breakages due to xray cloning
+
+v 11.2.22
+============================================================
+x Parallel sync/async for best effort policy fetching under
+  any circumstance
+
+v 11.2.21
+============================================================
+x Better fallback for failing syncMessage
+x [XSS] Simplified preemptive name sanitization
+
+v 11.2.20
+============================================================
+x [L10n] Updated de
+x [XSS] Fix false positive warning when "name" is in the
+  query string (thanks John Shield / DuckDuckGo for
+  reporting)
+
+v 11.2.19
+============================================================
+x [XSS] Faster invalidCharsRx initialization on Gecko 78 and
+  above
+x [XSS] More resilient name handling
+x [nscl] Use HTTPS SyncMessage endpoint for Chromium too
+  (works around lack of file access by default on packed
+  extensions breaking NoScript)
+
+v 11.2.16
+============================================================
+x Fallback to synchronous policy fetching if the document is
+  already loaded (e.g. on updates)
+x [XSS] Interactive testing made a bit easier
+x [nscl] Mitigate side effects of dead objects on patched
+  windows during extension updates
+x [XSS] Fix false positive on Microsoft authentication
+  (thanks GrK and Hanna_Payne for reporting)
+x [nscl] Work-around for object element initialization
+  inconsistencies on Firefox (thanks skriptimaahinen for
+  reporting)
+x [L10n] Updated fr
+x Better support for service workers in unrestricted modes
+  (thanks Mark McVeigh for reporting)
+
+v 11.2.16rc5
+============================================================
+x Fallback to syncrhonous policy fetching if the document is
+  already loaded (e.g. on updates)
+x [XSS] Interactive testing made a bit easier
+
+v 11.2.16rc4
+============================================================
+x [nscl] Mitigate side effects of dead objects on patched
+  windows during extension updates
+
+v 11.2.16rc3
+============================================================
+x [XSS] Fix false positive on Microsoft authentication
+  (thanks GrK and Hanna_Payne for reporting)
+
+v 11.2.16rc2
+============================================================
+x [nscl] Work-around for object element initialization
+  inconsistencies on Firefox (thanks skriptimaahinen for
+  reporting)
+
+v 11.2.16rc1
+============================================================
+x [L10n] Updated fr
+x Better support for service workers in unrestricted modes
+  (thanks Mark McVeigh for reporting)
+
+v 11.2.15
+============================================================
+x [Android] Work-around for Firefox "forgetting" tabs
+x [nscl] Improved cross-frame auto-patching
+
+v 11.2.14
+============================================================
+x [nscl] Updated SyncMessage fixes conflict with other
+  content blockers (thanks gwarser, barbaz and Baraoic)
+x [XSS] Tweaked risky operator check prevents false positive
+  on outbound Twitter navigation (thanks @muchtypo for
+  reporting)
+x [XSS] Better logging for JS fragment detection
+x [XSS] Fixed performance regression in invalid character
+  ranges generation causing random XSS "DOS" false positives
+x Fetch policy for baseURI if document.domain is empty
+x [L10n] Updated ja, lt, pl, ru, zh_CN
+x Always fetch policy synchronously, if missing
+x Fixed undetermined status icon on BF cache page loads
+x [nscl] Fix webgl blocking regression due to xray wrappers
+  confusion (thanks skriptimaahinen)
+x [nscl] Prevent unnecessary breakages on pages inspecting
+  canvas.getContext when webgl is disabled
+x [nscl] Reduce the risk to interfere with scripts messing
+  with the media attribute (issue #207)
+
+v 11.2.12rc6
+============================================================
+x [XSS] Fixed regression causing "too much recursion" false
+  positives (thanks barbaz for report)
+x [XSS] Precomputed invalid identifier chars regular
+  expression
+
+v 11.2.12rc5
+============================================================
+x [XSS] Tweaked risky operator check prevents false positive
+  on outbound Twitter navigation (thanks @muchtypo for
+  reporting)
+x [XSS] Better logging for JS fragment detection
+x [XSS] Fixed performance regression in invalid character
+  ranges generation causing random XSS "DOS" false positives
+x Fetch policy for baseURI if document.domain is empty
+
+v 11.2.12rc4
+============================================================
+x [L10n] Updated ja, lt, pl, ru, zh_CN
+x Always fetch policy synchronously, if missing
+x Fixed undetermined status icon on BF cache page loads
+
+v 11.2.12rc3
+============================================================
+x [nscl] Fix webgl blocking regression due to xray wrappers
+  confusion (thanks skriptimaahinen)
+
+v 11.2.12rc2
+============================================================
+x [nscl] Prevent unnecessary breakages on pages inspecting
+  canvas.getContext when webgl is disabled
+
+v 11.2.12rc1
+============================================================
+x [nscl] Reduce the risk to interfere with scripts messing
+  with the media attribute (issue #207)
+
 v 11.2.11
 ============================================================
 x [nscl] Fixed JavaScript access to CSS rules broken on

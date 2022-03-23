@@ -2,5 +2,10 @@
   "source": "https://github.com/hackademix/noscript/",
   "moz": "https://addons.mozilla.org/en-US/firefox/addon/noscript/",
   "chrome":"https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm/",
-  "nscl_source": "https://github.com/hackademix/nscl/"
+  "nscl_source": "https://github.com/hackademix/nscl/",
+  "nlnet": "https://nlnet.nl",
+  "ngi0": "https://nlnet.nl/NGI0/",
+  "ndi": "https://www.ndi.org/",
+  "otf": "https://opentech.fund",
+  "donate": "/donate",
 }

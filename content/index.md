@@ -5,7 +5,9 @@ nav: 1
 
 The __NoScript Security Suite__ is Free Open Source Software (FOSS) providing extra protection for [Firefox]({{ links.moz }}) (on Android, too!), [Chrome]({{ links.chrome }}), Edge, Brave
 and other web browsers. [__Install NoScript now!__]({{ "/getit" | url }})
-[![Screenshot of NoScript blocking by default several 3rd party scripts at CNN.com][screenshot]][screenshot]{.screenshot}
+
+
+{% screenshot "home", "Working with trust levels in NoScript's popup UI", "NoScript in action" %}
 
 NoScript is a built-in key security component of the [__Tor Browser__](https://torproject.org), the top anonymity tool defending millions against surveillance and censorship.
 
@@ -22,5 +24,3 @@ Experts* will agree: __the web is really safer with NoScript!__
 
 \* _experts endorsing NoScript, among others: __Edward Snowden__ (former CIA analyst and whistleblower against surveillance state); __Window Snyder__ (former "Chief Security Something or Other" at Mozilla); __Douglas Crockford__ (Javascript expert and creator of the JSON format); the [__Sans Internet Storm Center__](https://isc.sans.edu/)_
 
-
-[screenshot]: {{"/img/screenshots/home.jpg" | url}} "NoScript in action"
