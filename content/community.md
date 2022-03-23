@@ -32,6 +32,11 @@ If you are a developer wishing to [fix an issue][issues], to contribute new code
 1. [__NoScript__ (front-end) source code repository]({{links.source}})
 2. [__NoScript Commons Library__ source code repository][nscl]
 
+### Translations
+
+NoScript is currently localized in 28 languages, and this website is in the process to be made easier to localize, too.
+If you wish to help translate NoScript in your language, please use [__this Transifex instance__](https://www.transifex.com/otf/noscript/) generously offered by the [Open Technology Fund][otf].
+
 ### Funding
 Specific  NoScript development efforts have been generously supported by the [__Open Technology Fund__][otf], the [__National Democratic Institute__][ndi], the [__NLNet Foundation__][nlnet] and other institutions which value privacy, security and digital rights for everyone.
 ::: box {.funds}

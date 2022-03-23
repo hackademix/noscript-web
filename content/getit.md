@@ -25,93 +25,113 @@ nav: 2
 You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
 ````{.changelog}
-v 11.4.1
+v 11.4.3
 ============================================================
-x Support for reverting to the "Vintage Blue" style
-  (NoScript Options/Appearance)
-x Various tweaks to the "Moder Red" dark and light themes
-
-v 11.4
-============================================================
-x Visual refresh based on Simply Secure concept artwork
-x Full Dark/Light color schemes support
-x [l10n] Many languages updates
-x Include ServiceWorker-initiated fetch requests in UI
-  reporting (thanks 0_o for report)
-x Remove redundant style patching
-x Prompts can be closed by keyboard: Enter emulates the
-  default button click, Escape the cancel action
-x Ensure better visibility for in-popup message box
-x Sticky toolbar and scrollable fixed-height content in
-  browserAction popups
-x [XSS] Automatically reload page when clearing XSS choice
-  from popup
-x [XSS] Enable "Clear XSS Choices" button only if some item
-  is selected
-x Remember last active tab when opening the option window
-x Avoid useless reload if no actual change has happened in
-  enforcement status
-x Fix for regression: request and execution attempts not
-  being reported anymore in the UI if restrictions are
-  disabled (thanks Stefan Mey for report)
-x Dark mode support
-x Improved high contrast layout
-x Fixed automatic reload not always triggered for CUSTOM
-  tweakings
-x More consistent cross-browser widgets
-x Partial status indicator on the left of the icon, to
-  accommodate Chromium's badge position
-x Make focus hint less elusive for needed capability widgets
-x More accurate blocking stats
+x Reversed colors in Modern Red permissive icons for better
+  contrast
+x Fixed regression causing only signed builds to complete
 
 ````
 ### __Development build__{#devel}
 
-If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want try this [__NoScript {{ ver.dev }} release candidate__]( https://github.com/hackademix/noscript/releases/tag/{{ ver.dev }}).
+NoScript development happens very fast to keep up with emerging web threats.
+If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want to try the latest release candidate.
 
-On Firefox only, you can [__install NoScript {{ ver.dev }} by simply clicking here__](https://secure.informaction.com/download/betas/noscript-{{ ver.dev }}.xpi).
+#### RC for Firefox
 
-Recent development history:
+[__Install NoScript {{ ver.dev }} on Firefox Desktop by simply clicking here__](https://secure.informaction.com/download/betas/noscript-{{ ver.dev }}.xpi).
+
+On Firefox for Android, unfortunately, a pre-release can only be downloaded (same link as above) and temporarily installed on Nightly by using the [web-ext tool](https://github.com/mozilla/web-ext), which is only suitable for hardcore developers and contributors.
+
+#### RC for Chromium
+
+You can [__Download NoScript {{ ver.dev }} for Chromium-based browsers here__](https://secure.informaction.com/download/betas/noscript-{{ ver.dev }}-chrome.zip).
+
+In order to install this pre-release until the next stable version reaches the Chrome Store, you need to unzip it and load it as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked) in developer mode.
+
+Please follow these steps:
+
+1. Open the Extension Management page by navigating to chrome://extensions.
+   Alternatively, open this page by clicking on the Extensions menu button and selecting Manage Extensions at the bottom of the menu.
+   Alternatively, open this page by clicking on the Chrome menu, hovering over More Tools then selecting Extensions
+2. Enable _Developer Mode_ by clicking the toggle switch next to Developer mode.
+3. Unzip the zipped "noscript-{{ver.dev}}-chrome.zip" package to a directory of your choice.
+4. Click the [Load unpacked] button and select the extension directory you've unzipped the extension to (the one containing the "manifest.json" file)
+
+You're done. Happy testing!
+
+
+#### Recent development history
 ````{.changelog}
-v 11.4.1rc5
+v 11.4.4rc1
 ============================================================
-x Higher fidelity "Vintage Blue" theme
-x Removed missing stylesheet reference
-x More resilient CSS patching
-x Further tone down vintage icon brightness in dark mode
-x [L10n] Updated ru
+x [L10n] Updated mk
+x Removed "clearclick" item from default settings
+x Better layout for mixed status icons
 
-v 11.4.1rc4
+v 11.4.3rc1
 ============================================================
-x Open the appearance page for users to configure their
-  preferred visual theme on upgrade from 11.4.1rc3 and below
-x Support for focusing and/or highlighting elements when
-  opening the options page
-x Fixed confusing theme application until a choice is made
-x Dynamic size adjustments on theme changes
-x Focus indicator for on/off switches
-x Icon sizes adjustments (thanks barbaz)
-x Fixed UI in private windows always inheriting the fallback
-  browser color scheme until explicitly set (thanks
-  @mumboking for report)
-x More explanatory text for the Modern Red / Vintage Blue
-  switch
+x Reversed colors in Modern Red permissive icons for better
+  contrast
+x Fixed regression causing only signed builds to complete
 
-v 11.4.1rc3
+v 11.4.2rc8
 ============================================================
-x Cross-theme visual tweaks
-x More robust fallback for private windows (thanks
-  @mumboking for reporting)
+x Slight color tweakings
+x Auto-deploy after Chromium package is ready
 
-v 11.4.1rc2
+v 11.4.2rc7
 ============================================================
-x Fix status icon not always synchronized with
-  vintage/modern setting
+x Dark scheme for high contrast toolbar buttons (issue #142)
+x [Android] Preset size tweakings
+x Reduce toolbar unused space
+x Better contrast for "unsafe" URL labels
+x [L10n] Updated es, fr
+x Cleaner and more definite checked preset layout
+x Less blurry focus halo
 
-v 11.4.1rc1
+v 11.4.2rc6
 ============================================================
-x Support for reverting to the "Vintage Blue" style
-  (NoScript Options/Appearance)
+x [L10n] Updated de
+x [l10n] Updated pt_BR (thanks @DavidBrazSan)
+x Removed eyes from default disabled and unrestricted small
+  icons
+x Improved preset label positioning
+
+v 11.4.2rc5
+============================================================
+x [L10n] Updated ru, tr, zh_CN
+x Improved visual cues for selected presets (issue #235,
+  thanks @unsungNovelty for report)
+x [Android] Fixed regression: preset labels not correctly
+  sized in landscape mode
+x Fixed regression removing hover effect from toolbar
+  buttons
+
+v 11.4.2rc4
+============================================================
+x Improved layout
+x More balanced Modern Red icon set
+x [L10n] Updated de, nl, ru, sq, tr
+
+v 11.4.2rc3
+============================================================
+x Move XSS options down one line
+x New "Enable restrictions on browser restart" option
+x [L10n] Updated de, nl, zh_CN
+
+v 11.4.2rc2
+============================================================
+x Localizable Modern Red / Vintage Blue switch.
+x [L10n] Updated de, is.
+
+v 11.4.2rc1
+============================================================
+x Minor cross-theme visual tweakings
+x Override dark vintage theme brightness filter on images
+  for important UX cues
+x Fix too wide CSS scope bleeding into page style (issue
+  #232, thanks SuperPat45 for report)
 ````
 
 ### Deprecated, obsolete and unsupported "Classic" versions

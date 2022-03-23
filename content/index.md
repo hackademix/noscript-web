@@ -16,7 +16,7 @@ This browser extension allows JavaScript and other potentially __harmful content
 NoScript also provides the most powerful __anti-XSS protection__ ever available in a browser.
 
 NoScript's unique __pre-emptive script blocking__ approach prevents exploitation of security vulnerabilities (known, such as Meltdown or Spectre, and even not known yet!) with __no functionality loss__:
-you can enable JavaScript and other dynamic capabilities for __sites you trust__ with a simple [left-click on the NoScript icon]({{ "/features" | url }}).
+you can enable JavaScript and other dynamic capabilities for __sites you trust__ with a simple [left-click on the NoScript icon]({{ "/usage" | url }}).
 
 Staying __safe__ has never been so __easy__!
 

@@ -70,7 +70,7 @@
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #383838;
-  font-family: var(--logo-font), "Comic Sans MS", "Comic Sans", cursive;
+  font-family: var(--logo-font);
 }
 
 .main-menu li:first-child a {

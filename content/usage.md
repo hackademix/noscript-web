@@ -99,3 +99,7 @@ Shift+T         Disable restrictions on this tab
 P               Set all on this page to Temp. TRUSTED
 F               Forget temporary permissions
 ````
+### User-contributed guides
+
+* [A guide to using NoScript 10.x](https://blog.jeaye.com/2017/11/30/noscript/)
+* [A basic guide to NoScript 10](https://noscript.net/forum/?t=23974)

@@ -3,6 +3,38 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.3
+============================================================
+x Reversed colors in Modern Red permissive icons for better
+  contrast
+x Fixed regression causing only signed builds to complete
+
+v 11.4.2
+============================================================
+x Dark scheme for high contrast toolbar buttons (issue #142)
+x Reduce toolbar unused space
+x Better contrast for "unsafe" URL labels
+x Cleaner and more definite checked preset layout
+x Less blurry focus halo
+x [l10n] Updated pt_BR (thanks @DavidBrazSan)
+x Removed eyes from default disabled and unrestricted small
+  icons
+x Improved preset label positioning
+x Improved visual cues for selected presets (issue #235,
+  thanks @unsungNovelty for report)
+x Fixed regression removing hover effect from toolbar
+  buttons
+x More balanced Modern Red icon set
+x [L10n] Updated de, es, fr is, nl, ru, sq, tr, zh_CN
+x Move XSS options down one line
+x New "Enable restrictions on browser restart" option
+x Localizable Modern Red / Vintage Blue switch.
+x Minor cross-theme visual tweakings
+x Override dark vintage theme brightness filter on images
+  for important UX cues
+x Fix too wide CSS scope bleeding into page style (thanks
+  SuperPat45 for report)
+
 v 11.4.1
 ============================================================
 x Support for reverting to the "Vintage Blue" style
