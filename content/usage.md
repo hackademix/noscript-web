@@ -29,13 +29,14 @@ After installation, you can quickly access NoScript:
 ### Trust levels
 
 By using NoScript's popup UI you can assign any website or sub-resource origin (e.g. "cnn.com" or "ads-twitter.com") either one of __4 preset trust levels__ or a __per-site customized level__.
-{% screenshot "trust-levels", "Working with trust levels in NoScript's popup UI" %}
-- __DEFAULT__, as the name implies, is the fallback low trust level which NoScript automatically enforces on any not yet configured website. This way unknown sites you visit for the first time are unable to perform any harmful action against you.
-- __Temp. TRUSTED__ is the high trust level you can assign to sites requiring JavaScript or other active (and potentially harmful) capabilities to be enabled in order to work. **_Temp._** stands for "Temporarily", meaning that the trust level for this site gets reset to __DEFAULT__ as soon as the browser is closed or if you use the _Revoke Temporary Permissions_ ![Revoke Temporary Permissions]( {{ "/img/ui/ui-revoke-temp64.png" | url }}){.uibtn} button. This is the preferred way to tentatively enable sites which you need to work just now but you're unlikely to visit every day.
-You can also assign this level to all the sites you _currently_ listed in the popup UI by using the _Set all on this page to Temporarily TRUSTED_ ![Set all on this page to Temporarily TRUSTED]( {{ "/img/ui/ui-temp-all64.png" | url }}){.uibtn} button.
-- __TRUSTED__ is the permanent high trust level, enabling JavaScript and other active capabilities and persisting across browser restarts: use it only for sites which you really trust and use frequently.
-- __UNTRUSTED__ is the zero-trust level, which blocks every capability (including rendering of plain HTML frames and alternate &lt;noscript&gt; content). It may be useful to flag sites which are definitely not welcome in your browser.
-- __CUSTOM__ is a special level which can be tailored specifically for each site by turning on and off individual capabilities, such as _script_, _object_, _media_, _frame_, _font_, _webgl_, _fetch_, _ping_, _noscript_, _unrestricted CSS_, _other_. Capabilities which the site has tried to use, being blocked by NoScript, are highlighted in red. The temporary/permanent behavior of this level is controlled by a tiny clock-shaped toggle.
+{% screenshot "trust-levels", "Working with trust levels in NoScript's popup" %}
+- {% ui-icon "no", "__DEFAULT__", true %}, as the name implies, is the fallback low trust level which NoScript automatically enforces on any not yet configured website. This way unknown sites you visit for the first time are unable to perform any harmful action against you.
+- {% ui-icon "temp", "__Temp. TRUSTED__", true %} is the high trust level you can assign to sites requiring JavaScript or other active (and potentially harmful) capabilities to be enabled in order to work. **_Temp._** stands for "Temporarily", meaning that the trust level for this site gets reset to __DEFAULT__ as soon as the browser is closed or if you use the {% ui-icon "revoke-temp", "_Revoke Temporary Permissions_" %} button. This is the preferred way to tentatively enable sites which you need to work just now but you're unlikely to visit every day.
+You can also assign this level to all the sites you _currently_ listed in the popup UI by using
+the {% ui-icon "temp-all", "_Set all on this page to Temporarily TRUSTED_" %}  button.
+- {% ui-icon "yes", "__TRUSTED__" ,true %} is the permanent high trust level, enabling JavaScript and other active capabilities and persisting across browser restarts: use it only for sites which you really trust and use frequently.
+- {% ui-icon "black", "__UNTRUSTED__" , true %} is the zero-trust level, which blocks every capability (including rendering of plain HTML frames and alternate &lt;noscript&gt; content). It may be useful to flag sites which are definitely not welcome in your browser.
+- {% ui-icon "custom" "__CUSTOM__", true %} is a special level which can be tailored specifically for each site by turning on and off individual capabilities, such as _script_, _object_, _media_, _frame_, _font_, _webgl_, _fetch_, _ping_, _noscript_, _unrestricted CSS_, _other_. Capabilities which the site has tried to use, being blocked by NoScript, are highlighted in red. The temporary/permanent behavior of this level is controlled by a tiny clock-shaped toggle.
 
 #### Contextual Policies
 {% screenshot "contextual", "Example: contextual policy for Twitter embedded timeline" %}
@@ -76,9 +77,9 @@ Sometimes you are in a hurry on a complex workflow, spanning multiple redirectio
 
 One example may be a credit card payment, bouncing from an e-commerce site to one or more payment processor web services.
 
-In this case you may want to temporarily relax all the restrictions normally enforced by NoScript for all the sites loaded in the current tab until said tab is closed, by using the __Disable restrictions for this tab__  ![Disable restriction for this tab]( {{ "/img/ui/ui-tab64.png" | url }}){.uibtn} button.
+In this case you may want to temporarily relax all the restrictions normally enforced by NoScript for all the sites loaded in the current tab until said tab is closed, by using the {% ui-icon "tab", "__Disable restrictions for this tab__" %}  button.
 
-More radical (and __not__ recommended) is the __Disable restrictions globally (dangerous)__ ![Disable restrictions globally (dangerous)]( {{ "/img/ui/ui-global64.png" | url }}){.uibtn} button: using it amounts to disabling NoScripts permanently on any site/tab, keeping enabled the XSS filter only. Don't do it!
+More radical (and __not__ recommended) is the {% ui-icon "global", "__Disable restrictions globally (dangerous)__" %} button: using it amounts to disabling NoScripts permanently on any site/tab, keeping enabled the XSS filter only. Don't do it!
 
 ### Keyboard Shortcuts
 You can open and navigate all the NoScript UI by using the following keyboard shortcuts:

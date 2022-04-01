@@ -22,6 +22,14 @@ module.exports = eleventyConfig => {
       }
     );
 
+    eleventyConfig.addShortcode("ui-icon", (name, text = name, imageFirst = false) => {
+      let url = `/img/ui/ui-${name}64.png`;
+      alt = text.replace(/\b_+|_+\b/, '') + " icon";
+      let clazz = "{.ui-icon}";
+      if (imageFirst) clazz += "{.first}";
+      let image = `![${alt}](${url})${clazz}`
+      return imageFirst ? image + text : text + image;
+    });
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     eleventyConfig.addShortcode("ts", () => `${Date.now()}`);
 

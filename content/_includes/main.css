@@ -456,9 +456,10 @@ figcaption {
   cursor: zoom-out;
 }
 
-img.uibtn {
+img.ui-icon {
   height: 1.2em;
   vertical-align: text-bottom;
+  margin: 0 .5em 0 .5em;
 }
 
 img.nscl-logo {
