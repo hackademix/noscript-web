@@ -58,7 +58,7 @@ Even though this is not recommended, power users may customize also the built-in
 
 #### LAN Protection{.subh}
 
-Simply put, the LAN capability lets documents coming from the public Internet (AKA World Area Network / WAN) to link / send requests to hosts inside your Local Area Network (LAN), which is pretty what they can do now, allowing so called cross-zone CSRF/XSS attacks.
+Simply put, the LAN capability lets documents coming from the public Internet (AKA World Area Network / WAN) to link / send requests to hosts inside your Local Area Network (LAN), which is pretty much what they can do now, allowing so called cross-zone CSRF/XSS attacks.
 By keeping it disabled (the factory setting in the DEFAULT and UNTRUSTED presets), you're replicating this feature from "Classic" NoScript, without the hassle of going through ABE's firewall-like rules when you need to set an exception, which now is just a matter of checking the LAN capability box.
 
 ### Per-site preferences editor
