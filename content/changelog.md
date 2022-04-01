@@ -3,6 +3,12 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.4
+============================================================
+x [L10n] Updated mk
+x Removed "clearclick" item from default settings
+x Better layout for mixed status icons
+
 v 11.4.3
 ============================================================
 x Reversed colors in Modern Red permissive icons for better

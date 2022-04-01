@@ -25,11 +25,11 @@ nav: 2
 You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__](https://secure.informaction.com/download/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
 ````{.changelog}
-v 11.4.3
+v 11.4.4rc1
 ============================================================
-x Reversed colors in Modern Red permissive icons for better
-  contrast
-x Fixed regression causing only signed builds to complete
+x [L10n] Updated mk
+x Removed "clearclick" item from default settings
+x Better layout for mixed status icons
 
 ````
 ### __Development build__{#devel}
