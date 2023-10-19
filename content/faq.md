@@ -26,6 +26,10 @@ This is expected __only for per-site customizations__ and only if you're browsin
 
 Another reason why NoScript's and other extensions' settings may get wiped off is __some "privacy" software messing with the browser's storage__, like already [happened in the past with CCleaner](https://hackademix.net/2020/08/05/ccleaner-wiping-out-firefox-extensions-data-expected-fix-work-around/) and others: if you find that's the case, please let [us]({{ "/forum" | url }}) and the software's maker know.
 
+### Usage
+#### __Why does "Set all on this page to temporarily TRUSTED" need to be repeated sometimes?__{ #faq-temp-all-repeated }
+The {% ui-icon "temp-all", "__Set all on this page to temporarily TRUSTED__" %} command affects all the active content sources which are _currently_ present in the page. If some of the scripts that you've just allowed in the first pass loads new active content resources from different sites not seen yet, you will need to issue the command again for those items which are still set to DEFAULT.
+
 ### Contributing
 
 #### Is there any way to __donate__{ #faq-donate } different than Paypal?

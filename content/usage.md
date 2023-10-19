@@ -63,7 +63,7 @@ Simply put, the LAN capability lets documents coming from the public Internet (A
 By keeping it disabled (the factory setting in the DEFAULT and UNTRUSTED presets), you're replicating this feature from "Classic" NoScript, without the hassle of going through ABE's firewall-like rules when you need to set an exception, which now is just a matter of checking the LAN capability box.
 
 ### Per-site preferences editor
-{% screenshot "per-site-prefs", "Configuring per-site permissions" %}
+{% screenshot "per-site-prefs", "Configuring per-site permissions (light scheme)" %}
 You usually assign trust levels on the fly to the current site and its sub-resources from the popup UI.
 
 But you may also want to assign a different trust level to a site you've previously configured, or to configure new sites without actually visiting them.
@@ -80,6 +80,22 @@ One example may be a credit card payment, bouncing from an e-commerce site to on
 In this case you may want to temporarily relax all the restrictions normally enforced by NoScript for all the sites loaded in the current tab until said tab is closed, by using the {% ui-icon "tab", "__Disable restrictions for this tab__" %}  button.
 
 More radical (and __not__ recommended) is the {% ui-icon "global", "__Disable restrictions globally (dangerous)__" %} button: using it amounts to disabling NoScripts permanently on any site/tab, keeping enabled the XSS filter only. Don't do it!
+
+### Cross-site protections
+NoScript provides also protection mechanisms independent from core script blocking: most notably, its __XSS Filter__ and __Cross-tab Identity Leak Protection__
+
+#### XSS Filter
+{% screenshot "xss-warning", "NoScript's XSS warning dialog" %}
+NoScript's __XSS filter__ (also known as "Injection Checker") has been the first one and always the most effective available in a web browser.
+It prevents requests originating from a certain (possibly malicious) web site from injecting and executing code in a different web site, an attack known [as Cross-Site Scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting). When a suspicious request is detected, a warning dialog is shown for the user to block or allow it, either temporarily or permanently.
+Exception can be managed from _NoScript Options>Advanced>XSS_
+
+
+#### Cross-tab Identity Leak Protection
+NoScript's __Cross-tab Identity Leak Protection__ (or "TabGuard") is an experimental countermeasure against the [Targeted Deanonymization via the Cache Side Channel](https://leakuidatorplusteam.github.io/) attack by Mojtaba Zaheri, Yossi Oren and Reza Curtmola, presented at [Usenix Security in August 2022](https://www.usenix.org/conference/usenixsecurity22/presentation/zaheri).
+{% screenshot "tabguard-warning", "NoScript's Potential Identity Leak dialog" %}
+It is loosely inspired by the Leakuidator+ browser extension proposed by the authors as a defense, but it's designed to better integrate with Firefox and the Tor Browser and provide protection against variants of the attack not covered yet. When triggered, i.e. on cross-site requests across related tabs, TabGuard removes the authentication headers from the request and shows a red `TG`{.badge} badge near its icon. If you're unexpectedly logged out from a website loaded in a new tab and you can see this badge, you just need to _manually_ reload the page or follow any link, and the authorization will be automatically restored. Only in the rare occurrence of cross-tab cross-site POST requests, which might not be consistently replayed after the fact, TabGuard suspends the load with a warning to provide users with the ability to either "Load anonymously" (preventing the attack but also logging out from the target site) or "Load normally", which may be required by some legitimate cross-site workflows such as online payments, single sign-on and 3rd party authentication systems.
+This protection is enabled by default on any Private Browsing window (and therefore in the Tor Browser), but can be disabled or enabled globally from the _NoScript Options>Advanced_ panel.
 
 ### Keyboard Shortcuts
 You can open and navigate all the NoScript UI by using the following keyboard shortcuts:
@@ -104,3 +120,12 @@ F               Forget temporary permissions
 
 * [A guide to using NoScript 10.x](https://blog.jeaye.com/2017/11/30/noscript/)
 * [A basic guide to NoScript 10](https://noscript.net/forum/?t=23974)
+
+### Limitations on Chromium
+The API exposed by Chromium to browser extension is not as powerful and flexible as its Mozilla-developed counterpart.
+This is already true in Manifest V2, and [gets much worse with Manifest V3](https://www.eff.org/deeplinks/2021/12/googles-manifest-v3-still-hurts-privacy-security-innovation), especially hurting privacy and security innovation.
+Therefore, even if NoScript is compatible with most browsers, some of its most advanced features are available only on Firefox and its derivatives, such as the [Tor Browser](https://torproject.org).
+In details, these are the current limitations imposed to NoScript by Chromium-based browsers such as Google Chrome, Edge or Vivaldi:
+* __The Injection Checker XSS filter is disabled__ because there's no asynchronous blocking webRequest API
+* __The Cross-tab Identity Leak Protection (TabGuard) is unavailable__ (same reason as above)
+* __The LAN protection works for numeric IPs but cannot resolve domain names__ (no DNS API)

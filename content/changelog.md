@@ -3,6 +3,552 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.28
+============================================================
+x Prevent URL leaks from media placeholders (thanks NDevTK
+  for report)
+x [nscl] Support for in-tree TLDs updates
+
+v 11.4.28rc2
+============================================================
+x Remove replaceAsync() dependency on
+  String.prototype.matchAll()
+
+v 11.4.28rc1
+============================================================
+x Prevent URL leaks from media placeholders (thanks NDevTK
+  for report)
+x [nscl] Support for in-tree TLDs updates
+
+v 11.4.27
+============================================================
+x [XSS] Better specificity of HTML elements preliminary
+  checks
+x [XSS] Better specificity of potential fragmented injection
+  through framework syntax detection (thanks Rom623, barbaz
+  et al)
+x [nscl] RegExp.combo(): RegExp creation by combination for
+  better readability and comments
+x [nscl] Replaced lib/sha256.js with web platform native
+  implementation (thanks Martin for suggested patch)
+x [nscl] Fixed property/function mismatch (thanks Alex)
+x Fixed operators precedence issue #312 (thanks Alex)
+x [nscl] Prevent dead object access on BF cache (thanks
+  jamhubub and mriehm)
+
+v 11.4.27rc3
+============================================================
+x [XSS] Better specificity of HTML elements preliminary
+  checks
+
+v 11.4.27rc2
+============================================================
+x [XSS] Better specificity of potential fragmented injection
+  through framework syntax detection (thanks Rom623, barbaz
+  et al)
+x [nscl] RegExp.combo(): RegExp creation by combination for
+  better readability and comments
+
+v 11.4.27rc1
+============================================================
+x [nscl] Replaced lib/sha256.js with web platform native
+  implementation (thanks Martin for suggested patch)
+x [nscl] Fixed property/function mismatch (thanks Alex)
+x Fixed operators precedence issue #312 (thanks Alex)
+x [nscl] Prevent dead object access on BF cache (thanks
+  jamhubub and mriehm)
+
+v 11.4.26
+============================================================
+x [Android] Fixed regression preventing NoScript prompts
+  from being shown
+x [XSS] Fallback to execute most demanding regular
+  expressions asynchronously
+x [XSS] Removed obsolete Flash-related checks
+x [XSS] Make InjectionChecker's regular expressions easier
+  to debug
+x [XSS] Updated OpenID regexp
+
+v 11.4.26rc2
+============================================================
+x [Android] Fixed regression preventing NoScript prompts
+  from being shown
+
+v 11.4.26rc1
+============================================================
+x [XSS] Fallback to execute most demanding regular
+  expressions asynchronously
+x [XSS] Removed obsolete Flash-related checks
+x [XSS] Make InjectionChecker's regular expressions easier
+  to debug
+x [XSS] Updated OpenID regexp
+
+v 11.4.25
+============================================================
+x Reload extension on fatal failures
+x [Android] Fixed UI styling regression
+x Fixed UI inconsistencies when finer-grained contextual
+  policies are created/imported by other means (thanks
+  barbaz for reporting)
+
+v 11.4.25rc2
+============================================================
+x Reload extension on fatal failures
+x [Android] Fixed UI styling regression
+
+v 11.4.25rc1
+============================================================
+x Fixed UI inconsistencies when finer-grained contextual
+  policies are created/imported by other means (thanks
+  barbaz for reporting)
+
+v 11.4.24
+============================================================
+x [XSS] Fix Base64 hash checks interfering with query string
+  checks (thanks barbaz for reporting)
+x [TabGuard] Stop exempting domains bidirectionally by
+  default
+x [TabGuard] Fix destination domain being reported as the
+  trigger of a warning prompt when all the other tab-tied
+  domains have been exempted (thanks barbaz for report)
+
+v 11.4.24rc2
+============================================================
+x [XSS] Fix Base64 hash checks interfering with query string
+  checks (thanks barbaz for reporting)
+
+v 11.4.24rc1
+============================================================
+x [TabGuard] Stop exempting domains bidirectionally by
+  default
+x [TabGuard] Fix destination domain being reported as the
+  trigger of a warning prompt when all the other tab-tied
+  domains have been exempted (thanks barbaz for report)
+
+v 11.4.23
+============================================================
+x [TabGuard] Exclude non-scriptable content types from
+  suspects
+x [TabGuard] Check for chains of about:blank puppet tabs
+x Mirror NoScript's badge content in the context menu to
+  provide more info (e.g. on XSS or TG status) whenever the
+  toolbar icon is hidden
+x [TabGuard] Short circuit requests in non-anonymized tabs
+x [TabGuard] Decouple tab ties cutting from one-shot
+  authorized loads cases for same-site navigation
+x [TabGuard] Load with credentials when reloading from
+  NoScript's UI
+x [TabGuard] "TG" badge on the NoScript icon when the
+  selected tab is anonymized
+x [TabGuard] Cut ties and restore authorization info on
+  manual reloads
+x [TabGuard] Remove Set-Cookie headers from anonymized
+  requests to prevent unreversible authorization loss
+x [TabGuard] Keep track of anonymized requests
+x [TabGuard] Keep track of anonymized tabs
+x [TabGuard] Fix "never prompt" option's label not being
+  clickable
+x [TabGuard] Introduce prompt granularity options (default:
+  prompt only on POST requests)
+x Removed invalid CSS
+x Avoid unnecessary prompt resizing
+x Prevent focus-related console warning when opening prompts
+
+v 11.4.23rc5
+============================================================
+x [TabGuard] Exclude non-scriptable content types from
+  suspects
+x [TabGuard] Check for chains of about:blank puppet tabs
+
+v 11.4.23rc4
+============================================================
+x Mirror NoScript's badge content in the context menu to
+  provide more info (e.g. on XSS or TG status) whenever the
+  toolbar icon is hidden
+
+v 11.4.23rc3
+============================================================
+x [TabGuard] Short circuit requests in non-anonymized tabs
+x [TabGuard] Decouple tab ties cutting from one-shot
+  authorized loads cases for same-site navigation
+
+v 11.4.23rc2
+============================================================
+x [TabGuard] Load with credentials when reloading from
+  NoScript's UI
+x [TabGuard] "TG" badge on the NoScript icon when the
+  selected tab is anonymized
+x [TabGuard] Cut ties and restore authorization info on
+  manual reloads
+x [TabGuard] Remove Set-Cookie headers from anonymized
+  requests to prevent unreversible authorization loss
+x [TabGuard] Keep track of anonymized requests
+x [TabGuard] Keep track of anonymized tabs
+x [TabGuard] Fix "never prompt" option's label not being
+  clickable
+
+v 11.4.23rc1
+============================================================
+x [TabGuard] Introduce prompt granularity options (default:
+  prompt only on POST requests)
+x Removed invalid CSS
+x Avoid unnecessary prompt resizing
+x Prevent focus-related console warning when opening prompts
+
+
+v 11.4.22
+============================================================
+x [L10n] Updated uk
+x Consistently apply DEFAULT policy to top-level data: URLs
+
+v 11.4.21
+============================================================
+x Fixed mislabeled Tor Browser settings override option
+x [L10n] Updated mk
+
+v 11.4.21rc2
+============================================================
+x Better label formatting for Tor Browser overriding options
+
+v 11.4.21rc1
+============================================================
+x Fixed mislabeled Tor Browser settings override option
+x [L10n] Updated mk
+
+v 11.4.20
+============================================================
+x Generalized prompt safety hooks
+x Better blob: URL support
+
+v 11.4.19
+============================================================
+x [nscl] Improved cross-window patch cascading
+x [nscl] Avoid unneeded side effects when checking for
+  zombie patched objects
+x [nscl] Prompt safety hooks
+x [L10n] Updated fr, fi
+x Fix font family typo (!283, thanks alex-kinokon)
+
+v 11.4.19rc3
+============================================================
+x [nscl] Improved cross-window patch cascading
+
+v 11.4.19rc2
+============================================================
+x [nscl] Avoid unneeded side effects when checking for
+  zombie patched objects
+
+v 11.4.19rc1
+============================================================
+x [nscl] Prompt safety hooks
+x [L10n] Updated fi
+x [L10n] Updated fr
+x Fix font family typo (!283, thanks alex-kinokon)
+
+v 11.4.18
+============================================================
+x [Firefox on Linux] Fixed detached window UI gets closed
+  when its decoration is clicked (thanks richard for
+  reporting)
+
+v 11.4.17
+============================================================
+x [nscl] Settings persistence made more reliable and
+  resilient against sync storage unavailability
+x [Windows] Changed the tab enforcement toggling shortcut to
+  "Alt+Shift+Comma" (still "Alt+Shift+Space" on desktop OSes
+  other than Windows) - issue #281
+x Updated copyright year
+x Removed unused files from the source tree
+x Fixed "Firefox" being shown instead of "Tor Browser" in
+  the Security Level override option label
+x [L10n] Updated pl, tr
+
+v 11.4.17rc2
+============================================================
+x [nscl] Fixed rc1 regression erasing big policies from sync
+  storage (thanks Dwedit and mkupper for reporting)
+
+v 11.4.17rc1
+============================================================
+x [Windows] Changed the tab enforcement toggling shortcut to
+  "Alt+Shift+Comma" (still "Alt+Shift+Space" on desktop OSes
+  other than Windows) - issue #281
+x Updated copyright year
+x Settings persistence made more reliable and resilient
+  against sync storage unavailability
+x Removed unused files from the source tree
+x Fixed "Firefox" being shown instead of "Tor Browser" in
+  the Security Level override option label
+x [L10n] Updated pl, tr
+
+v 11.4.16
+============================================================
+x [L10n] Updated de, nl, pl, ru, sq, zh_CN
+x Always open the windowed standalone UI when invoked from
+  the Alt+Shift+N shortcut
+x Alt+Shift+Space shortcut to toggle restrictions
+  enforcement for current tab (issue #129, thanks PF4Public
+  for RFE)
+
+v 11.4.16rc2
+============================================================
+x [L10n] Updated de, nl, pl, ru, sq, zh_CN
+
+v 11.4.16rc1
+============================================================
+x Always open the windowed standalone UI when invoked from
+  the Alt+Shift+N shortcut
+x Alt+Shift+Space shortcut to toggle restrictions
+  enforcement for current tab (issue #129, thanks PF4Public
+  for RFE)
+
+v 11.4.15
+============================================================
+x Use the actual browser's brand name for Tor Browser
+  derivatives
+x Always open the windowed standalone UI when invoked from
+  the contextual menu (thanks ZeroUnderscoreOu for
+  reporting)
+
+v 11.4.15rc2
+============================================================
+x Use the actual browser's brand name for Tor Browser
+  derivatives
+
+v 11.4.15rc1
+============================================================
+x Always open the windowed standalone UI when invoked from
+  the contextual menu (thanks ZeroUnderscoreOu for
+  reporting)
+
+v 11.4.14
+============================================================
+x Updated HTML event attributes list
+x Uniformed indexed directory Firefox UI emulation to
+  prevent a script blocking bypass on file:// resources
+  (thanks RyotaK for reporting)
+x Fixed error being logged in the console on scriptless
+  pages when hitting [Delete] or [Backspace] (thanks barbaz
+  for reporting)
+x Work-around for background page misteriously being
+  unloaded sometimes by Firefox
+x [L10n] Updated Transifex configuration
+
+v 11.4.14rc2
+============================================================
+x Updated HTML event attributes list
+x Uniformed indexed directory Firefox UI emulation to
+  prevent a script blocking bypass on file:// resources
+  (thanks RyotaK for reporting)
+x Fixed error being logged in the console on scriptless
+  pages when hitting [Delete] or [Backspace] (thanks barbaz
+  for reporting)
+
+v 11.4.14rc1
+============================================================
+x Work-around for background page misteriously being
+  unloaded sometimes by Firefox
+x [L10n] Updated Transifex configuration
+
+v 11.4.13
+============================================================
+x Ensure theme changes are synchronized across windows,
+  including private ones (thanks barbaz for reporting)
+x [UI] Ensure prompts are always centered relative to the
+  parent window in multi-monitors setups
+x Switch to "Modern Red Evil" icon contributed by fatboy
+x Work-around for Chromium unable to load the placeholder
+  icon
+x Themed placeholders
+x [nscl] Fixed placeholder fallback styles on Gecko
+  embedding documents
+x [L10n] New Romanian (ro) locale (thanks Simona Iacob and
+  Inpresentia I.)
+
+v 11.4.13rc4
+============================================================
+x Ensure theme changes are synchronized across windows,
+  including private ones (thanks barbaz for reporting)
+x Work-around for window position not always changing on
+  first update() call
+
+v 11.4.13rc3
+============================================================
+x Fixed private windows always falling back to Vintage Blue
+  theme (thanks barbaz for report)
+x Fixed prompts's vertical centering altered by
+  fit-to-content algorithm error (thanks barbaz for report)
+
+v 11.4.13rc2
+============================================================
+x [UI] Ensure prompts are always centered relative to the
+  parent window in multi-monitors setups
+x Improved Chromium placeholder icon work-around
+
+v 11.4.13rc1
+============================================================
+x Switch to "Modern Red Evil" icon contributed by fatboy
+x Work-around for Chromium unable to load the placeholder
+  icon
+x Themed placeholders
+x [nscl] Fixed placeholder fallback styles on Gecko
+  embedding documents
+x [L10n] New Romanian (ro) locale (thanks Simona Iacob and
+  Inpresentia I.)
+v 11.4.12
+============================================================
+x [L10n] Updated is, mk
+x [L10n] New Finnish (fi) locale (thanks RJuho, olavinto and
+  ricky.tigg)
+x [L10n] New Ukrainian (uk) locale (thanks Kataphan, MuS and
+  uniss)
+x [L10n] New Persian (fa) locale (thanks voxp and magnifico)
+
+v 11.4.11
+============================================================
+x Fix broken NoScript dialogs when
+  browser.privatebrowsing.autostart = true (issue#259,
+  thanks foenix for reporting)
+x Avoid using fallback origins for main_frame loads
+
+v 11.4.11rc2
+============================================================
+x Fix broken NoScript dialogs when
+  browser.privatebrowsing.autostart = true (issue#259,
+  thanks foenix for reporting)
+
+v 11.4.11rc1
+============================================================
+x Avoid using fallback origins for main_frame loads
+
+v 11.4.10
+============================================================
+x [TabTies] Cascade and merge ties in a shared pool, to
+  prevent them from being cut by closing a middle tab
+  (thanks NDevTK for reporting)
+x Extended origin normalization to top-level documents
+  (thanks NDevTK for reporting)
+x [TabGuard] Fixed regression in about:blank handling
+  (thanks NDevTK for reporting)
+x Better origin guess for requests from sandboxed iframes
+  (thanks NDevTK for reporting)
+x More precise tracking of implicit origins in tab URLs
+x [nscl] Stricter criteria for cutting tab relations (thanks
+  NDevTK for reporting)
+x Use window.origin when fetching policies for inheriting
+  special URLs (thanks NDevTK for reporting)
+x Better build script compatibility
+
+v 11.4.10rc3
+============================================================
+x [TabTies] Cascade and merge ties in a shared pool, to
+  prevent them from being cut by closing a middle tab
+  (thanks NDevTK for reporting)
+
+v 11.4.10rc2
+============================================================
+x Extended origin normalization to top-level documents
+  (thanks NDevTK for reporting)
+x [TabGuard] Fixed regression in about:blank handling
+  (thanks NDevTK for reporting)
+
+v 11.4.10rc1
+============================================================
+x Better origin guess for requests from sandboxed iframes
+  (thanks NDevTK for reporting)
+x More precise tracking of implicit origins in tab URLs
+x [nscl] Stricter criteria for cutting tab relations (thanks
+  NDevTK for reporting)
+x Use window.origin when fetching policies for inheriting
+  special URLs (thanks NDevTK for reporting)
+x Better build script compatibility
+v 11.4.9
+============================================================
+x [L10n] Updated pl, tr, zh_CN
+x [TabGuard] Abort the load when the warning dialog is
+  closed by any mean except the OK button
+x [TabGuard] Stricter criteria for cutting tab relations
+  (thanks fatboy for reporting)
+
+v 11.4.8
+============================================================
+x Cross-tab identity leak protection ("TabGuard", see
+  tor-browser#41071, thanks barbaz and fatboy for testing)
+x [TabGuard] Better request lifecycle management
+x [L10n] Updated de, it, nl, ru, sq
+x [l10n] Automatic pull for 100% completed translations only
+
+v 11.4.8rc5
+============================================================
+x [TabGuard] Avoid infinite redirection loops
+
+v 11.4.8rc4
+============================================================
+x [TabGuard] Better request lifecycle management
+x [L10n] Updated it
+
+v 11.4.8rc3
+============================================================
+x [TabGuard] Improved specificity + some bug fixes (thanks
+  barbaz and fatboy)
+x [TabGuard] Move "forget" button in its own line
+x [L10n] Updated de, nl, ru, sq
+x [l10n] Automatic pull for 100% completed translations only
+
+v 11.4.8rc2
+============================================================
+x [TabGuard] Better management of subrequests in undecided
+  tabs
+
+v 11.4.8rc1
+============================================================
+x Cross-tab identity leak protection (tor-browser#41071)
+
+v 11.4.7
+============================================================
+x [XSS] Fixed regression in invalid characters optimization
+  causing false negatives (thanks Tsubasa for reporting)
+x Minor build script enhancement
+
+v 11.4.6
+============================================================
+x [nscl] Copy NOSCRIPT elements' attribute in emulated
+  replacements (issue #238)
+x [XSS] Correct for concurrency in timeout checks
+x [UI] Flatter preset appearance
+x [UI] Focus visual feedback adjustments
+x Inclusion-time TLD updates
+x Updated HTML events
+x [L10n] Updated pl
+x Opaque white for vintage lock icons
+x [L10n] Updated is
+
+v 11.4.6rc2
+============================================================
+x [nscl] Copy NOSCRIPT elements' attribute in emulated
+  replacements (issue #238)
+
+v 11.4.6rc1
+============================================================
+x [XSS] Correct for concurrency in timeout checks
+x [UI] Flatter preset appearance
+x [UI] Focus visual feedback adjustments
+x Inclusion-time TLD updates
+x Updated HTML events
+x [L10n] Updated pl
+x Opaque white for vintage lock icons
+x [L10n] Updated is
+
+v 11.4.5
+============================================================
+x Improved preset sizing
+x Reduce toolbar bottom shaded line tickness
+x [L10n] Updated he
+x Various user-driven visual tweaks
+x Fixed vintage icon brightness in automatic light mode
+x Minor icon tweaks
+
 v 11.4.4
 ============================================================
 x [L10n] Updated mk

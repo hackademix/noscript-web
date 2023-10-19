@@ -3,12 +3,13 @@
   font-family: "Linik Sans", "sans-serif";
   font-size: 16px;
   --logo-font: "Jellee", cursive;
+  --logo-red: #d12027;
   scroll-behavior: smooth;
 }
 
 .__NoScript_ThemeWeb__, .__NoScript_ThemeWeb__[data-theme="dark"] {
   color-scheme: dark;
-  --accent-color: #d12027;
+  --accent-color: #ff4850;
   --fg-color1: #b1b0b6;
   --fg-color2: #fff;
   --text-color: #ddd;
@@ -27,6 +28,7 @@
 @media (prefers-color-scheme: light) {
   .__NoScript_ThemeWeb__ {
     color-scheme: light;
+    --accent-color: var(--logo-red);
     --fg-color1: #555;
     --fg-color2: #000;
     --text-color: #333;
@@ -64,9 +66,9 @@
   opacity: 1;
 }
 
-.donate {
-  color: var(--hilite-color);
-  text-shadow: var(--fg-color2) .05em 0em 0.05em;
+.donate, .donate:visited {
+  color: var(--fg-color2);
+  text-shadow: var(--logo-red) .05em 0em 0.05em;
   font-size: 6vw;
   padding: 1em;
   border: none;
@@ -90,6 +92,7 @@
 .donate:before {
   content: "♥";
   padding-right: .1em;
+  color: var(--logo-red);
 }
 
 .donated .donate {
@@ -266,7 +269,8 @@ header {
 }
 
 header > h1 {
-  display: none;
+  position: absolute;
+  text-indent: -5000px;
   font-size: 150px;
   padding: 0;
   margin: 0 0 0 220px;
@@ -526,4 +530,12 @@ img.nscl-logo {
 
 .funds img {
   width: 100%;
+}
+
+.badge {
+  background: #800;
+  color: white;
+  font-weight: bold;
+  border-radius: .3em;
+  display: inline-block;
 }
