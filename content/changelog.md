@@ -3,6 +3,52 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.29
+============================================================
+x [nscl] Updated TLDs
+x [nscl] Improved reliability of TLD updater
+x Removed theme.js console noise
+x Fix beta channel updates breakage due to
+  browser_specific_settings override
+x [nscl] Several content-side performance improvements
+x Reduce synchronous policy retrieval impact on file: and
+  ftp: document loading performance
+x More commands for which a keyboard shortcut can be
+  configured
+x [L10n] Updated de, fi, mk, nl, pl, ru, sq, tr, uk,
+  pt_BR, zh_CN, zh_TW
+x Explicit Android compatibility declaration
+
+v 11.4.29rc5
+============================================================
+x [nscl] Improved reliability of TLD updater
+
+v 11.4.29rc4
+============================================================
+x [nscl] Updated TLDs
+x Removed theme.js console noise
+
+v 11.4.29rc3
+============================================================
+x Fix beta channel updates breakage due to
+  browser_specific_settings override
+
+v 11.4.29rc2
+============================================================
+x [L10n] Updated fi, pt_BR
+x [nscl] Several content-side performance improvements
+x Reduce synchronous policy retrieval impact on file: and
+  ftp: document loading performance
+x More commands for which a keyboard shortcut can be
+  configured
+
+v 11.4.29rc1
+============================================================
+x [nscl] Updated TLDs
+x [L10n] Updated de, mk, nl, pl, ru, sq, tr, uk, zh_CN,
+  zh_TW
+x Explicit Android compatibility declaration
+
 v 11.4.28
 ============================================================
 x Prevent URL leaks from media placeholders (thanks NDevTK

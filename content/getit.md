@@ -25,21 +25,21 @@ nav: 2
 You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__](https://noscript.net/download/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
 ````{.changelog}
-v 11.4.27
+v 11.4.29
 ============================================================
-x [XSS] Better specificity of HTML elements preliminary
-  checks
-x [XSS] Better specificity of potential fragmented injection
-  through framework syntax detection (thanks Rom623, barbaz
-  et al)
-x [nscl] RegExp.combo(): RegExp creation by combination for
-  better readability and comments
-x [nscl] Replaced lib/sha256.js with web platform native
-  implementation (thanks Martin for suggested patch)
-x [nscl] Fixed property/function mismatch (thanks Alex)
-x Fixed operators precedence issue #312 (thanks Alex)
-x [nscl] Prevent dead object access on BF cache (thanks
-  jamhubub and mriehm)
+x [nscl] Updated TLDs
+x [nscl] Improved reliability of TLD updater
+x Removed theme.js console noise
+x Fix beta channel updates breakage due to
+  browser_specific_settings override
+x [nscl] Several content-side performance improvements
+x Reduce synchronous policy retrieval impact on file: and
+  ftp: document loading performance
+x More commands for which a keyboard shortcut can be
+  configured
+x [L10n] Updated de, fi, mk, nl, pl, ru, sq, tr, uk,
+  pt_BR, zh_CN, zh_TW
+x Explicit Android compatibility declaration
 ````
 ### __Development build__{#devel}
 
@@ -72,45 +72,39 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
+v 11.4.30rc1
+============================================================
+x Removed obsolete "applications" manifest.json key
+
+v 11.4.29rc5
+============================================================
+x [nscl] Improved reliability of TLD updater
+
+v 11.4.29rc4
+============================================================
+x [nscl] Updated TLDs
+x Removed theme.js console noise
+
+v 11.4.29rc3
+============================================================
+x Fix beta channel updates breakage due to
+  browser_specific_settings override
+
+v 11.4.29rc2
+============================================================
+x [L10n] Updated fi, pt_BR
+x [nscl] Several content-side performance improvements
+x Reduce synchronous policy retrieval impact on file: and
+  ftp: document loading performance
+x More commands for which a keyboard shortcut can be
+  configured
+
 v 11.4.29rc1
 ============================================================
 x [nscl] Updated TLDs
 x [L10n] Updated de, mk, nl, pl, ru, sq, tr, uk, zh_CN,
   zh_TW
 x Explicit Android compatibility declaration
-
-v 11.4.28rc2
-============================================================
-x Remove replaceAsync() dependency on
-  String.prototype.matchAll()
-
-v 11.4.28rc1
-============================================================
-x Prevent URL leaks from media placeholders (thanks NDevTK
-  for report)
-x [nscl] Support for in-tree TLDs updates
-
-v 11.4.27rc3
-============================================================
-x [XSS] Better specificity of HTML elements preliminary
-  checks
-
-v 11.4.27rc2
-============================================================
-x [XSS] Better specificity of potential fragmented injection
-  through framework syntax detection (thanks Rom623, barbaz
-  et al)
-x [nscl] RegExp.combo(): RegExp creation by combination for
-  better readability and comments
-
-v 11.4.27rc1
-============================================================
-x [nscl] Replaced lib/sha256.js with web platform native
-  implementation (thanks Martin for suggested patch)
-x [nscl] Fixed property/function mismatch (thanks Alex)
-x Fixed operators precedence issue #312 (thanks Alex)
-x [nscl] Prevent dead object access on BF cache (thanks
-  jamhubub and mriehm)
 ````
 
 ### Deprecated, obsolete and unsupported "Classic" versions
