@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/hackademix/noscript/",
   "moz": "https://addons.mozilla.org/addon/noscript/",
-  "chrome":"https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm/",
+  "chrome": "https://chromewebstore.google.com/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm",
   "nscl_source": "https://github.com/hackademix/nscl/",
   "nlnet": "https://nlnet.nl",
   "ngi0": "https://nlnet.nl/NGI0/",
