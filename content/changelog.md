@@ -1,8 +1,194 @@
 ---
 title: Changelog
 ---
-[+] new feature, [x] bug fix, [-] removed feature, [=] repackaging or cosmetic change
+[+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 11.4.38
+============================================================
+x [nscl] Reuse uuid() in SyncMessage
+x [nscl] Simpler and safer SyncMessage logic on
+  Chromium-based browsers (thanks NDevTK for reporting)
+x Fixed missing frameId on interception reporting
+x Updated file exclusions on packaging
+
+v 11.4.38rc2
+============================================================
+x [nscl] Reuse uuid() in SyncMessage
+
+v 11.4.38rc1
+============================================================
+x Updated file exclusions on packaging
+x [nscl] Simpler and safer SyncMessage logic on
+  Chromium-based browsers (thanks NDevTK for reporting)
+x Fixed missing frameId on interception reporting
+
+v 11.4.37
+============================================================
+x [nscl] Do not patch windows with WebGLHook if webgl is
+  globally disabled
+x [nscl] Do not patch workers if webgl is globally disabled
+x [L10n] Updated uk
+x [nscl] Workers-aware WebGL Hook
+
+v 11.4.37rc3
+============================================================
+x [nscl] Do not patch windows with WebGLHook if webgl is
+  globally disabled
+
+v 11.4.37rc2
+============================================================
+x [nscl] Do not patch workers if webgl is globally disabled
+
+v 11.4.37rc1
+============================================================
+x [L10n] Updated uk
+x [nscl] Workers-aware WebGL Hook
+
+v 11.4.36
+============================================================
+x [nscl] Merged MV3-compatible branch
+x [XSS] Take in account the whole redirection chain (thanks
+  NDevTK for reporting)
+
+v 11.4.35
+============================================================
+x Improved lazy_load capability (optimization and
+  notification)
+x [nscl] Slight optimization of NOSCRIPT element emulation
+  loop
+x Automatically add extra capabilities to policyTypesMap
+x Gracefully handle new capabilities still unknown to the
+  settings host (e.g. Tor/Mullvad browser), if any
+x Configurable "lazy_load" capability (see
+  https://github.com/whatwg/html/issues/5250)
+x Prefetch all CSS subresources (1st party included) in
+  private contexts where both unchecked_css and scripting
+  capabilities are disabled
+x Forcibly neutralize lazy loading attributes when scripting
+  is disabled
+x [nscl] Restored SyncMessage compatibility with Firefox 78
+  and below
+x Lock nscl version on stable releases
+x [L10n] Updated de, fr, tr, ru, uk, zh_CN
+
+v 11.4.35rc4
+============================================================
+x Improved lazy_load capability (optimization and
+  notification)
+x [nscl] Slight optimization of NOSCRIPT element emulation
+  loop
+x Automatically add extra capabilities to policyTypesMap
+x [L10n] Updated de, fr, tr, ru, zh_CN
+
+v 11.4.35rc3
+============================================================
+x Gracefully handle new capabilities still unknown to the
+  settings host (e.g. Tor/Mullvad browser), if any
+x Configurable "lazy_load" capability (see
+  https://github.com/whatwg/html/issues/5250)
+x [L10n] Updated fr
+
+v 11.4.35rc2
+============================================================
+x Prefetch all CSS subresources (1st party included) in
+  private contexts where both unchecked_css and scripting
+  capabilities are disabled
+x Forcibly neutralize lazy loading attributes when scripting
+  is disabled
+
+v 11.4.35rc1
+============================================================
+x [nscl] Restored SyncMessage compatibility with Firefox 78
+  and below
+x [L10n] Updated uk
+x Lock nscl version on stable releases
+
+v 11.4.34
+============================================================
+x [nscl] Work around for
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1899786
+  (issue #372)
+x [L10n] Updated de, ru, tr
+x Synchronize nscl git commits as needed before tagging new
+  versions
+
+v 11.4.34rc2
+============================================================
+x [L10n] Updated ru, tr
+x [nscl] Work around for
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1899786
+  (issue #372)
+
+v 11.4.34rc1
+============================================================
+x Fix fallback noscript meta-refresh broken by sandbox CSP
+  directive
+
+v 11.4.33
+============================================================
+= (placeholder Chrome Store version for 11.4.31 rollback)
+
+v 11.4.32
+============================================================
+x [L10n] Updated de
+x [nscl] Use the sandbox directive in addition to script-src
+  for CSP-based script blocking
+x Syncrhonize nscl git commits as needed before tagging new
+  versions
+
+v 11.4.31
+============================================================
+x [L10n] Updated fr, is, ru, zh_CN
+x Improved release tooling
+x [nscl] Updated to latest NoScript Commons Library
+x NoScript Options/Appearance/Show synthetic placeholders
+  for invisible capability probes (issue #369)
+x [nscl] Make placeholders easier to style per type
+x Prevent duplicate synthetic placeholders for invisible
+  capability probes (issue #369)
+
+v 11.4.31rc3
+============================================================
+x [L10n] Updated zh_CN
+x Improved release tooling
+x [nscl] Updated to latest NoScript Commons Library
+x [L10n] Updated ru
+x [L10n] Updated fr, is
+
+v 11.4.31rc2
+============================================================
+x NoScript Options/Appearance/Show synthetic placeholders
+  for invisible capability probes (issue #369)
+x [nscl] Make placeholders easier to style per type
+
+v 11.4.31rc1
+============================================================
+x Prevent duplicate synthetic placeholders for invisible
+  capability probes (issue #369)
+
+v 11.4.30
+============================================================
+x [nscl] Best effort WebGL placeholders for offscreen
+  capability detection
+x Improved blocked but required capability reporting from
+  subframes (issue #367)
+x [nscl] Include SVG among embedding document types (fixes
+  issue #366)
+x Removed obsolete "applications" manifest.json key
+
+v 11.4.30rc2
+============================================================
+x [nscl] Best effort WebGL placeholders for offscreen
+  capability detection
+x Improved blocked but required capability reporting from
+  subframes (issue #367)
+x [nscl] Include SVG among embedding document types (fixes
+  issue #366)
+
+v 11.4.30rc1
+============================================================
+x Removed obsolete "applications" manifest.json key
+
 v 11.4.29
 ============================================================
 x [nscl] Updated TLDs

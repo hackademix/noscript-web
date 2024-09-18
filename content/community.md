@@ -54,4 +54,4 @@ Specific  NoScript development efforts have been generously supported by the [__
 
 #### Donations
 Nevertheless NoScript couldn't keep up with its continuous and strenuous fight against emerging web threats with no help from you, dear user. So, if you find NoScript useful, __please consider a donation__, either via __Paypal__ ([USD]({{links.donate}}?c=USD) / [EUR]({{links.donate}}?c=EUR)) or [by other means]({{ "/faq#faq-donate" | url }}).
-You will feel proud of your contribution to a safer web, and prouder your gorgeous [dark NoScript wallpaper](/img/noscript-wallpaper-dark.png).
+You will feel proud of your contribution to a safer web, and even prouder of your gorgeous [dark NoScript wallpaper](/img/noscript-wallpaper-dark.png).
