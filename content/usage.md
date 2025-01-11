@@ -100,15 +100,17 @@ This protection is enabled by default on any Private Browsing window (and theref
 ### Keyboard Shortcuts
 You can open and navigate all the NoScript UI by using the following keyboard shortcuts:
 ````
-Alt+Shift+N     start (open NoScript Popup)
-Arrows/Tab      move around
+Alt+Shift+Comma (Windows) Toggle enforcement on this tab
+Opt+Shift+Space (macOS) Toggle enforcement on this tab
+Alt+Shift+N     Start (open NoScript Popup)
+Arrows/Tab      Move around
 DEL/BKSPC/0     DEFAULT
 +               TRUSTED
 -               UNTRUSTED
 C               CUSTOM
 T               Temp
 S               HTTPS-lock
-HOME            jump to the toolbar
+HOME            Jump to the toolbar
 ESC/ENTER       Close the UI
 R               Reload current page without closing the UI
 Shift+G         Globally disable restrictions
@@ -116,6 +118,13 @@ Shift+T         Disable restrictions on this tab
 P               Set all on this page to Temp. TRUSTED
 F               Forget temporary permissions
 ````
+
+Depending on your browser, you can also change these keyboard shortcuts:
+
+* Chrome: go to <chrome://extensions> and click on the Keboard Shortcuts link at the bottom.
+* Edge: go to <edge://extensions/shortcuts>
+* Firefox: go to <about:addons>, click on the gear icon at the top right, and select Manage Extension Shortcuts
+
 ### User-contributed guides
 
 * [A guide to using NoScript 10.x](https://blog.jeaye.com/2017/11/30/noscript/)
