@@ -121,7 +121,7 @@ F               Forget temporary permissions
 
 Depending on your browser, you can also change these keyboard shortcuts:
 
-* Chrome: go to <chrome://extensions> and click on the Keboard Shortcuts link at the bottom.
+* Chrome: go to <chrome://extensions/shortcuts>
 * Edge: go to <edge://extensions/shortcuts>
 * Firefox: go to <about:addons>, click on the gear icon at the top right, and select Manage Extension Shortcuts
 
