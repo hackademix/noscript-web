@@ -3,6 +3,710 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 13.4
+============================================================
+x [UX] More concise and compact placeholders
+x [UX] Include all the suppported capability types in the
+  tooltip blocked/used report
+
+v 13.3
+============================================================
+x [UX] [nscl] In-content placeholders for Wasm
+  (tor-browser#44278)
+x [nscl] Fixed race condition potentially breaking
+  placeholders in edge cases
+x [nscl] Detect asynchronous failed WebAssembly access
+  attempts (tor-browser#44278)
+
+v 13.2.903
+============================================================
+x [UX] [nscl] In-content placeholders for Wasm
+  (tor-browser#44278)
+
+v 13.2.902
+============================================================
+x [nscl] Fixed race condition potentially breaking
+  placeholders in edge cases
+
+v 13.2.901
+============================================================
+x [nscl] Detect asynchronous failed WebAssembly access
+  attempts (tor-browser#44278)
+
+v 13.2.2
+============================================================
+x Work-around for issue #462
+x [L10n] Updated fr, pl, zh_CN
+x Resolve implicit dependencies from createHTMLElement()
+x [Android] Erase temporary permissions when all the tabs
+  closed (issue #464)
+x [Android] Make NoScript Options' top buttons fit in one
+  row
+x Typo in comment in LifeCycle.js
+
+v 13.2.1
+============================================================
+x Fix bugs with Tor Browser unknown capabilities handling
+x Work-around for Tor Browser Security Levels not being
+  aware yet of the wasm capability
+x [nscl] Make wasm usage attempt notification
+  Chromium-compatible
+x [L10n] Updated de, ru, tr
+
+v 13.1.903
+============================================================
+x Fix bugs with Tor Browser unknown capabilities handling
+
+v 13.1.902
+============================================================
+x Work-around for Tor Browser Security Levels not being
+  aware yet of the wasm capability
+
+v 13.1.901
+============================================================
+x [nscl] Make wasm usage attempt notification
+  Chromium-compatible
+x [L10n] Updated de, ru, tr
+
+v 13.1
+============================================================
+x New wasm capability to control WebAssembly per site
+x [L10n] Updated is, pt_BR
+x Adopt the Chromium prefetch CSS CORS work-around on Gecko
+  (torbrowser#44239 fix)
+x Best effort to avoid extra temporary tabs for sidebar
+  detection
+
+v 13.0.904
+============================================================
+x [nscl] Fix bug causing wasm to be unconditionally disabled
+
+v 13.0.903
+============================================================
+x New wasm capability to control WebAssembly per site
+
+v 13.0.902
+============================================================
+x [L10n] Updated is, pt_BR
+x Adopt the Chromium prefetch CSS CORS work-around on Gecko
+  (torbrowser#44239 fix)
+
+v 13.0.901
+============================================================
+x Best effort to avoid extra temporary tabs for sidebar
+  detection
+
+v 13.0.9
+============================================================
+x [UX] Increase contrast for non-HTTPS site labels in dark
+  mode (thanks Soothsayer for reporting)
+x [L10n] Updated he, pl, tr, uk
+x [Tor] Align Tor/Mullvad Browser integration logic and UI
+  with "persistent mode" (mullvad-browser#455)
+x Switch to ?. operator and tidy up surrounding code
+
+v 13.0.8.903
+============================================================
+x [UX] Increase contrast for non-HTTPS site labels in dark
+  mode (thanks Soothsayer for reporting)
+
+v 13.0.8.902
+============================================================
+x Fix CSS error causing permanent permissions switch to be
+  shown in every context (thanks barbaz for reporting)
+
+v 13.0.8.901
+============================================================
+x [L10n] Updated he, pl, tr, uk
+x [Tor] Align Tor/Mullvad Browser integration logic and UI
+  with "persistent mode" (mullvad-browser#455)
+x Switch to ?. operator and tidy up surrounding code
+
+v 13.0.8
+============================================================
+x Reduce annoyances and false positives from sidebar content
+  detection (issue #444)
+x Fix automatic top level trust conflict with existing
+  contextual policies (issue #441)
+
+v 13.0.6.902
+============================================================
+x Reduce annoyances and false positives from sidebar content
+  detection (issue #444)
+
+v 13.0.6.901
+============================================================
+x Fix automatic top level trust conflict with existing
+  contextual policies (issue #441)
+
+v 13.0.6
+============================================================
+x Use frameAncestors whenever possible for top URL
+  retrieving
+x Automatic reload on permissions change for promiscuous
+  tabbed/tab-less sites
+x [UX] Avoid creating extra tabs for sidebar measurement
+  when possible
+x [L10n] Updated ru
+x [UX] Best effort to hide/show tab-less sites depending on
+  the statusbar visibility
+x Fix always set parent entry of temporary contextual
+  policies created from DEFAULT to temporary (issue #440,
+  thanks SandboxerX86 for reporting)
+x [UX] Permissions UI support for tab-less (e.g. sidebar)
+  content (issue #429)
+x [Chromium] Prerendered frame support in context policies
+  enforcing
+x Fix some automatic top-level TRUST bugs (issue #437)
+x Discard "zombie" prompts from the backlog
+x Honor restrictions disablement for x-load checks
+x [UX] Improved UX for file:// contextual permissions
+  (issue#435)
+x [nscl] Harmonize file:// URLs parsing and matching across
+  Gecko and Chromium
+x [XSS] Prevent false positives from the uptain.de
+  e-commerce back-end
+x More consistent contextual permission checks
+x Fixed click to play sometimes broken for file:/// URLs
+x Fixed automatic temporary permissions require reload
+  (thanks scottg for reporting)
+
+v 13.0.5.901
+============================================================
+x Use frameAncestors whenever possible for top URL
+  retrieving
+
+v 13.0.4.901
+============================================================
+x Automatic reload on permissions change for promiscuous
+  tabbed/tab-less sites
+
+v 13.0.3.901
+============================================================
+x [UX] Avoid creating extra tabs for sidebar measurement
+  when possible
+x [L10n] Updated ru
+
+v 13.0.2.901
+============================================================
+x [UX] Best effort to hide/show tab-less sites depending on
+  the statusbar visibility
+
+v 13.0.1.901
+============================================================
+x Fix always set parent entry of temporary contextual
+  policies created from DEFAULT to temporary (issue #440,
+  thanks SandboxerX86 for reporting)
+
+v 12.9.909
+============================================================
+x Disable tab-less support on Chromium
+
+v 12.9.908
+============================================================
+x Fix options page bustage regression from issue #429
+
+v 12.9.907
+============================================================
+x [UX] Permissions UI support for tab-less (e.g. sidebar)
+  content (issue #429)
+
+v 12.9.906
+============================================================
+x [Chromium] Prerendered frame support in context policies
+  enforcing
+
+v 12.9.905
+============================================================
+x Fixed webRequest header patching regression from
+  contextual overrides (addresses issue #436)
+
+v 12.9.904
+============================================================
+x Fix some automatic top-level TRUST bugs (issue #437)
+
+v 12.9.903
+============================================================
+x Discard "zombie" prompts from the backlog
+x Honor restrictions diablement for x-load checks
+x [UX] Improved UX for file:// contextual permissions
+  (issue#435)
+x [nscl] Harmonize file:// URLs parsing and matching across
+  Gecko and Chromium
+x [XSS] Prevent false positives from the uptain.de
+  e-commerce back-end
+x More consistent contextual permission checks
+
+v 12.9.902
+============================================================
+x Fixed click to play sometimes broken for file:/// URLs
+
+v 12.9.901
+============================================================
+x Fixed automatic temporary permissions require reload
+  (thanks scottg for reporting)
+
+v 12.6
+============================================================
+x Make contextual policies override restriction cascading
+  (tor-browser#43397)
+x [Chromium] Fix 12.5.9xx prompt closure regression
+x [Chromium] Full x-load checks Chromium support
+x Better offscreen placeholders for x-load
+x [l10n] [Chromium] Make x-load capability localization
+  Chromium-compatible
+x [L10n] Updated de, fr, he, ru, tr zh_CN
+x [UX] Honor non-contextual x-load capability granted from
+  NoScript Options (thanks barbaz for RFE)
+x Prevent data: URIs from messing with srcset parsing
+  (thanks fatboy for reporting)
+x Regard as "mutually safe" for x-load directories sharing a
+  common ancestor
+x [UX] Make x-load capability visible for CUSTOM file:
+  entries in NoScript Options (thanks barbaz for RFE)
+x [UX] Fixed prompt window leaks (tor-browser#43281)
+x [UX] Make object unblocking temporary and contextual by
+  default, with choices in the prompt
+x [nscl] Option to clone Permissions without context
+x Always honor the "Collapse blocked objects" option
+x Refactor top-level auto-trust and make it contextual
+  (issue #417)
+x [nscl] Remove noisy debug statement
+x [UX] UI support for extra floating capabilities (x-load)
+x Integrate event handlers suppression with blocking if
+  needed (thanks Adithya Suresh Kumar for reporting)
+x [nscl] Refactor xray proxification
+x Fix incorrect assumptions about some DOM element
+  properties reflecting URLs (thanks Adithya Suresh Kumar
+  for reporting)
+x [nscl] Fix race condition between multiple extensions
+  using MV3/DNR SyncMessage (JShelter#146, thanks polcak for
+  reporting)
+x Suppress some event handlers (tor-browser#43491, thanks
+  Adithya Suresh Kumar for reporting)
+x [build] Publish XPIs only after their signed
+x [build] Improved version bump commit logic
+
+v 12.5.906
+============================================================
+x Make contextual policies override restriction cascading
+  (tor-browser#43397)
+x [Chromium] Fix 12.5.9xx prompt closure regression
+x Full x-load checks Chromium support
+x Better offscreen placeholders for x-load
+x [l10n] Make x-load capability localization
+  Chromium-compatible
+x [L10n] Updated tr
+
+v 12.5.905
+============================================================
+x [UX] Honor non-contextual x-load capability granted from
+  NoScript Options (thanks barbaz for RFE)
+x Prevent data: URIs from messing with srcset parsing
+  (thanks fatboy for reporting)
+x Regard as "mutually safe" for x-load directories sharing a
+  common ancestor
+
+v 12.5.904
+============================================================
+x [L10n] Updated de, fr, ru
+x Make x-load capability visible for CUSTOM file: entries in
+  NoScript Options (thanks barbaz for RFE)
+x [UX] Fixed prompt window leaks (tor-browser#43281)
+x [UX] Make object unblocking temporary and contextual by
+  default, with choices in the prompt
+x [nscl] Option to clone Permissions without context
+
+v 12.5.903
+============================================================
+x Fixed infinite x-load blocking loops (thanks barbaz for
+  reporting)
+x Always honor the "Collapse blocked objects" option
+
+v 12.5.902
+============================================================
+x Refactor top-level auto-trust and make it contextual
+  (issue #417)
+x [L10n] Updated zh_CN
+
+v 12.5.901
+============================================================
+x Make the x-load capability localizable (tor-browser#43635)
+x Earlier x-load interception  (thanks Adithya Suresh Kumar
+  for reporting)
+
+v 12.1.1.905
+============================================================
+x Improved x-load capability support (thanks Adithya Suresh
+  Kumar for reporting)
+x [nscl] Remove noisy debug statement
+
+v 12.1.1.904
+============================================================
+x UI support for extra floating capabilities (x-load)
+x Integrate event handlers suppression with blocking if
+  needed (thanks Adithya Suresh Kumar for reporting)
+x [nscl] Refactor xray proxification
+
+v 12.1.1.903
+============================================================
+x Broader event handlers suppression (thanks Adithya Suresh
+  Kumar for reporting)
+
+v 12.1.1.902
+============================================================
+x Fix incorrect assumptions about some DOM element
+  properties reflecting URLs (thanks Adithya Suresh Kumar
+  for reporting)
+
+v 12.1.1.901
+============================================================
+x [nscl] Fix race condition between multiple extensions
+  using MV3/DNR SyncMessage (JShelter#146, thanks polcak for
+  reporting)
+x Suppress some event handlers (tor-browser#43491, thanks
+  Adithya Suresh Kumar for reporting)
+x [build] Publish XPIs only after their signed
+x [nscl] Updated to latest NoScript Commons Library
+x [L10n] Updated he
+x [build] Improved version bump commit logic
+
+v 12.1.1
+============================================================
+x Fix automatic reloading broken if the background script /
+  service worker is not already initialized on UI load
+x Re-enable signing logging
+
+v 12.1
+============================================================
+x [nscl] Improved work-around for Youtube placeholder
+  displacement (tor-browser#43296)
+x [L10n] Updated pl
+x Avoid synchronous policy fetching if document is already
+  complete (e.g. on extension updates)
+x Remove more MV3-only entries from MV2 manifest
+x Remove pre-release version check on signing
+x More informative debug logging
+x Fixed misplaced update_url in development builds (thanks
+  DJ-Leith for reporting)
+x Switch Firefox development build version format to *.9xx
+  (like Chromium)
+x Cross-browser and cross-manifest compatibility down to
+  Gecko 115
+x Improved cross-browser and cross-manifest development and
+  build ergonomics
+x Fixed RequestGuard on Firefox still using CSP.blocks() as
+  an instance method
+x Improved cross-browser and cross-manifest support
+x Do not reload affected tabs before saving XSS user
+  choices, if any
+x [nscl] Several performance and reliability enhancements
+  from NSCL
+x [nscl] Updated to latest NoScript Commons Library
+x Fixed offscreen placeholder container preventing user
+  interaction on the left of placeholders
+  (tor-browser#43282)
+x Fix localization-related console spam when opening options
+  panel (tor-browser#43269)
+x Fixed offscreen placeholder container preventing user
+  interaction on the left of placeholders
+  (tor-browser#43282)
+x Fix localization-related console spam when opening options
+  panel (tor-browser#43269)
+
+v 12.0.904
+============================================================
+x [nscl] Improved work-around for Youtube placeholder
+  displacement (tor-browser#43296)
+x [L10n] Updated pl
+
+v 12.0.903
+============================================================
+x Avoid synchronous policy fetching if document is already
+  complete (e.g. on extension updates)
+x Remove more MV3-only entries from MV2 manifest
+x Remove pre-release version check on signing
+
+v 12.0.902
+============================================================
+x More informative debug logging
+x Fixed misplaced update_url in development builds (thanks
+  DJ-Leith for reporting)
+
+v 12.0.901
+============================================================
+x Switch Firefox development build version format to *.9xx
+  (like Chromium)
+x Cross-browser and cross-manifest compatibility down to
+  Gecko 115
+x Improved cross-browser and cross-manifest development and
+  build ergonomics
+x Fixed RequestGuard on Firefox still using CSP.blocks() as
+  an instance method
+x Improved cross-browser and cross-manifest support
+x Do not reload affected tabs before saving XSS user
+  choices, if any
+
+v 12.0.0 (MV3 / Chromium only)
+============================================================
+x [nscl] Switch all the Chromium usages of patchWindow() to
+  the new Worlds API
+x [nscl] Switch patchWorkers.js implementation from
+  patchWindow.js to Worlds.js
+x [nscl] Switch WebGLHook implementation from patchWindow.js
+  to Worlds.js
+x Optimized fall-back reporting for non-HTTP documents and
+  included script type
+x Remove uuid from DNR reporting CSP to prevent it from
+  being abused for tracking
+x Import versioning module just once
+x Infrastructure to replace patchWindow.js with MAIN world
+  content scripts
+x MV3 compatibility
+x DeclarativeNetRequest-backed policy enforcement
+x Fixed theming race condition and other bugs
+x Require explicit call to run tests
+x Gecko strict compatibility versioning to prevent
+  Chromium-only NoScript 12.x from being accidentally
+  installed on Firefox
+x Simplified Wakening
+
+v 11.5.3rc2
+============================================================
+x [nscl] Several performance and reliability enhancements
+  from NSCL
+x [nscl] Updated to latest NoScript Commons Library
+x Fixed offscreen placeholder container preventing user
+  interaction on the left of placeholders
+  (tor-browser#43282)
+x Fix localization-related console spam when opening options
+  panel (tor-browser#43269)
+
+v 11.5.3rc1
+============================================================
+x Fixed offscreen placeholder container preventing user
+  interaction on the left of placeholders
+  (tor-browser#43282)
+x Fix localization-related console spam when opening options
+  panel (tor-browser#43269)
+
+v 11.5.2
+============================================================
+x [tor-browser#43257] More efficient, flexible and
+  race-resistant placeholder styling
+
+v 11.5.1
+============================================================
+x [nscl] Panic abort on buggy pages (like
+  https://github.com/) going in infinite loops when webgl is
+  disabled
+x Refactoring to use DocRewriter
+x [tor-browser#43258] Remove content script crypto.subtle
+  dependency
+x Synchronize Sites.onionSecure on any settings update
+x [tor-browser#32668] More reliable Security Level Reset on
+  Tor / Mullvad Browser
+
+v 11.5.1rc4
+============================================================
+x [tor-browser#43258] Fixed LifeCycle error on update
+
+v 11.5.1rc3
+============================================================
+x [nscl] Panic abort on buggy pages (like
+  https://github.com/) going in infinite loops when webgl is
+  disabled
+x Refactoring to use DocRewriter
+
+v 11.5.1rc2
+============================================================
+x [tor-browser#43258] Remove content script crypto.subtle
+  dependency
+x Synchronize Sites.onionSecure on any settings update
+
+v 11.5.1rc1
+============================================================
+x [tor-browser#32668] More reliable Security Level Reset on
+  Tor / Mullvad Browser
+
+v 11.5.0
+============================================================
+x [tor-browser#32668] Use the Security Level as the default
+  policy for Options Reset on Tor Browser
+x [tor] Stateless-compatible Tor Browser integration
+x [L10n] Updated pt_BR
+x Stateless-compatible temporary permissions
+x Switch from deferWebTraffic to Wakening
+x Stateless-compatibile TabGuard
+x Switch to non-persistent background page
+x [xss] Refactor for non-persistence
+x Removed Fennec-specific code
+x Bump min Gecko compatibility to 115.0 (stateless
+  background script support)
+
+v 11.4.44
+============================================================
+x [L10n] Updated pt_BR
+x Wait for (re)wakening before dispatching messages (fixes
+  occasional blank UI on Android)
+x Fix broken settings persistence when options opened from
+  privileged page and reload required
+x Fixed computedChildPolicy() regression on missing tab url
+x Minor code cleanup
+x Remove 6 years old legacy code handling migrations from
+  NoScript 5.x "Classic"
+x [xss] Removed legacy/obsolete exceptions
+x [build] Support for quiet tagging without editing the
+  message
+
+v 11.4.44rc2
+============================================================
+x [L10n] Updated pt_BR
+
+v 11.4.44rc1
+============================================================
+x Wait for (re)wakening before dispatching messages (fixes
+  occasional blank UI on Android)
+x Fix broken settings persistence when options opened from
+  privileged page and reload required
+x Fixed computedChildPolicy() regression on missing tab url
+x Minor code cleanup
+x Remove 6 years old legacy code handling migrations from
+  NoScript 5.x "Classic"
+x [xss] Removed legacy/obsolete exceptions
+x [build] Support for quiet tagging without editing the
+  message
+
+v 11.4.43
+============================================================
+x Improved prompts factory
+x Refactor browser-dependent UI CSS
+x [build] accept "signed" as a "sign" synonym.
+x [nscl]  Fixed SyncMessage regression in the MV2 code paths
+x [nscl] Block file: media sources independently from CSP
+x Update copyright dates
+x [nscl] MV3-compatible SyncMessage implementation
+x Add match_origin_as_fallback to manifest content scripts
+x Fix Tor Browser / Mullvad Browser falling back to a serif
+  font for NoScript UI
+
+v 11.4.43rc5
+============================================================
+x Fixed prompts factory regression on Android
+
+v 11.4.43rc4
+============================================================
+x Improved prompts factory
+
+v 11.4.43rc3
+============================================================
+x Refactor browser-dependent UI CSS
+
+v 11.4.43rc2
+============================================================
+x [build] accept "signed" as a "sign" synonym.
+x [nscl]  Fixed SyncMessage regression in the MV2 code paths
+
+v 11.4.43rc1
+============================================================
+x [nscl] Block file: media sources independently from CSP
+x Update copyright dates
+x [nscl] MV3-compatible SyncMessage implementation
+x Add match_origin_as_fallback to manifest content scripts
+x Fix Tor Browser falling back to a serif font for NoScript
+  UI
+
+v 11.4.42
+============================================================
+x [nscl] Further SyncMessage simplification
+x Mitigate race conditions on startup
+
+v 11.4.42rc2
+============================================================
+x [nscl] Further SyncMessage simplification
+
+v 11.4.42rc1
+============================================================
+x Mitigate race conditions on startup
+
+v 11.4.41
+============================================================
+x [nscl] Fixed Chromium worker patching regression caused by
+  failSafe scope
+x [nscl] Force service workers to be patched bypassing cache
+x [nscl] More robust SyncMessage implementation
+x [nscl] Enhanced remote worker patching
+x [nscl] Remove missing source map warning for
+  browser-polyfill.js
+x [nscl] Better console handling in execution context
+  patches
+x Reduce console spam on non-debugging instances
+x [nscl] Avoid patched workers breakage if console API is
+  disabled (thanks ayi for reporting)
+
+v 11.4.41rc4
+============================================================
+x [nscl] Fixed Chromium worker patching regression caused by
+  failSafe scope
+
+v 11.4.41rc3
+============================================================
+x [nscl] Force service workers to be patched bypassing cache
+
+v 11.4.41rc2
+============================================================
+x [nscl] More robust SyncMessage implementation
+x [nscl] Enhanced remote worker patching
+x [nscl] Remove missing source map warning for
+  browser-polyfill.js
+x [nscl] Better console handling in execution context
+  patches
+
+v 11.4.41rc1
+============================================================
+x Reduce console spam on non-debugging instances
+x [nscl] Avoid patched workers breakage if console API is
+  disabled (thanks ayi for reporting)
+
+v 11.4.40
+============================================================
+x [nscl] Fix patched workers failures caused by Firefox
+  webRequest filters disconnect() breaking on large files
+  (thanks barbaz for reporting)
+
+v 11.4.39
+============================================================
+x [nscl] Improved WebGL-hooking and worker patching
+  stability
+x [L10n] Lower to 90% the threshold for including a new
+  translation
+x [L10n] Updated he, pt_PT
+x [nscl] Prevent patchWindow from throwing on SOP violations
+x [nscl] Correctly propagate extra arguments to shadowed
+  worker constructors
+
+v 11.4.39rc4
+============================================================
+x [nscl] Fixed regression in replaying property interactions
+  with shadowed/patched workers
+
+v 11.4.39rc3
+============================================================
+x [nscl] Improved WebGL-hooking and worker patching
+  stability
+x [L10n] Lower to 90% the threshold for including a new
+  translation
+x [L10n] Updated he, pt_PT
+
+v 11.4.39rc2
+============================================================
+x [nscl] Prevent patchWindow from throwing on SOP violations
+
+v 11.4.39rc1
+============================================================
+x [nscl] Correctly propagate extra arguments to shadowed
+  worker constructors
+
 v 11.4.38
 ============================================================
 x [nscl] Reuse uuid() in SyncMessage

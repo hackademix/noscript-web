@@ -22,23 +22,25 @@ nav: 2
 
 ### __Direct download__{#direct} for Firefox
 
-You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__](https://noscript.net/download/releases/noscript-{{ ver.stable }}.xpi).
+You can get the latest stable version __for Firefox desktop only__ also using this [__direct NoScript {{ ver.stable }} download link__]({{ links.download }}/releases/noscript-{{ ver.stable }}.xpi).
 To install, just drag and drop it onto your address bar.
-````{.changelog}
-v 11.4.37
-============================================================
-x [nscl] Do not patch windows with WebGLHook if webgl is
-  globally disabled
-x [nscl] Do not patch workers if webgl is globally disabled
-x [L10n] Updated uk
-x [nscl] Workers-aware WebGL Hook
 
-v 11.4.36
+_Special thanks to Adithya Suresh Kumar for extensively reporting about a new browser fingerprinting risk, allowing NoScript 12.6 to deploy a mitigation technique for it._
+````{.changelog}
+13.2.2
 ============================================================
-x [nscl] Merged MV3-compatible branch
-x [XSS] Take in account the whole redirection chain (thanks
-  NDevTK for reporting)
+x Work-around for issue #462
+x [L10n] Updated fr, pl, zh_CN
+x Resolve implicit dependencies from createHTMLElement()
+x [Android] Erase temporary permissions when all the tabs
+  closed (issue #464)
+x [Android] Make NoScript Options' top buttons fit in one
+  row
+x Typo in comment in LifeCycle.js
 ````
+
+[Go to full changelog &raquo;]({{ "/changelog" | url }})
+
 ### __Development build__{#devel}
 
 NoScript development happens very fast to keep up with emerging web threats.
@@ -46,15 +48,18 @@ If you're brave enough and you need a specific feature or fix not released yet, 
 
 #### RC for Firefox
 
-[__Install NoScript {{ ver.dev }} on Firefox Desktop by simply clicking here__](https://noscript.net/download/betas/noscript-{{ ver.dev }}.xpi).
+[__Install NoScript {{ ver.dev }} on Firefox Desktop by simply clicking here__]({{ links.download }}/betas/noscript-{{ ver.dev }}.xpi).
 
 On Firefox for Android, unfortunately, a pre-release can only be downloaded (same link as above) and temporarily installed on Nightly by using the [web-ext tool](https://github.com/mozilla/web-ext), which is only suitable for hardcore developers and contributors.
 
-#### RC for Chromium
+#### Non-store versions for Chromium
 
-You can [__Download NoScript {{ ver.dev }} for Chromium-based browsers here__](https://noscript.net/download/betas/noscript-{{ ver.dev }}-chrome.zip).
+On Chromium based browsers you can download either:
 
-In order to install this pre-release until the next stable version reaches the Chrome Store, you need to unzip it and load it as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked) in developer mode.
+- [__NoScript {{ ver.dev }} (MV3)__]({{ links.download }}/betas/noscript-{{ ver.dev }}-chrome.zip) - experimental, supporting the Google-mandated but limiting, unproven and unstable latest extensions technology. __Requires Chromium version 128 or above__ (latest stable version recommended).
+- [__NoScript {{ ver.mv2 }} (MV2)__]({{ links.download }}/releases/noscript-{{ ver.mv2 }}-chrome.zip) - legacy, unsupported by Google but proven and stable. Best option for browsers based on Chromium 127 and below.
+
+In order to install next MV3 version until it reaches the Chrome Store, or the MV2 version if you're affected by some MV3-caused bug which could not have been fixed yet, you need to unzip the downloaded `noscript-$VERSION-chrome.zip` file and load its content as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked) in developer mode.
 
 Please follow these steps:
 
@@ -70,95 +75,95 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
-v 11.4.39rc2
+v 13.3.901
 ============================================================
-x [nscl] Prevent patchWindow from throwing on SOP violations
+x [UX] More concise and compact placeholders
+x [UX] Include all the suppported capability types in the
+  tooltip blocked/used report
 
-v 11.4.39rc1
+v 13.2.903
 ============================================================
-x [nscl] Correctly propagate extra arguments to shadowed
-  worker constructors
+x [UX] [nscl] In-content placeholders for Wasm
+  (tor-browser#44278)
 
-v 11.4.38rc2
+v 13.2.902
 ============================================================
-x [nscl] Reuse uuid() in SyncMessage
+x [nscl] Fixed race condition potentially breaking
+  placeholders in edge cases
 
-v 11.4.38rc1
+v 13.2.901
 ============================================================
-x Updated file exclusions on packaging
-x [nscl] Simpler and safer SyncMessage logic on
-  Chromium-based browsers (thanks NDevTK for reporting)
-x Fixed missing frameId on interception reporting
+x [nscl] Detect asynchronous failed WebAssembly access
+  attempts (tor-browser#44278)
 
-v 11.4.37rc3
+v 13.2.1.901
 ============================================================
-x [nscl] Do not patch windows with WebGLHook if webgl is
-  globally disabled
+x Work-around for issue #462
+x [L10n] Updated fr, pl
+x Resolve implicit dependencies from createHTMLElement()
+x [Android] Erase temporary permissions when all the tabs
+  closed (issue #464)
+x [L10n] Updated zh_CN
+x [Android] Make NoScript Options' top buttons fit in one
+  row
+x Typo in comment in LifeCycle.js
 
-v 11.4.37rc2
+v 13.1.903
 ============================================================
-x [nscl] Do not patch workers if webgl is globally disabled
+x Fix bugs with Tor Browser unknown capabilities handling
 
-v 11.4.37rc1
+v 13.1.902
 ============================================================
-x [L10n] Updated uk
-x [nscl] Workers-aware WebGL Hook
+x Work-around for Tor Browser Security Levels not being
+  aware yet of the wasm capability
 
-v 11.4.36rc1
+v 13.1.901
 ============================================================
-x [nscl] Merged MV3-compatible branch
-x [XSS] Take in account the whole redirection chain (thanks
-  NDevTK for reporting)
+x [nscl] Make wasm usage attempt notification
+  Chromium-compatible
+x [L10n] Updated de, ru, tr
 
-v 11.4.35rc4
+v 13.0.904
 ============================================================
-x Improved lazy_load capability (optimization and
-  notification)
-x [nscl] Slight optimization of NOSCRIPT element emulation
-  loop
-x Automatically add extra capabilities to policyTypesMap
-x [L10n] Updated de, fr, tr, ru, zh_CN
+x [nscl] Fix bug causing wasm to be unconditionally disabled
 
-v 11.4.35rc3
+v 13.0.903
 ============================================================
-x Gracefully handle new capabilities still unknown to the
-  settings host (e.g. Tor/Mullvad browser), if any
-x Configurable "lazy_load" capability (see
-  https://github.com/whatwg/html/issues/5250)
-x [L10n] Updated fr
+x New wasm capability to control WebAssembly per site
 
-v 11.4.35rc2
+v 13.0.902
 ============================================================
-x Prefetch all CSS subresources (1st party included) in
-  private contexts where both unchecked_css and scripting
-  capabilities are disabled
-x Forcibly neutralize lazy loading attributes when scripting
-  is disabled
+x [L10n] Updated is, pt_BR
+x Adopt the Chromium prefetch CSS CORS work-around on Gecko
+  (torbrowser#44239 fix)
 
-v 11.4.35rc1
+v 13.0.901
 ============================================================
-x [nscl] Restored SyncMessage compatibility with Firefox 78
-  and below
-x [L10n] Updated uk
-x Lock nscl version on stable releases
+x Best effort to avoid extra temporary tabs for sidebar
+  detection
+
 ````
 
-### Deprecated, obsolete and unsupported "Classic" versions
+### Browser compatibility and obsolete versions{#deprecated-obsolete-and-unsupported-classic-versions}
+
+[NoScript {{ ver.stable }}](#latest-stable) is compatible with browsers based on Gecko versions 115 and above (e.g. Firefox and Tor Browser, on desktop and Android) and on Chromium versions 128 and above (Chrome, Edge, Vivaldi, Brave...)
+
+[NoScript {{ ver.legacy }}]({{ links.download }}/betas/noscript-{{ ver.legacy }}.xpi) is compatible with Gecko versions 59-114.
 
 [![NoScript Classic Logo](https://classic.noscript.net/noscript/logo.png){.left}](https://classic.noscript.net/)
 
-You can still download [**NoScript "Classic"** (5.1.9)](https://noscript.net/download/releases/noscript-5.1.9.xpi) ([SHA256](https://noscript.net/download/releases/noscript-5.1.9.xpi.sha256)) for Seamonkey, Palemoon, Waterfox Classic and possibly other "vintage" (pre-Gecko 57) Firefox forks [here](https://noscript.net/download/releases/noscript-5.1.9.xpi).
+You can still download [**NoScript "Classic"** (5.1.9)]({{ links.download }}/releases/noscript-5.1.9.xpi) ([SHA256]({{ links.download }}/releases/noscript-5.1.9.xpi.sha256)) for Seamonkey, Palemoon, Waterfox Classic and possibly other "vintage" (pre-Gecko 57) Firefox forks [here]({{ links.download }}/releases/noscript-5.1.9.xpi).
 
 **Notice:** _you may need to open about:config and set your **xpinstall.signatures.required** preference to **false** in order to install NoScript 5.x, since Mozilla doesn't support signatures for legacy add-ons anymore. If you're [using a non ESR Firefox, you may also need this hack](https://forums.informaction.com/viewtopic.php?p=98662#p98662)._
 
 
 Users of Firefox 58 and below are urged to upgrade their very unsafe browser. For those few who can't,
 
-*   [latest NoScript version compatible with Gecko 57 - Gecko 58 is 10.1.7.3](https://noscript.net/download/releases/noscript-10.1.7.3.xpi);
-*   [latest NoScript version compatible with Gecko 46 - Gecko 56 is 5.1.9](https://noscript.net/download/releases/noscript-5.1.9.xpi) ([SHA256](https://noscript.net/download/releases/noscript-5.1.9.xpi.sha256));
-*   [latest NoScript version compatible with Gecko 13 - Gecko 45 is 2.9.0.14](https://noscript.net/download/releases/noscript-2.9.0.14.xpi) ([SHA256](https://noscript.net/download/releases/noscript-2.9.0.14.xpi.sha256));
-*   [latest NoScript version compatible with Gecko 1.9 - Gecko 12 is 2.9.0.1rc1](https://noscript.net/download/betas/noscript-2.9.0.1rc1.xpi) ([SHA256](https://noscript.net/download/betas/noscript-2.9.0.1rc1.xpi.sha256));
-*   [latest NoScript version compatible with Gecko < 1.9 is 1.10](https://noscript.net/download/releases/noscript-1.10.xpi) ([SHA256](https://noscript.net/download/releases/noscript-1.10.xpi.sha256)).
+*   [latest NoScript version compatible with Gecko 57 - Gecko 58 is 10.1.7.3]({{ links.download }}/releases/noscript-10.1.7.3.xpi);
+*   [latest NoScript version compatible with Gecko 46 - Gecko 56 is 5.1.9]({{ links.download }}/releases/noscript-5.1.9.xpi) ([SHA256]({{ links.download }}/releases/noscript-5.1.9.xpi.sha256));
+*   [latest NoScript version compatible with Gecko 13 - Gecko 45 is 2.9.0.14]({{ links.download }}/releases/noscript-2.9.0.14.xpi) ([SHA256]({{ links.download }}/releases/noscript-2.9.0.14.xpi.sha256));
+*   [latest NoScript version compatible with Gecko 1.9 - Gecko 12 is 2.9.0.1rc1]({{ links.download }}/betas/noscript-2.9.0.1rc1.xpi) ([SHA256]({{ links.download }}/betas/noscript-2.9.0.1rc1.xpi.sha256));
+*   [latest NoScript version compatible with Gecko < 1.9 is 1.10]({{ links.download }}/releases/noscript-1.10.xpi) ([SHA256]({{ links.download }}/releases/noscript-1.10.xpi.sha256)).
 
 #### Disclaimer
 We cannot update nor support NoScript 5.x and below anymore, because it was based on a completely different and now obsolete technology. However you can still find usage information and a FAQ section for those ancient versions in the [NoScript Classic archived website](https://classic.noscript.net/).
