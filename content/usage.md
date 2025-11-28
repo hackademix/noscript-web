@@ -13,7 +13,19 @@ Don't forget to allow NoScript to __run in Private / Incognito windows__, either
 
 Otherwise you won't find NoScript where you need it the most.
 
-For the same reason, __on Chromium-based browsers__, you'll probably want to __Pin NoScript's icon to the toolbar__, in order to have a visual indicator of what is going on with current page's permissions and a fast way to configure them.
+For the same reason, you'll probably want to __Pin NoScript's icon to the toolbar__, in order to have a visual indicator of what is going on with current page's permissions and a fast way to configure them.
+
+
+{% screenshot "onboarding", "Onboarding / Site Classification Behavior page" %}
+
+Upon installation, a welcome page lets you decide the way NoScript 
+must assign the initial [trust level](#trust-level) to unclassified sites, choosing between three "Site Classification Behaviors" (or usability levels), from most involving (but safest and recommended) to most convenient:
+- **STRICT / Default Deny** -
+  The traditional, recommended and most secure NoScript behavior: unclassified sites are marked as __DEFAULT__. Potentially harmful capabilities, including scripts, are disabled. You can manually enable the sites you trust by opening the NoScript interface and marking them as __TRUSTED__, or further customize their capabilities by selecting __CUSTOM__.
+- **EASIER / Auto** -
+  A compromise between security and convenience: the top level site, whose address is shown in the navigation bar, is automatically promoted to __Temporarily TRUSTED__ unless already manually classified. 3d party sites still need to be classified manually. Cross-site protections are still enforced.
+- **EASIEST / Default allow** -
+  The most relaxed behavior: unclassified top-level sites are promoted to __Temporarily TRUSTED__, and capabilities enabled for the top-level site are automatically cascaded to all its 3rd party unclassified sub-resources. Sites already classified as "UNTRUSTED" and __CUSTOM__ are not affected. Cross-site protections still enforced.
 
 {% screenshot "icon", "Clicking on NoScript toolbar icon" %}
 
@@ -25,7 +37,6 @@ After installation, you can quickly access NoScript:
 * __on Firefox for Android__,
   by selecting _Add-ons_ in Firefox's main menu and tapping the NoScript entry.
 
-
 ### Trust levels
 
 By using NoScript's popup UI you can assign any website or sub-resource origin (e.g. "cnn.com" or "ads-twitter.com") either one of __4 preset trust levels__ or a __per-site customized level__.
@@ -36,7 +47,7 @@ You can also assign this level to all the sites you _currently_ listed in the po
 the {% ui-icon "temp-all", "_Set all on this page to Temporarily TRUSTED_" %}  button.
 - {% ui-icon "yes", "__TRUSTED__" ,true %} is the permanent high trust level, enabling JavaScript and other active capabilities and persisting across browser restarts: use it only for sites which you really trust and use frequently.
 - {% ui-icon "black", "__UNTRUSTED__" , true %} is the zero-trust level, which blocks every capability (including rendering of plain HTML frames and alternate &lt;noscript&gt; content). It may be useful to flag sites which are definitely not welcome in your browser.
-- {% ui-icon "custom" "__CUSTOM__", true %} is a special level which can be tailored specifically for each site by turning on and off individual capabilities, such as _script_, _object_, _media_, _frame_, _font_, _webgl_, _fetch_, _ping_, _noscript_, _unrestricted CSS_, _other_. Capabilities which the site has tried to use, being blocked by NoScript, are highlighted in red. The temporary/permanent behavior of this level is controlled by a tiny clock-shaped toggle.
+- {% ui-icon __custom__ "__CUSTOM__", true %} is a special level which can be tailored specifically for each site by turning on and off individual capabilities, such as _script_, _object_, _media_, _frame_, _font_, _webgl_, _fetch_, _ping_, _noscript_, _unrestricted CSS_, _other_. Capabilities which the site has tried to use, being blocked by NoScript, are highlighted in red. The temporary/permanent behavior of this level is controlled by a tiny clock-shaped toggle.
 
 #### Contextual Policies
 {% screenshot "contextual", "Example: contextual policy for Twitter embedded timeline" %}

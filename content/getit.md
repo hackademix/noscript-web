@@ -27,16 +27,77 @@ To install, just drag and drop it onto your address bar.
 
 _Special thanks to Adithya Suresh Kumar for extensively reporting about a new browser fingerprinting risk, allowing NoScript 12.6 to deploy a mitigation technique for it._
 ````{.changelog}
-13.2.2
+v 13.5
 ============================================================
-x Work-around for issue #462
-x [L10n] Updated fr, pl, zh_CN
-x Resolve implicit dependencies from createHTMLElement()
-x [Android] Erase temporary permissions when all the tabs
-  closed (issue #464)
-x [Android] Make NoScript Options' top buttons fit in one
-  row
-x Typo in comment in LifeCycle.js
+x [UX] Show onboarding page on settings reset
+x [l10n] Lowered Transifex merge threshold to 50%
+x [L10n] Updated bn, br, ca, da, el, es, fa, ja, lt, ms, nb,
+ro, sv_SE
+x [UX] Scary styling for restrictions disablement option
+x [UX] Turn on restrictions when a behavior is selected
+x [UX] Zoom-in site classification behavior transition
+x [L10n] Updated de, fi, fr, he, is, it, mk, nl, pl, pt_BR,
+pt_PT, ru, sq, tr, uk, zh_CN, zh_TW
+x [UX] Improved modifier button styling
+x [UX] Colorized site classification behavior options
+x [UX] Implement first install onboarding page
+x [UX] Further behavior UI synchronization fixes (thanks
+fatboy for reporting)
+x [UX] Various style tweaks for Android
+x Fixed autoAllowTop bug on Chromium
+x [UX] Fixed some user-visible messages (thanks Tonnes for
+reporting)
+x [UX] Fix possible race condition on classification
+behavior UI initialization (thanks fatboy for reporting)
+x [UX] Classification behavior: improved code formatting and
+synchronization
+x [UX] Support links
+x [UX] Added missing bidirectional UI synchronization step
+x [UX] Complete classification behavior wiring
+x [UX] Hide classification behavior UI in Tor/Mullvad
+browsers
+x [L10n] Updated de, fa, fi, fr, it, nl, pl, pt_BR, pt_PT,
+ro, ru, sq, tr, zh_CN, zh_TW
+x [UX] "Site Classification Behavior" (usability level)
+selector
+x [UX] Support multiple UI listeners
+x [UX] Handle more media placeholder edge cases
+x [UX] Localize capabilities in status tooltip
+x [UX] Fix DEFAULT wrongly styled as canScript on unsafe
+URLs
+x [nscl] Fixed DomFreezer regression on first file:// load
+due to onbeforescriptexecuted deprecation (thanks Anton K
+for reporting)
+x [L10n] Updated nl
+x `build.sh +` automatically increments current version
+x [UX] Always show the stricter top-level site match on top
+of the list (thanks fatboy for suggestion)
+x [UX] Do not show CASCADED label for DEFAULT entries
+matching the top-level site
+x [UX] More cascading permissions bug fixes
+x [L10n] Multiple localization updates
+x [UX] Improved visual feedback for cascaded permissions
+(thanks fatboy for bug reporting)
+x [UX] Cascading permissions frontend
+x [nscl] [UX] Force artificial placeholders creation on
+x.com even if no real media object is in the DOM
+x [nscl] Cascading permissions support (backend)
+x [nscl] Do not let AUTO-TRUSTED override policies other
+than DEFAULT
+x [L10n] Updated de, fr, ru
+x [UX] Fixed theme configuration caching bug
+x [UX] Fix AUTO-TRUSTED preset titles
+x [UX] Improved UI labeling for automatically trusted
+top-level sites
+x [L10n] Updated it
+x Imported settings version migration support
+x Export settings metadata and versioning support
+x Mitigate x-load protection affecting file:// documents
+load times (issue #455, thanks Meludall for patch)
+x [UX] Better handling of clicks on obstructed placeholders
+x [UX] More concise and compact placeholders
+x [UX] Include all the suppported capability types in the
+  tooltip blocked/used report
 ````
 
 [Go to full changelog &raquo;]({{ "/changelog" | url }})
@@ -75,72 +136,155 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
-v 13.3.901
+v 13.5.0.902
 ============================================================
-x [UX] More concise and compact placeholders
-x [UX] Include all the suppported capability types in the
-  tooltip blocked/used report
+x [UX] Dismiss classification behavior UI when
+  tapping/clicking the background (like a popup)
+x [nscl] [UX] Start playing click-to-play media elements as
+  soon as they get enabled
+x Fix infinite recursion in theme CSS cleanup regular
+  expression
+x [Tor] Fix update_info_url version suffix
 
-v 13.2.903
+v 13.5.0.901
 ============================================================
-x [UX] [nscl] In-content placeholders for Wasm
-  (tor-browser#44278)
+x [L10n] Updated sq
+x [Tor] Self-hosted builds deployment automation
+x Tor self-hosting build support
+x 13.5 Tor self-hosting experiment
 
-v 13.2.902
+v 13.4.922
 ============================================================
-x [nscl] Fixed race condition potentially breaking
-  placeholders in edge cases
+x [UX] Show onboarding page on settings reset
+x [l10n] Lowered Transifex merge threshold to 50%
+x [L10n] Updated bn, br, ca, da, el, es, fa, ja, lt, ms, nb,
+  ro, sv_SE
+x [UX] Scary styling for restrictions disablement option
+x [UX] Turn on restrictions when a behavior is selected
 
-v 13.2.901
+v 13.4.921
 ============================================================
-x [nscl] Detect asynchronous failed WebAssembly access
-  attempts (tor-browser#44278)
+x [UX] Zoom-in site classification behavior transition
 
-v 13.2.1.901
+v 13.4.920
 ============================================================
-x Work-around for issue #462
-x [L10n] Updated fr, pl
-x Resolve implicit dependencies from createHTMLElement()
-x [Android] Erase temporary permissions when all the tabs
-  closed (issue #464)
-x [L10n] Updated zh_CN
-x [Android] Make NoScript Options' top buttons fit in one
-  row
-x Typo in comment in LifeCycle.js
+x [UX] More presentation / styling tweaks
+x [L10n] Updated de, fi, fr, he, is, it, mk, nl, pl, pt_BR,
+  pt_PT, ru, sq, tr, uk, zh_CN, zh_TW
+x [UX] Improved modifier button styling
 
-v 13.1.903
+v 13.4.919
 ============================================================
-x Fix bugs with Tor Browser unknown capabilities handling
+x [UX] Colorized site classification behavior options
 
-v 13.1.902
+v 13.4.918
 ============================================================
-x Work-around for Tor Browser Security Levels not being
-  aware yet of the wasm capability
+x [UX] Implement first install onboarding page
 
-v 13.1.901
+v 13.4.917
 ============================================================
-x [nscl] Make wasm usage attempt notification
-  Chromium-compatible
-x [L10n] Updated de, ru, tr
+x [UX] Further behavior UI synchronization fixes (thanks
+  fatboy for reporting)
+x [UX] Various style tweaks for Android
+x Fixed autoAllowTop bug on Chromium
 
-v 13.0.904
+v 13.4.916
 ============================================================
-x [nscl] Fix bug causing wasm to be unconditionally disabled
+x [UX] Fixed some user-visible messages (thanks Tonnes for
+  reporting)
+x [UX] Fix possible race condition on classification
+  behavior UI initialization (thanks fatboy for reporting)
 
-v 13.0.903
+v 13.4.915
 ============================================================
-x New wasm capability to control WebAssembly per site
+x [UX] Classification behavior: improved code formatting and
+  synchronization
+x [UX] Support links
 
-v 13.0.902
+v 13.4.914
 ============================================================
-x [L10n] Updated is, pt_BR
-x Adopt the Chromium prefetch CSS CORS work-around on Gecko
-  (torbrowser#44239 fix)
+x [UX] Added missing bidirectional UI synchronization step
 
-v 13.0.901
+v 13.4.913
 ============================================================
-x Best effort to avoid extra temporary tabs for sidebar
-  detection
+x [UX] Complete classification behavior wiring
+x [UX] Hide classification behavior UI in Tor/Mullvad
+  browsers
+x [L10n] Updated de, fa, fi, fr, it, nl, pl, pt_BR, pt_PT,
+  ro, ru, sq, tr, zh_CN, zh_TW
+
+v 13.4.912
+============================================================
+x [UX] "Site Classification Behavior" (usability level)
+  selector
+x [UX] Support multiple UI listeners
+
+v 13.4.911
+============================================================
+x [UX] Handle more media placeholder edge cases
+x [UX] Localize capabilities in status tooltip
+
+v 13.4.910
+============================================================
+x [UX] Fix DEFAULT wrongly styled as canScript on unsafe
+  URLs
+x [nscl] Fixed DomFreezer regression on first file:// load
+  due to onbeforescriptexecuted deprecation (thanks Anton K
+  for reporting)
+x [L10n] Updated nl
+x `build.sh +` automatically increments current version
+
+v 13.4.909
+============================================================
+x [UX] Always show the stricter top-level site match on top
+  of the list (thanks fatboy for suggestion)
+x [UX] Do not show CASCADED label for DEFAULT entries
+  matching the top-level site
+
+v 13.4.908
+============================================================
+x [UX] More cascading permissions bug fixes
+
+v 13.4.907
+============================================================
+x [L10n] Multiple localization updates
+x [UX] Improved visual feedback for cascaded permissions
+  (thanks fatboy for bug reporting)
+
+v 13.4.906
+============================================================
+x [UX] Cascading permissions frontend
+x [nscl] [UX] Force artificial placeholders creation on
+  x.com even if no real media object is in the DOM
+x [nscl] Cascading permissions support (backend)
+x [nscl] Do not let AUTO-TRUSTED override policies other
+  than DEFAULT
+x [L10n] Updated de, fr, ru
+
+v 13.4.905
+============================================================
+x [UX] Fixed theme configuration caching bug
+x [UX] Fix AUTO-TRUSTED preset titles
+
+v 13.4.904
+============================================================
+x [UX] Improved UI labeling for automatically trusted
+  top-level sites
+
+v 13.4.903
+============================================================
+x [L10n] Updated it
+x Imported settings version migration support
+x Export settings metadata and versioning support
+
+v 13.4.902
+============================================================
+x Mitigate x-load protection affecting file:// documents
+  load times (issue #455, thanks Meludall for patch)
+
+v 13.4.901
+============================================================
+x [UX] Better handling of clicks on obstructed placeholders
 
 ````
 

@@ -9,7 +9,7 @@ and other web browsers.
 [__Install NoScript now!__]({{ "/getit" | url }})
 
 
-{% screenshot "home", "Working with trust levels in NoScript's popup UI", "NoScript in action" %}
+{% screenshot "home-13_5", "Working with trust levels in NoScript's popup UI", "NoScript in action" %}
 
 NoScript is a built-in key security component of the [__Tor Browser__](https://torproject.org), the top anonymity tool defending millions against surveillance and censorship.
 
@@ -25,4 +25,3 @@ Staying __safe__ has never been so __easy__!
 Experts* will agree: __the web is really safer with NoScript!__
 
 \* _experts endorsing NoScript, among others: __Edward Snowden__ (former NSA analyst and whistleblower against surveillance state); __Window Snyder__ (former top security officer at Microsoft, Square, Inc., Apple, Fastly, Intel and Mozilla Corp.); __Douglas Crockford__ (Javascript expert and creator of the JSON format); the [__Sans Internet Storm Center__](https://isc.sans.edu/)_
-
