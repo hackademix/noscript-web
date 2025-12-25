@@ -3,6 +3,106 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 13.5.5
+============================================================
+x [nscl] DocumentFreezer bug fixes and improvements (fixes
+  #496)
+x [nscl] Improved DocRewriter web compatibility (see
+  tor-browser#44450)
+
+v 13.5.4.902
+============================================================
+x [nscl] DocumentFreezer bug fixes and improvements (fixes
+  #496)
+
+v 13.5.4.901
+============================================================
+x [nscl] Improved DocRewriter web compatibility (see
+  tor-browser#44450)
+
+v 13.5.4
+============================================================
+x [UX] Fix regression in sites UI live reload (issue #500)
+
+v 13.5.3
+============================================================
+x Wakeup TabCache from DNRPolicy (issue #497)
+x More logging and belt+suspenders for #497
+x [Chromium] Better fix for startup MV3 DNR tab-bound rules
+  race condition (issue #497)
+x [UX] Improve prompt labels (thanks fatboy for suggestion)
+x Refactor toLabel() into Sites
+x [Chromium] Fixed race conditions with MV3 DNR tab-specific
+  rules (issues #495 and #497)
+x [L10n] Updated tr
+
+v 13.5.2.905
+============================================================
+x Wakeup TabCache from DNRPolicy (issue #497)
+
+v 13.5.2.904
+============================================================
+x More logging and belt+suspenders for #497
+
+v 13.5.2.903
+============================================================
+x [Chromium] Better fix for startup MV3 DNR tab-bound rules
+  race condition (issue #497)
+
+v 13.5.2.902
+============================================================
+x [UX] Improve prompt labels (thanks fatboy for suggestion)
+x Refactor toLabel() into Sites
+
+v 13.5.2.901
+============================================================
+x [Chromium] Fixed race conditions with MV3 DNR tab-specific
+  rules (issues #495 and #497)
+x [L10n] Updated tr
+
+v 13.5.2
+============================================================
+x [L10n] Updated zh_CN
+x [UX] Fix minor issues with UI titles
+x [nscl] Fix cascade restrictions causing empty capabilities
+  (issue #492)
+
+v 13.5.1
+============================================================
+x Soft-reload must be performed off-document if scripts had
+  been suppressed by document freezing (fixes #489)
+x [UX] Dismiss classification behavior UI when
+  tapping/clicking the background (like a popup)
+x [nscl] [UX] Start playing click-to-play media elements as
+  soon as they get enabled
+x Fix infinite recursion in theme CSS cleanup regular
+  expression
+x [L10n] Updated sq
+x [Tor] Self-hosted builds deployment automation
+x Tor self-hosting build support
+
+v 13.5.0.903
+============================================================
+x Soft-reload must be performed off-document if scripts had
+  been suppressed by document freezing (fixes #489)
+
+v 13.5.0.902
+============================================================
+x [UX] Dismiss classification behavior UI when
+  tapping/clicking the background (like a popup)
+x [nscl] [UX] Start playing click-to-play media elements as
+  soon as they get enabled
+x Fix infinite recursion in theme CSS cleanup regular
+  expression
+x [Tor] Fix update_info_url version suffix
+
+v 13.5.0.901
+============================================================
+x [L10n] Updated sq
+x [Tor] Self-hosted builds deployment automation
+x Tor self-hosting build support
+x 13.5 Tor self-hosting experiment
+
 v 13.5
 ============================================================
 x [UX] Show onboarding page on settings reset
