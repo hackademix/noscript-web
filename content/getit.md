@@ -55,8 +55,9 @@ x [L10n] Updated tr
 
 ### __Development build__{#devel}
 
-NoScript development happens very fast to keep up with emerging web threats.
-If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want to try the latest release candidate.
+NoScript development happens very fast to keep up with emerging web threats. Each published development build in-between stable releases is considered a release candidate and is marked by a version number ending with `90x`, e.g. {{ver.dev}}.
+
+If you're brave enough and you need a specific feature or fix not released yet, or you simply want to provide feedback before official release, you may want to try the latest release as listed below.
 
 #### RC for Firefox
 
@@ -64,16 +65,13 @@ If you're brave enough and you need a specific feature or fix not released yet, 
 
 On Firefox for Android, unfortunately, a pre-release can only be downloaded (same link as above) and temporarily installed on Nightly by using the [web-ext tool](https://github.com/mozilla/web-ext), which is only suitable for hardcore developers and contributors.
 
-#### Non-store versions for Chromium
+#### RC for Chromium
 
-On Chromium based browsers you can download either:
+[Download __NoScript {{ ver.dev }} (MV3 for browsers based on Chromium 128 or above)__]({{ links.download }}/betas/noscript-{{ ver.dev }}-chrome.zip). 
 
-- [__NoScript {{ ver.dev }} (MV3)__]({{ links.download }}/betas/noscript-{{ ver.dev }}-chrome.zip) - experimental, supporting the Google-mandated but limiting, unproven and unstable latest extensions technology. __Requires Chromium version 128 or above__ (latest stable version recommended).
-- [__NoScript {{ ver.mv2 }} (MV2)__]({{ links.download }}/releases/noscript-{{ ver.mv2 }}-chrome.zip) - legacy, unsupported by Google but proven and stable. Best option for browsers based on Chromium 127 and below.
+In order to install non-store extensions like NoScript {{ ver.dev }} on Chromium-based browsers you need to unzip the downloaded `noscript-$VERSION-chrome.zip` file and load its content as an [unpacked extension](#unpacked-extensions) in developer mode.
 
-In order to install next MV3 version until it reaches the Chrome Store, or the MV2 version if you're affected by some MV3-caused bug which could not have been fixed yet, you need to unzip the downloaded `noscript-$VERSION-chrome.zip` file and load its content as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked) in developer mode.
-
-Please follow these steps:
+You can install an **unpacked extension on Chromium**{#unpacked-extensions} by following these steps:
 
 1. Open the Extension Management page by navigating to chrome://extensions.
    Alternatively, open this page by clicking on the Extensions menu button and selecting Manage Extensions at the bottom of the menu.
@@ -133,16 +131,16 @@ x [L10n] Updated tr
 
 ### Browser compatibility and obsolete versions
 
-[NoScript {{ ver.stable }}](#latest-stable) is compatible with browsers based on Gecko versions 115 and above (e.g. Firefox and Tor Browser, on desktop and Android) and on Chromium versions 128 and above (Chrome, Edge, Vivaldi, Brave...)
+* [NoScript {{ ver.stable }}](#latest-stable) is compatible with browsers based on Gecko versions 115 and above (e.g. Firefox and Tor Browser, on desktop and Android) and on Chromium versions 128 and above (Chrome, Edge, Vivaldi, Brave...)
+* [NoScript {{ ver.legacy }}]({{ links.download }}/betas/noscript-{{ ver.legacy }}.xpi) is compatible with Gecko versions 59-114.
+* [__NoScript {{ ver.mv2 }} (MV2)__]({{ links.download }}/releases/noscript-{{ ver.mv2 }}-chrome.zip) is comparible with Chromium 127 and below. In order to install it, you need to unzip the downloaded `noscript-{ ver.mv2 }}-chrome.zip` file and load its content as an [unpacked extension](#unpacked-extensions) in developer mode.
 
-[NoScript {{ ver.legacy }}]({{ links.download }}/betas/noscript-{{ ver.legacy }}.xpi) is compatible with Gecko versions 59-114.
 
-[![NoScript Classic Logo](https://classic.noscript.net/noscript/logo.png){.left}](https://classic.noscript.net/)
+[![NoScript Classic Logo](https://classic.noscript.net/noscript/logo.png){.left}](https://classic.noscript.net/){#classic}
 
 You can still download [**NoScript "Classic"** (5.1.9)]({{ links.download }}/releases/noscript-5.1.9.xpi) ([SHA256]({{ links.download }}/releases/noscript-5.1.9.xpi.sha256)) for Seamonkey, Palemoon, Waterfox Classic and possibly other "vintage" (pre-Gecko 57) Firefox forks [here]({{ links.download }}/releases/noscript-5.1.9.xpi).
 
 **Notice:** _you may need to open about:config and set your **xpinstall.signatures.required** preference to **false** in order to install NoScript 5.x, since Mozilla doesn't support signatures for legacy add-ons anymore. If you're [using a non ESR Firefox, you may also need this hack](https://forums.informaction.com/viewtopic.php?p=98662#p98662)._
-
 
 Users of Firefox 58 and below are urged to upgrade their very unsafe browser. For those few who can't,
 
@@ -152,5 +150,5 @@ Users of Firefox 58 and below are urged to upgrade their very unsafe browser. Fo
 *   [latest NoScript version compatible with Gecko 1.9 - Gecko 12 is 2.9.0.1rc1]({{ links.download }}/betas/noscript-2.9.0.1rc1.xpi) ([SHA256]({{ links.download }}/betas/noscript-2.9.0.1rc1.xpi.sha256));
 *   [latest NoScript version compatible with Gecko < 1.9 is 1.10]({{ links.download }}/releases/noscript-1.10.xpi) ([SHA256]({{ links.download }}/releases/noscript-1.10.xpi.sha256)).
 
-#### Disclaimer
+**Disclaimer**
 We cannot update nor support NoScript 5.x and below anymore, because it was based on a completely different and now obsolete technology. However you can still find usage information and a FAQ section for those ancient versions in the [NoScript Classic archived website](https://classic.noscript.net/).
