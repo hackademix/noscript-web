@@ -200,7 +200,13 @@ pre {
 
 main ul {
   padding-left: 1.5em;
-  list-style: "➤";
+  list-style: "▶";
+  padding-inline-start: 2em;
+}
+
+main ul li::marker {
+  color: var(--logo-red);
+  text-shadow: var(--focus-color) .1em .1em .1em, -.1em -.1em .1em, 0 -.1em .1em, 0 .1em .1em, -.1em 0 .1em, .1em 0 .1em;
 }
 
 main ol {
@@ -209,7 +215,7 @@ main ol {
 }
 
 main li {
-  padding: .25em;
+  padding: .25em .5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
