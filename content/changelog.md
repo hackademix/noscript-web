@@ -3,6 +3,27 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 13.5.6
+============================================================
+x file:// quirk mode compatibility, thanks peterbg for
+  reporting
+x Add option to disable automatic page reloading on
+  permissions change (fixes issue #42)
+
+v 13.5.5.903
+============================================================
+x [nscl] Handle DTD serialization edge cases
+
+v 13.5.5.902
+============================================================
+x [nscl] Generalize DTD serialization (file:// quirk mode
+  compat, thanks peterbg for reporting)
+
+v 13.5.5.901
+============================================================
+x Add option to disable automatic page reloading on
+  permissions change (fixes issue #42)
+
 v 13.5.5
 ============================================================
 x [nscl] DocumentFreezer bug fixes and improvements (fixes

@@ -27,27 +27,12 @@ To install, just drag and drop it onto your address bar.
 
 _Special thanks to Adithya Suresh Kumar for extensively reporting about a new browser fingerprinting risk, allowing NoScript 12.6 to deploy a mitigation technique for it._
 ````{.changelog}
-v 13.5.5
+v 13.5.6
 ============================================================
-x [nscl] DocumentFreezer bug fixes and improvements (fixes
-  #496)
-x [nscl] Improved DocRewriter web compatibility (see
-  tor-browser#44450)
-v 13.5.4
-============================================================
-x [UX] Fix regression in sites UI live reload (issue #500)
-
-v 13.5.3
-============================================================
-x Wakeup TabCache from DNRPolicy (issue #497)
-x More logging and belt+suspenders for #497
-x [Chromium] Better fix for startup MV3 DNR tab-bound rules
-  race condition (issue #497)
-x [UX] Improve prompt labels (thanks fatboy for suggestion)
-x Refactor toLabel() into Sites
-x [Chromium] Fixed race conditions with MV3 DNR tab-specific
-  rules (issues #495 and #497)
-x [L10n] Updated tr
+x file:// quirk mode compatibility, thanks peterbg for
+  reporting
+x Add option to disable automatic page reloading on
+  permissions change (fixes issue #42)
 
 ````
 
@@ -84,6 +69,15 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
+v 13.5.5.903
+============================================================
+x [nscl] Handle DTD serialization edge cases
+
+v 13.5.5.902
+============================================================
+x [nscl] Generalize DTD serialization (file:// quirk mode
+  compat, thanks peterbg for reporting)
+
 v 13.5.5.901
 ============================================================
 x Add option to disable automatic page reloading on
