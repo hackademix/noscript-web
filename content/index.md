@@ -4,7 +4,9 @@ nav: 1
 ---
 
 The __NoScript Security Suite__ is Free Open Source Software (FOSS) providing extra protection for [Firefox]({{ links.moz }}) (on Android, too!), [Chrome]({{ links.chrome }}), Edge, Brave
-and other web browsers.
+and other web browsers, by letting user decide freely which site they trust enough to run code in their browser.
+
+NoScript enables __consensual browsing__: your browser, your choice!
 
 [__Install NoScript now!__]({{ "/getit" | url }})
 

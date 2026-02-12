@@ -291,19 +291,20 @@ header > h1 {
 }
 
 header > h2 {
-  font-size: 60px;
+  font-size: 55px;
   margin: 2rem 0px 0px 11rem;
-  background-color: var(--accent-color);
+  background-color: var(--hilite-color);
   color: var(--fg-color2);
   border: .1em solid var(--fg-color2);
-  padding: 0.1em;
+  border-radius: .8em;
+  padding: 0.1em 0.3em 0.3em;
   transform-origin: center center 0px;
   transform: rotate(-10deg);
   position: absolute;
   bottom: 1.5em;
   right: 2em;
   white-space: nowrap;
-  box-shadow: 0 0 .2em .2em var(--hilite-color);
+  box-shadow: 0 0 .2em .2em var(--accent-color);
 }
 
 
@@ -325,7 +326,7 @@ header > h2 {
       0.1vw 0.1vw var(--accent-color);
   }
   header > h2 {
-    font-size: 6vw;
+    font-size: 5.5vw;
     bottom: 1.8em;
     right: .8em;
   }

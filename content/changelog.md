@@ -3,6 +3,105 @@ title: Changelog
 ---
 [+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 13.5.12
+============================================================
+x Convert PNG images to WEBP
+x [UX][Android] Improve support for increased font size
+  configurations
+x Make deploy2tor.sh default to latest unpacked firefox
+  manifest.json
+x [UX] Fix first selected preset not being focused
+  automatically on popup opening (issue #506)
+x Prevent mid-session updates on Android in global PMB
+  (tor-browser#44398)
+x [UX] Fix keyboard navigation regression (issue #506)
+x [UX] Improved readability of focused icon buttons
+
+v 13.5.11.903
+============================================================
+x Convert PNG images to WEBP
+x [UX][Android] Improve support for increased font size
+  configurations
+x Make deploy2tor.sh default to latest unpacked firefox
+  manifest.json
+
+v 13.5.11.902
+============================================================
+x [UX] Fix first selected preset not being focused
+  automatically on popup opening (issue #506)
+
+v 13.5.11.901
+============================================================
+x Prevent mid-session updates on Android in global PMB
+  (tor-browser#44398)
+x [UX] Fix keyboard navigation regression (issue #506)
+x [UX] Improved readability of focused icon buttons
+
+v 13.5.11
+============================================================
+x Fixed high-contrast regression (thanks Laurens for
+  reporting)
+x [Gecko] Switch back to persistent background scripts
+  (work-around for tor-browser#44398)
+x Avoid about:blank deadlocks (possibly related to
+  mozbug#543435, tor-browser#443098)
+x [UX] Update and optimize images (issue #505)
+
+v 13.5.10
+============================================================
+x [UX] Smoother popup initialization
+x [UX] Scrolling area optimization
+x [UX] Flickering reduction
+x [UX] Various visual tweaks
+
+v 13.5.9.906
+============================================================
+x [UX] Smoother popup initialization
+
+v 13.5.9.905
+============================================================
+x [UX] Scrolling area optimization
+
+v 13.5.9.904
+============================================================
+x [UX] More flickering reduction
+
+v 13.5.9.903
+============================================================
+x Avoid flickering on preset customization tab change
+
+v 13.5.9.902
+============================================================
+x More visual tweaks
+
+v 13.5.9.901
+============================================================
+x Minor visual changes
+
+v 13.5.9
+============================================================
+x Fix missing https-only icon regression (thanks Ingo
+  Brückl for reporting)
+
+v 13.5.8
+============================================================
+x Fix site label misalignment (thanks Ingo Brückl for
+  reporting)
+
+v 13.5.7
+============================================================
+x [nscl] Improved document freezing and CSP insertion
+x Control manually navigated top-level data: URIs
+  (tor-browser#44482)
+
+v 13.5.6.902
+============================================================
+x [nscl] Improved document freezing and CSP insertion
+
+v 13.5.6.901
+============================================================
+x Control manually navigated top-level data: URIs
+  (tor-browser#44482)
 v 13.5.6
 ============================================================
 x file:// quirk mode compatibility, thanks peterbg for

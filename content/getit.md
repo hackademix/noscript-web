@@ -27,13 +27,19 @@ To install, just drag and drop it onto your address bar.
 
 _Special thanks to Adithya Suresh Kumar for extensively reporting about a new browser fingerprinting risk, allowing NoScript 12.6 to deploy a mitigation technique for it._
 ````{.changelog}
-v 13.5.6
+v 13.5.12
 ============================================================
-x file:// quirk mode compatibility, thanks peterbg for
-  reporting
-x Add option to disable automatic page reloading on
-  permissions change (fixes issue #42)
-
+x Convert PNG images to WEBP
+x [UX][Android] Improve support for increased font size
+  configurations
+x Make deploy2tor.sh default to latest unpacked firefox
+  manifest.json
+x [UX] Fix first selected preset not being focused
+  automatically on popup opening (issue #506)
+x Prevent mid-session updates on Android in global PMB
+  (tor-browser#44398)
+x [UX] Fix keyboard navigation regression (issue #506)
+x [UX] Improved readability of focused icon buttons
 ````
 
 [Go to full changelog &raquo;]({{ "/changelog" | url }})
@@ -69,57 +75,72 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
-v 13.5.5.903
+v 13.5.12.902
 ============================================================
-x [nscl] Handle DTD serialization edge cases
+x [nscl] Enhanced worker patch propagation support
+  (tor-browser#44626)
 
-v 13.5.5.902
+v 13.5.12.901
 ============================================================
-x [nscl] Generalize DTD serialization (file:// quirk mode
-  compat, thanks peterbg for reporting)
+x [nscl] [UX] Ensure offscreen placeholders survive
+  full-page error messages (tor-browser#44625)
+x Cross-browser icon support (SVG on Gecko, PNG on Chromium)
+x Added detached gpg signatures to Tor-hosted XPIs
+x [l10n] Removed nb_NO (deprecated in favor of nb)
 
-v 13.5.5.901
+v 13.5.11.903
 ============================================================
-x Add option to disable automatic page reloading on
-  permissions change (fixes issue #42)
+x Convert PNG images to WEBP
+x [UX][Android] Improve support for increased font size
+  configurations
+x Make deploy2tor.sh default to latest unpacked firefox
+  manifest.json
 
-v 13.5.4.902
+v 13.5.11.902
 ============================================================
-x [nscl] DocumentFreezer bug fixes and improvements (fixes
-  #496)
+x [UX] Fix first selected preset not being focused
+  automatically on popup opening (issue #506)
 
-v 13.5.4.901
+v 13.5.11.901
 ============================================================
-x [nscl] Improved DocRewriter web compatibility (see
-  tor-browser#44450)
+x Prevent mid-session updates on Android in global PMB
+  (tor-browser#44398)
+x [UX] Fix keyboard navigation regression (issue #506)
+x [UX] Improved readability of focused icon buttons
 
-v 13.5.3.901
+v 13.5.10.901
 ============================================================
-x [UX] Fix regression in sites UI live reload (issue #500)
+x Fixed high-contrast regression (thanks Laurens for
+  reporting)
+x [Gecko] Switch back to persistent background scripts
+  (work-around for tor-browser#44398)
+x Avoid about:blank deadlocks (possibly related to
+  mozbug#543435, tor-browser#443098)
+x [UX] Update and optimize images (issue #505)
 
-v 13.5.2.905
+v 13.5.9.906
 ============================================================
-x Wakeup TabCache from DNRPolicy (issue #497)
+x [UX] Smoother popup initialization
 
-v 13.5.2.904
+v 13.5.9.905
 ============================================================
-x More logging and belt+suspenders for #497
+x [UX] Scrolling area optimization
 
-v 13.5.2.903
+v 13.5.9.904
 ============================================================
-x [Chromium] Better fix for startup MV3 DNR tab-bound rules
-  race condition (issue #497)
+x [UX] More flickering reduction
 
-v 13.5.2.902
+v 13.5.9.903
 ============================================================
-x [UX] Improve prompt labels (thanks fatboy for suggestion)
-x Refactor toLabel() into Sites
+x Avoid flickering on preset customization tab change
 
-v 13.5.2.901
+v 13.5.9.902
 ============================================================
-x [Chromium] Fixed race conditions with MV3 DNR tab-specific
-  rules (issues #495 and #497)
-x [L10n] Updated tr
+x More visual tweaks
+
+v 13.5.9.901
+============================================================
+x Minor visual changes
 
 ````
 
