@@ -1,8 +1,8 @@
 :root {
   --content-width: 1000px;
-  font-family: "Linik Sans", "sans-serif";
+  font-family: "Linik Sans", sans-serif;
   font-size: 16px;
-  --logo-font: "Jellee", cursive;
+  --logo-font: "Jellee", sans-serif;
   --logo-red: #d12027;
   scroll-behavior: smooth;
 }
@@ -307,6 +307,14 @@ header > h2 {
   box-shadow: 0 0 .2em .2em var(--accent-color);
 }
 
+.pride header > h2 {
+  color: lightpink;
+  padding: 0.3em 0.6em 0.3em 1.4em;
+  background-image: url("/img/pride-flag.svg");
+  background-size: cover;
+  background-position: left;
+  text-shadow: purple 2px 2px 2px, purple -2px -2px 2px, purple 2px -2px 2px, purple -2px 2px 2px;
+}
 
 @media (max-width: 1000px) {
   header {
