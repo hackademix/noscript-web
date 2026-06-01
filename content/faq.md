@@ -18,6 +18,10 @@ The same goes for a fresh install of the __Tor Browser__, where the developers d
 
 Otherwise, if you're browsing in a Private/Incognito window (or you've set your browser to do it by default), please open the _Extensions Manager_ and double check you've allowed NoScript to run in Private/Incognito mode.
 
+#### Why can I see a notification saying "NoScript started __debugging__{#faq-debugger} this browser"?
+
+Due to limitations of Chromium-based browsers, the only way for NoScript to modify the JavaScript execution environment inside web workers (e.g. to selectively block access to the `webgl` or the `wasm` capabilities) is using the debugger, which causes the browser to notify users because this is a very powerful feature that most browser extensions don't need.
+
 ### Troubleshooting
 
 #### __Why does NoScript forget my settings whenever I restart the browser?__{ #faq-forgot-settings }

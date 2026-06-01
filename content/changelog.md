@@ -1,8 +1,583 @@
 ---
 title: Changelog
 ---
-[+] new feature, [x] bug fix/maintenance, [-] removed feature, [=] repackaging or cosmetic change
 ```{.changelog}
+v 13.6.19
+============================================================
+x [UX][Android] Auto-size gesture label
+x [UX][Android] Adapt automatically to bigger font sizes
+  (issue #503)
+x [L10n] Updated it from Localization Lab
+x [UX] Fix wss: URLs being styled as unsafe (issue #551)
+x Fixed race condition causing intermittent Cloudflare
+  challenges failures (issue #549)
+x [nscl] Handle RFC 4291 (thanks Security Research Labs for
+  report)
+x [TabGuard] Avoid function serialization pitfalls (thanks
+  Security Research Labs for report)
+x [TabGuard] Fix wrong key used in redundancy optimization
+
+v 13.6.18.902
+============================================================
+x [UX][Android] Auto-size gesture label
+x [UX][Android] Adapt automatically to bigger font sizes
+  (issue #503)
+x [L10n] Updated it from Localization Lab
+x [UX] Fix wss: URLs being styled as unsafe (issue #551)
+x Fixed race condition causing intermittent Cloudflare
+  challenges failures (issue #549)
+
+v 13.6.18.901
+============================================================
+x [nscl] Handle RFC 4291 (thanks Security Research Labs for
+  report)
+x [TabGuard] Avoid function serialization pitfalls (thanks
+  Security Research Labs for report)
+x [TabGuard] Fix wrong key used in redundancy optimization
+
+v 13.6.18
+============================================================
+x [nscl] [Chromium] Work-around for restrictive CSP breaking
+  inline blob:/data: worker patches
+x Short-circuit on internal URIs
+
+v 13.6.17
+============================================================
+x [XSS] Updated IC_EVENT_PATTERN
+x Improve compatibility across extensions reusing
+  SyncMessage (issue #548)
+
+v 13.6.16
+============================================================
+x Remove sync fetching exception for network-served
+  embedding documents (thanks Security Research Labs for
+  report)
+x [UX] Improved gesture calibration
+x Prevent horizontal scrolling caused by options tab panels
+x Reduce console spam on startup
+x [A11y] Fix aria-expanded management for customizable
+  presets
+x [L10n] Updated bn, fi, fr, ja, ru, tr, zh_Hans from
+  Localization Lab
+x [XSS] Updated IC_EVENT_PATTERN
+x [UX] Improved rendering and tab-switching performance for
+  very large site lists
+x Fix container options still shown if "Enable support for
+  containers tabs" is unchecked=
+x [Containers] Make Default policy label in options
+  localizable (thanks fatboy for report)
+x Restore README.md logo image lost during webp migration
+  (73d6ed0) (#545)
+x [L10n] Updated bn, de, ru from Localization Lab
+x Translations update from Localization Lab (#542)
+x [Containers] Gracefully degrade when containers are
+  disabled by browser options
+x [UX][Containers] UI integration
+x Enable container support (Firefox pre-releases only)
+x Add support for container tabs (#218, thanks to
+  @aaronkollasch for this huge contribution)
+x Slight policy fetching optimization in edge cases
+x [nscl] Fix frozen srcdoc frames having "null" as their
+  content
+x [nscl] Improved attributes freezing (thanks Security
+  Research Labs for report)
+x [build] Local github release automation script
+x Better changelog formatting in release management action
+x Fix release management action always using HEAD
+x Consider wss: in secure protocol checks (thanks barbaz for
+  reporting)
+x [Android] Fireproof UI tab closing
+x [nscl] Fix dead objects interfering with window.event
+  patch
+x [nscl] Consider wss: in SecureDomainKey checks
+x Add missing license information
+x Remove "fetch" capability from DEFAULT preset unless
+  "script" is there too (thanks Security Research Labs for
+  suggestion)
+x Block websocket connections where the fetch capability is
+  disabled (thanks Security Research Labs for report)
+x Improved origin normalization for sandboxed content
+  (thanks Security Research Labs for report)
+
+v 13.6.15.913
+============================================================
+x Remove sync fetching exception for network-served
+  embedding documents (thanks Security Research Labs for
+  report)
+
+v 13.6.15.912
+============================================================
+x [UX] Improved gesture calibration
+
+v 13.6.15.911
+============================================================
+x [UX] Further rendering and tab-switching performance
+  improvement for very large site lists
+x Prevent horizontal scrolling caused by options tab panels
+x Reduce console spam on startup
+
+v 13.6.15.910
+============================================================
+x [A11y] Fix aria-expanded management for customizable
+  presets
+
+v 13.6.15.909
+============================================================
+x [L10n] Updated bn, fi, fr, ja, ru, tr, zh_Hans from
+  Localization Lab
+x [XSS] Updated IC_EVENT_PATTERN
+x [UX] Improved rendering and tab-switching performance for
+  very large site lists
+
+v 13.6.15.908
+============================================================
+x Fix container options still shown if "Enable support for
+  containers tabs" is unchecked
+
+v 13.6.15.907
+============================================================
+x [Containers] Make Default policy label in options
+  localizable (thanks fatboy for report)
+x Restore README.md logo image lost during webp migration
+  (73d6ed0) (#545)
+x [L10n] Updated bn, de, ru from Localization Lab
+
+v 13.6.15.906
+============================================================
+x Translations update from Localization Lab (#542)
+x [Containers] Gracefully degrade when containers are
+  disabled by browser options
+x [UX][Containers] UI integration
+x Enable container support in Firefox pre-releases only for
+  now
+x Add support for container tabs (#218, thanks to
+  @aaronkollasch for this huge contribution)
+
+v 13.6.15.905
+============================================================
+x Slight policy fetching optimization in edge cases
+x [nscl] Fix frozen srcdoc frames having "null" as their
+  content
+
+v 13.6.15.904
+============================================================
+x [nscl] Improved attributes freezing (thanks Security
+  Research Labs for report)
+x [build] Local github release automation script
+x Better changelog formatting in release management action
+x Fix release management action always using HEAD
+
+v 13.6.15.903
+============================================================
+x Consider wss: in secure protocol checks (thanks barbaz for
+  reporting)
+x [Android] Fireproof UI tab closing
+x Extract stable release notes from
+  https://noscript.net/changelog
+x Fix indentation pt. 2
+x Fix indentation
+x Make the manage release action triggerable on demand
+
+v 13.6.15.902
+============================================================
+x [nscl] Fix dead objects interfering with window.event
+  patch
+x [nscl] Consider wss: in SecureDomainKey checks
+x Add missing license information
+x [build] Workflow to automate GitHub releases when a
+  version tag is pushed
+
+v 13.6.15.901
+============================================================
+x Remove "fetch" capability from DEFAULT preset unless
+  "script" is there too (thanks Security Research Labs for
+  suggestion)
+x Block websocket connections where the fetch capability is
+  disabled (thanks Security Research Labs for report)
+x Improved origin normalization for sandboxed content
+  (thanks Security Research Labs for report)
+
+v 13.6.15
+============================================================
+x [nscl] Create placeholders for LAN requests
+x Saner origin normalization for sandboxed iframes (thanks
+  Security Research Labs for report)
+x Notify sub_frame requests to parent content frame
+x [UX][Android] Remove finger-size gating for gesture
+  detection (issues #540, #541)
+x Fix gesture not recognized when RFP is on (issue #540)
+x [Gecko] Improved freezing/unfreezing for file:// documents
+  (thanks Security Research Labs for report)
+
+v 13.6.14.903
+============================================================
+x [nscl] Create placeholders for LAN requests
+x Saner origin normalization for sandboxed iframes (thanks
+  Security Research Labs for report)
+x Notify sub_frame requests to parent content frame
+x [UX][Android] Remove finger-size gating for gesture
+  detection (issues #540, #541)
+
+v 13.6.14.902
+============================================================
+x Fix gesture not recognized when RFP is on (issue #540)
+
+v 13.6.14.901
+============================================================
+x [Gecko] Improved freezing/unfreezing for file:// documents
+  (thanks Security Research Labs for report)
+
+v 13.6.13
+============================================================
+x Remove source comments from installable packages
+x Replace browser-polyfill.js with an empty stub in Firefox
+  builds
+x Reduce console spam by deferring the logging of messaging
+  errors due to premature unloading (tor-browser#44673)
+x Ensure event hooking does not break window-level listeners
+
+v 13.6.12
+============================================================
+x [nscl] Do not limit CSS prefetching to 3rd party / DNS
+  when used beyond PP0 mitigation
+x Better support for debug builds
+x Ensure NavCache is awake when used
+
+v 13.6.11.902
+============================================================
+x [nscl] Do not limit CSS prefetching to 3rd party / DNS
+  when used beyond PP0 mitigation
+x Better support for debug builds part 2
+
+v 13.6.11.901
+============================================================
+x Ensure NavCache is awake when used
+x Better support for debug builds
+
+v 13.6.11
+============================================================
+x Remove -webkit-appearance and -moz-appearance occurrences
+x [UX] Restore 12px as the base font size on desktop
+  (related to #529)
+x [UX] Fix onboarding page dismissed when clicking on the
+  background
+x Safer version bumping
+
+v 13.6.10
+============================================================
+x [nscl] Account for xray being unrelevant and missing in
+  Worker scope when patching trustedTypes
+
+v 13.6.9
+============================================================
+x [nscl] Multiple xray-related fixes (tor-browser#44778)
+x Allow building if tree changes are not in the source code
+
+v 13.6.8.902
+============================================================
+x [nscl] More xray-related fixes (tor-browser#44778)
+
+v 13.6.8.901
+============================================================
+x [nscl] Fix xray issues with trustedTypes patch
+  (tor-browser#44778)
+x Allow building if tree changes are not in the source code
+
+v 13.6.8
+============================================================
+x [L10n] Updated el, ru from Localization Lab
+x [nscl] Fix XrayWrapper problems with Worker constructor
+  arguments (tor-browser#44761)
+x [XSS] Updated IC_EVENT_PATTERN generation (thanks Security
+  Research Labs for report)
+x [nscl] Use xray to proxify trustedTypes.createPolicy when
+  needed (fixes tor-browser#44767)=
+x [UX] Better approach to ensure customizer is visible on
+  the bottom of the scrollable area
+x [UX] Prevent longer URLs from breaking customizer layout
+  and force unwanted horizontal scrolling
+x [UX][Android] Improved gesture event activation
+x [XSS] Unconditionally include acorn.js dependency to
+  account for some browsers (IronFox?) breaking native
+  syntax checking (#535)
+x Fix misleading CASCADED labels for DEFAULT entries when
+  full addresses are shown (thanks fatboy for reporting)
+x [nscl] Fix breakages on older browser versions not
+  supporting Trusted Types yet
+x Support deployment completion after automatic signing
+  failure and manual recovery
+x [nscl] Trusted Types compatible worker patching
+  (tor-browser#44755)
+x [L10n] Automate adding new empty messages.json files
+x [L10n] Updated bs, is, km, nl, pl, sr, zh_Hans, zh_Hant
+  from Localization Lab (#531)
+x Fix extra about:blank and deferred update when existing
+  tab is suitable for temporary data survival
+  (tor-browser#44714)
+
+v 13.6.7.908
+============================================================
+x [L10n] Updated el, ru from Localization Lab
+x [nscl] Fix XrayWrapper problems with Worker constructor
+  arguments (tor-browser#44761)
+
+v 13.6.7.907
+============================================================
+x [XSS] Updated IC_EVENT_PATTERN generation (thanks Security
+  Research Labs for report)
+x [nscl] Use xray to proxify trustedTypes.createPolicy when
+  needed (fixes tor-browser#44767)
+
+v 13.6.7.906
+============================================================
+x [UX] Better approach to ensure customizer is visible on
+  the bottom of the scrollable area
+x [UX] Prevent longer URLs from breaking customizer layout
+  and force unwanted horizontal scrolling
+x [UX][Android] Improved gesture event activation
+
+v 13.6.7.905
+============================================================
+x [XSS] Unconditionally include acorn.js dependency to
+  account for some browsers (IronFox?) breaking native
+  syntax checking (#535)
+x [L10n] Updated el from Localization Lab
+x Fix misleading CASCADED labels for DEFAULT entries when
+  full addresses are shown (thanks fatboy for reporting)
+
+v 13.6.7.904
+============================================================
+x [nscl] Fix breakages on older browser versions not
+  supporting Trusted Types yet
+x Support deployment completion after automatic signing
+  failure and manual recovery
+
+v 13.6.7.903
+============================================================
+x [nscl] Trusted Types compatible worker patching
+  (tor-browser#44755)
+
+v 13.6.7.902
+============================================================
+x Fix CUSTOM temporary toggle not working (regression from
+  2bed7b29bd561e1600, thanks fatboy for reporting)
+x [L10n] Automate adding new empty messages.json files
+x [L10n] Updated bs, is, km, nl, pl, sr, zh_Hans, zh_Hant
+  from Localization Lab (#531)
+x [l10n] Added new empty bs, km, sr
+
+v 13.6.7.901
+============================================================
+x Fix extra about:blank and deferred update when existing
+  tab is suitable for temporary data survival
+  (tor-browser#44714)
+
+v 13.6.7
+============================================================
+x Removed some dead code
+x Translations update from Localization Lab (#530)
+x [UX] Site UI styling tweaks
+x Explicit namespaces to create HTML elements
+x [UX] Slightly increased icon button sizes
+x [UX] font-size adjustments
+x [UX] Scroll to customizer when editing the CUSTOM preset
+x [UX][Android] Exclude multi-touch from closing gestures
+x [UX][Android] Make site UI dismissal easier and more
+  intuitive by touching page in the background
+x Fix onboarding page header layout regression
+x new translations from weblate (#526)
+x [UX][Android] Exempt actual  drawing applications from
+  gesture detection (issue #522)
+x [UX][Android] Optimize passive/active/capture in touch
+  event listeners
+x [nscl] Preserve focus across conservative document
+  rewrites (issue#525)
+x [L10n] Updated de, nl, uk (last merge from Transifex
+  before deprecating it for Weblate)
+x [L10n] Add script to merge two _locales directories
+x [L10n] Updated bn, br, ca, da, de, el, es, fa, fi, fr, he,
+  is, it, ja, lt, mk, ms, nb_NO, nl, pl, pt_BR, pt_PT, ro,
+  ru, sq, sv_SE, tr, uk, zh_CN, zh_TW from Localization Lab
+
+v 13.6.6.907
+============================================================
+x Removed some dead code
+x Translations update from Localization Lab (#530)
+x [UX] Site UI styling tweaks
+
+v 13.6.6.906
+============================================================
+x Explicit namespaces for gesture visual feedback HTML
+  elements
+x [UX] Site UI styling tweaks
+
+v 13.6.6.905
+============================================================
+x [nscl] Use explicit namespace usage when creating HTML
+  elements
+x [Chromium] Fix regression causing smaller UI text with
+  some system themes
+x [UX] Slightly ncreased icon button sizes
+
+v 13.6.6.904
+============================================================
+x [UX] font-size adjustments
+x [UX] Scroll to customizer when editing the CUSTOM preset
+x [UX][Android] Exclude multi-touch from closing gestures
+
+v 13.6.6.903
+============================================================
+x [UX][Android] Make site UI dismissal easier and more
+  intuitive by touching page in the background
+x Fix onboarding page header layout regression
+
+v 13.6.6.902
+============================================================
+x new translations from weblate (#526)
+x [UX][Android] Exempt actual  drawing applications from
+  gesture detection (issue #522)
+x [UX][Android] Optimize passive/active/capture in touch
+  event listeners
+
+v 13.6.6.901
+============================================================
+x [nscl] Preserve focus across conservative document
+  rewrites (issue#525)
+x [L10n] Updated de, nl, uk (last merge from Transifex
+  before deprecating it for Weblate)
+x [L10n] Add script to merge two _locales directories
+x [L10n] Updated bn, br, ca, da, de, el, es, fa, fi, fr, he,
+  is, it, ja, lt, mk, ms, nb_NO, nl, pl, pt_BR, pt_PT, ro,
+  ru, sq, sv_SE, tr, uk, zh_CN, zh_TW from Localization Lab
+
+v 13.6.6
+============================================================
+x [XSS] Fix false positives regression due to the MV3 WIP
+  (issue #520)
+
+v 13.6.5
+============================================================
+x [UX] "S" gesture: change default to disabled
+x [UX] "S" gesture on-screen description and lower
+  activation threshold (issue #519)
+
+v 13.6.4
+============================================================
+x [UX] Add option to disable/enable "S" drawing activation
+  gesture
+
+v 13.6.3
+============================================================
+x [UI] Improved gesture initiation calibration
+x [Android] Fixed gesture not opening the popup on Firefox
+  Nightly
+
+v 13.6.2
+============================================================
+x [Android] Auto-close the site UI tab when right-swiping to
+  home
+x Add "S" gesture to open NoScript UI
+
+v 13.6.1
+============================================================
+x [nscl] Fix manifest version filter omitting scripts from
+  html documents (thanks ppxxbu for reporting)
+
+v 13.6
+============================================================
+x Hardened subcontext environment modification machinery
+x Improved stable/pre channel assignment by version number
+  matching
+x Autoreload extension on UI initialization failure
+x Simplify policy fetching
+x Refactor and rationalize edge case sync/async policy
+  fetching
+x [Chromium] Fix null origin subdocuments always getting the
+  fallback locked down policy
+x [nscl] [Chromium] Prevent uuid() from polluting Main World
+  browser contexts (#508)
+x [nscl] [Chromium] Cross-browser worklet patching
+
+v 13.5.903
+============================================================
+x Improved stable/pre channel assignment by version number
+  matching
+x [nscl] Fixed document unfreezing regression (isse #515)
+
+v 13.5.902
+============================================================
+x Switch back to MV2 on Firefox (due to
+  https://github.com/w3c/webextensions/issues/730)
+x Autoreload extension on UI initialization failure
+x Simplify policy fetching
+
+v 13.5.901
+============================================================
+x Refactor and rationalize edge case sync/async policy
+  fetching
+x Switch to MV3 on Firefox
+x [XSS] Switch to asynchronous / MV3-compatible
+  SyntaxChecker
+
+v 13.5.15
+============================================================
+x [Chromium] Fix null origin subdocuments always getting the
+  fallback locked down policy
+x [nscl] [Chromium] Prevent uuid() from polluting Main World
+  browser contexts (#508)
+x [nscl] [Chromium] Cross-browser worklet patching
+
+v 13.5.14
+============================================================
+x [nscl] Chromium WIP fixes / removed console noise
+x [nscl] Fix worker patches breaking SRI (#504 /
+  tor-browser#44663 - thanks  Mattias Svanström for
+  reporting)
+x Explicit bash to call build scripts
+
+v 13.5.13.902
+============================================================
+x [nscl] Chromium WIP fixes / removed console noise
+
+v 13.5.13.901
+============================================================
+x [nscl] Fix worker patches breaking SRI (#504 /
+  tor-browser#44663 - thanks  Mattias Svanström for
+  reporting)
+x Explicit bash to call build scripts
+
+v 13.5.13
+============================================================
+x [nscl] Try to please AMO syntax validator
+x [nscl] Worklet patching support
+x [nscl] Improved nth-order worker patching
+x [nscl] Enhanced worker patch propagation support
+  (tor-browser#44626)
+x [nscl] [UX] Ensure offscreen placeholders survive
+  full-page error messages (tor-browser#44625)
+x Cross-browser icon support (SVG on Gecko, PNG on Chromium)
+x Added detached gpg signatures to Tor-hosted XPIs
+x [l10n] Removed nb_NO (deprecated in favor of nb)
+
+v 13.5.12.903
+============================================================
+x [nscl] Try to please AMO syntax validator
+x [nscl] Worklet patching support
+x [nscl] Improved nth-order worker patching
+
+v 13.5.12.902
+============================================================
+x [nscl] Enhanced worker patch propagation support
+  (tor-browser#44626)
+
+v 13.5.12.901
+============================================================
+x [nscl] [UX] Ensure offscreen placeholders survive
+  full-page error messages (tor-browser#44625)
+x Cross-browser icon support (SVG on Gecko, PNG on Chromium)
+x Added detached gpg signatures to Tor-hosted XPIs
+x [l10n] Removed nb_NO (deprecated in favor of nb)
+
 v 13.5.12
 ============================================================
 x Convert PNG images to WEBP
