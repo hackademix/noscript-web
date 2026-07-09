@@ -2,6 +2,140 @@
 title: Changelog
 ---
 ```{.changelog}
+v 13.6.29
+============================================================
+x [nscl] Generalize prototype.constructor proxying
+x [nscl] Prevent unproxied MutationObserver leaking via
+  prototype.constructor
+x [nscl] Invoke MutationObserver callback using the observer
+  as `this` (fixes issue #573)
+
+v 13.6.28.903
+============================================================
+x [nscl] Generalize prototype.constructor proxying
+
+v 13.6.28.902
+============================================================
+x [nscl] Prevent unproxied MutationObserver leaking via
+  prototype.constructor
+
+v 13.6.28.901
+============================================================
+x [nscl] Invoke MutationObserver callback using the observer
+  as `this` (fixes issue #573)
+
+v 13.6.28
+============================================================
+x [nscl] Minor fixes
+x [nscl] Better xray argument handling and reduced console
+  noise
+x [nscl] Updated with several xray-related fixes
+x [L10n] Updated fi from Localization Lab
+
+v 13.6.27.903
+============================================================
+x [nscl] Minor fixes
+
+v 13.6.27.902
+============================================================
+x [nscl] Better xray argument handling and reduced console
+  noise
+
+v 13.6.27.901
+============================================================
+x [nscl] Updated with several xray-related fixes
+x [L10n] Updated fi from Localization Lab
+
+v 13.6.27
+============================================================
+x [nscl] Fix xray issues with MutationObserver patching
+  (#572)
+
+v 13.6.26
+============================================================
+x Earlier DOM freezing on file:// URLs (fixes
+  tor-browser#45089)
+x Fix sandboxed blob: frames permissions inheritance
+x Fix data: and blob: request not properly garbage collected
+x [L10n] Updated fi from Localization Lab
+x [nscl] Higher fidelity naming for patched properties
+x [nscl] Work-around for Gecko MutationObserver recursion
+  (thanks Libor Polčák for reporting)
+
+v 13.6.25.903
+============================================================
+x Earlier DOM freezing on file:// URLs (fixes
+  tor-browser#45089)
+
+v 13.6.25.902
+============================================================
+x Fix sandboxed blob: frames permissions inheritance
+x Fix data: and blob: request not properly garbage collected
+x [L10n] Updated fi from Localization Lab
+
+v 13.6.25.901
+============================================================
+x [nscl] Higher fidelity naming for patched properties
+x [nscl] Work-around for Gecko MutationObserver recursion
+  (thanks Libor Polčák for reporting)
+
+v 13.6.25
+============================================================
+x [nscl] Improved worker/worklet patching web compatibility
+  (thanks Juho Forsén for reports)
+
+v 13.6.24
+============================================================
+x [nscl] Stop using XHR for worklet retrieval
+x [nscl] Avoid potential races between DocStartInjection
+  start and end events
+
+v 13.6.23
+============================================================
+x [nscl] Improve DocStartInjection transition management
+
+v 13.6.21
+============================================================
+x [nscl] Improve DocStartInjection failure management
+
+v 13.6.20
+============================================================
+x [Android] [UX] Fix closing site permissions UI reverts to
+  the wrong tab
+x new translations from weblate (#561)
+x Improved policy fetching
+x Avoid contentScript.register() (see JShelter issue #175)
+x [A11y] Honor prefers-reduce-motion (issue #560)
+x [XSS] Updated IC_EVENT_PATTERN
+x [L10n] Updated ko from Localization Lab
+x [l10n] Created empty ko localization
+x [XSS] Updated IC_EVENT_PATTERN
+x [UX][Android] Prevent site label truncation (issue #503)
+x Reduce page layout disruption from placeholders
+
+v 13.6.19.904
+============================================================
+x [Android] [UX] Fix closing site permissions UI reverts to
+  the wrong tab
+
+v 13.6.19.903
+============================================================
+x new translations from weblate (#561)
+x Improved policy fetching
+v 13.6.19.902
+============================================================
+x Avoid contentScript.register() (see JShelter issue #175)
+x [A11y] Honor prefers-reduce-motion (issue #560)
+x [XSS] Updated IC_EVENT_PATTERN
+x [L10n] Updated ko from Localization Lab
+x [l10n] Created empty ko localization
+x [XSS] Updated IC_EVENT_PATTERN
+x [UX][Android] Prevent site label truncation (issue #503)
+
+v 13.6.19.901
+============================================================
+x Reduce page layout disruption from placeholders
+
 v 13.6.19
 ============================================================
 x [UX][Android] Auto-size gesture label
