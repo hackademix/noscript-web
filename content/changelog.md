@@ -2,6 +2,13 @@
 title: Changelog
 ---
 ```{.changelog}
+v 13.6.30
+============================================================
+x Fix placeholders regression (thanks barbaz/laniakea64 for
+  patch)
+x Automate AMO submission of stable releases
+x [L10n] Updated bn, fi from Localization Lab
+
 v 13.6.29
 ============================================================
 x [nscl] Generalize prototype.constructor proxying

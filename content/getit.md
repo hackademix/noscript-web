@@ -84,6 +84,14 @@ You're done. Happy testing!
 
 #### Recent development history
 ````{.changelog}
+
+v 13.6.29.901
+============================================================
+x Fix placeholders regression (thanks barbaz/laniakea64 for
+  patch)
+x Automate AMO submission of stable releases
+x [L10n] Updated bn, fi from Localization Lab
+
 v 13.6.28.903
 ============================================================
 x [nscl] Generalize prototype.constructor proxying
